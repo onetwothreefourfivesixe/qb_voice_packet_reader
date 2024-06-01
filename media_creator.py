@@ -39,7 +39,7 @@ def saveSpeaking(text = ""):
     engine.save_to_file(text, "question.mp3")
     engine.runAndWait()
     print(text)
-    with open(os.path.join('qb_packet_reader\assets',"MyFile.txt"), "w") as outputFile:
+    with open(os.path.join('qb_packet_reader/assets',"MyFile.txt"), "w") as outputFile:
         sentences = text.split()
         for sentence in sentences:
             outputFile.write(sentence + "\n")
