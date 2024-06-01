@@ -3,1161 +3,931 @@
   {
    "begin": "0.000",
    "children": [],
-   "end": "0.280",
+   "end": "0.480",
    "id": "f000001",
    "language": "eng",
    "lines": [
-    "The"
+    "One"
    ]
   },
   {
-   "begin": "0.280",
+   "begin": "0.480",
    "children": [],
-   "end": "0.840",
+   "end": "0.760",
    "id": "f000002",
    "language": "eng",
    "lines": [
-    "so-called"
+    "ethnic"
    ]
   },
   {
-   "begin": "0.840",
+   "begin": "0.760",
    "children": [],
-   "end": "1.200",
+   "end": "0.920",
    "id": "f000003",
    "language": "eng",
    "lines": [
-    "coup"
+    "group"
    ]
   },
   {
-   "begin": "1.200",
+   "begin": "0.920",
    "children": [],
-   "end": "1.400",
+   "end": "1.200",
    "id": "f000004",
-   "language": "eng",
-   "lines": [
-    "by"
-   ]
-  },
-  {
-   "begin": "1.400",
-   "children": [],
-   "end": "2.080",
-   "id": "f000005",
-   "language": "eng",
-   "lines": [
-    "memorandum"
-   ]
-  },
-  {
-   "begin": "2.080",
-   "children": [],
-   "end": "2.200",
-   "id": "f000006",
    "language": "eng",
    "lines": [
     "in"
    ]
   },
   {
-   "begin": "2.200",
+   "begin": "1.200",
    "children": [],
-   "end": "2.480",
-   "id": "f000007",
+   "end": "1.520",
+   "id": "f000005",
    "language": "eng",
    "lines": [
     "this"
    ]
   },
   {
-   "begin": "2.480",
+   "begin": "1.520",
    "children": [],
-   "end": "3.120",
-   "id": "f000008",
+   "end": "2.240",
+   "id": "f000006",
    "language": "eng",
    "lines": [
     "country"
    ]
   },
   {
-   "begin": "3.120",
+   "begin": "2.240",
    "children": [],
-   "end": "3.440",
+   "end": "2.640",
+   "id": "f000007",
+   "language": "eng",
+   "lines": [
+    "revolted"
+   ]
+  },
+  {
+   "begin": "2.640",
+   "children": [],
+   "end": "2.840",
+   "id": "f000008",
+   "language": "eng",
+   "lines": [
+    "in"
+   ]
+  },
+  {
+   "begin": "2.840",
+   "children": [],
+   "end": "3.800",
    "id": "f000009",
    "language": "eng",
    "lines": [
-    "brought"
+    "Shakushain\u2019s"
    ]
   },
   {
-   "begin": "3.440",
+   "begin": "3.800",
    "children": [],
-   "end": "3.520",
+   "end": "4.640",
    "id": "f000010",
    "language": "eng",
    "lines": [
-    "about"
+    "revolt."
    ]
   },
   {
-   "begin": "3.520",
+   "begin": "4.640",
    "children": [],
-   "end": "3.720",
+   "end": "5.080",
    "id": "f000011",
    "language": "eng",
    "lines": [
-    "the"
+    "Shell"
    ]
   },
   {
-   "begin": "3.720",
+   "begin": "5.080",
    "children": [],
-   "end": "4.120",
+   "end": "5.160",
    "id": "f000012",
    "language": "eng",
    "lines": [
-    "downfall"
+    "heaps"
    ]
   },
   {
-   "begin": "4.120",
+   "begin": "5.160",
    "children": [],
-   "end": "4.440",
+   "end": "5.240",
    "id": "f000013",
    "language": "eng",
    "lines": [
-    "of"
+    "in"
    ]
   },
   {
-   "begin": "4.440",
+   "begin": "5.240",
    "children": [],
-   "end": "4.720",
+   "end": "5.720",
    "id": "f000014",
-   "language": "eng",
-   "lines": [
-    "its"
-   ]
-  },
-  {
-   "begin": "4.720",
-   "children": [],
-   "end": "5.200",
-   "id": "f000015",
-   "language": "eng",
-   "lines": [
-    "Justice"
-   ]
-  },
-  {
-   "begin": "5.200",
-   "children": [],
-   "end": "6.440",
-   "id": "f000016",
-   "language": "eng",
-   "lines": [
-    "Party,"
-   ]
-  },
-  {
-   "begin": "6.440",
-   "children": [],
-   "end": "6.800",
-   "id": "f000017",
-   "language": "eng",
-   "lines": [
-    "while"
-   ]
-  },
-  {
-   "begin": "6.800",
-   "children": [],
-   "end": "6.960",
-   "id": "f000018",
-   "language": "eng",
-   "lines": [
-    "a"
-   ]
-  },
-  {
-   "begin": "6.960",
-   "children": [],
-   "end": "6.960",
-   "id": "f000019",
-   "language": "eng",
-   "lines": [
-    "new"
-   ]
-  },
-  {
-   "begin": "6.960",
-   "children": [],
-   "end": "8.000",
-   "id": "f000020",
-   "language": "eng",
-   "lines": [
-    "constitution"
-   ]
-  },
-  {
-   "begin": "8.000",
-   "children": [],
-   "end": "8.280",
-   "id": "f000021",
-   "language": "eng",
-   "lines": [
-    "was"
-   ]
-  },
-  {
-   "begin": "8.280",
-   "children": [],
-   "end": "8.880",
-   "id": "f000022",
-   "language": "eng",
-   "lines": [
-    "proclaimed"
-   ]
-  },
-  {
-   "begin": "8.880",
-   "children": [],
-   "end": "9.520",
-   "id": "f000023",
-   "language": "eng",
-   "lines": [
-    "following"
-   ]
-  },
-  {
-   "begin": "9.520",
-   "children": [],
-   "end": "9.720",
-   "id": "f000024",
-   "language": "eng",
-   "lines": [
-    "a"
-   ]
-  },
-  {
-   "begin": "9.720",
-   "children": [],
-   "end": "10.400",
-   "id": "f000025",
-   "language": "eng",
-   "lines": [
-    "1960"
-   ]
-  },
-  {
-   "begin": "10.400",
-   "children": [],
-   "end": "10.800",
-   "id": "f000026",
-   "language": "eng",
-   "lines": [
-    "coup"
-   ]
-  },
-  {
-   "begin": "10.800",
-   "children": [],
-   "end": "11.000",
-   "id": "f000027",
-   "language": "eng",
-   "lines": [
-    "by"
-   ]
-  },
-  {
-   "begin": "11.000",
-   "children": [],
-   "end": "11.480",
-   "id": "f000028",
-   "language": "eng",
-   "lines": [
-    "General"
-   ]
-  },
-  {
-   "begin": "11.480",
-   "children": [],
-   "end": "12.760",
-   "id": "f000029",
-   "language": "eng",
-   "lines": [
-    "Gursel."
-   ]
-  },
-  {
-   "begin": "12.760",
-   "children": [],
-   "end": "13.000",
-   "id": "f000030",
-   "language": "eng",
-   "lines": [
-    "The"
-   ]
-  },
-  {
-   "begin": "13.000",
-   "children": [],
-   "end": "13.400",
-   "id": "f000031",
-   "language": "eng",
-   "lines": [
-    "first"
-   ]
-  },
-  {
-   "begin": "13.400",
-   "children": [],
-   "end": "13.880",
-   "id": "f000032",
-   "language": "eng",
-   "lines": [
-    "ruler"
-   ]
-  },
-  {
-   "begin": "13.880",
-   "children": [],
-   "end": "13.880",
-   "id": "f000033",
-   "language": "eng",
-   "lines": [
-    "of"
-   ]
-  },
-  {
-   "begin": "13.880",
-   "children": [],
-   "end": "14.160",
-   "id": "f000034",
    "language": "eng",
    "lines": [
     "this"
    ]
   },
   {
-   "begin": "14.160",
+   "begin": "5.720",
    "children": [],
-   "end": "14.680",
-   "id": "f000035",
+   "end": "6.280",
+   "id": "f000015",
    "language": "eng",
    "lines": [
-    "nation"
+    "country"
    ]
   },
   {
-   "begin": "14.680",
+   "begin": "6.280",
    "children": [],
-   "end": "15.360",
-   "id": "f000036",
+   "end": "6.680",
+   "id": "f000016",
    "language": "eng",
    "lines": [
-    "successfully"
+    "belong"
    ]
   },
   {
-   "begin": "15.360",
+   "begin": "6.680",
    "children": [],
-   "end": "16.080",
-   "id": "f000037",
-   "language": "eng",
-   "lines": [
-    "annexed"
-   ]
-  },
-  {
-   "begin": "16.080",
-   "children": [],
-   "end": "16.280",
-   "id": "f000038",
-   "language": "eng",
-   "lines": [
-    "the"
-   ]
-  },
-  {
-   "begin": "16.280",
-   "children": [],
-   "end": "17.160",
-   "id": "f000039",
-   "language": "eng",
-   "lines": [
-    "French-controlled"
-   ]
-  },
-  {
-   "begin": "17.160",
-   "children": [],
-   "end": "17.760",
-   "id": "f000040",
-   "language": "eng",
-   "lines": [
-    "region"
-   ]
-  },
-  {
-   "begin": "17.760",
-   "children": [],
-   "end": "17.960",
-   "id": "f000041",
-   "language": "eng",
-   "lines": [
-    "of"
-   ]
-  },
-  {
-   "begin": "17.960",
-   "children": [],
-   "end": "19.480",
-   "id": "f000042",
-   "language": "eng",
-   "lines": [
-    "Alexandretta."
-   ]
-  },
-  {
-   "begin": "19.480",
-   "children": [],
-   "end": "19.840",
-   "id": "f000043",
-   "language": "eng",
-   "lines": [
-    "This"
-   ]
-  },
-  {
-   "begin": "19.840",
-   "children": [],
-   "end": "20.400",
-   "id": "f000044",
-   "language": "eng",
-   "lines": [
-    "modern-day"
-   ]
-  },
-  {
-   "begin": "20.400",
-   "children": [],
-   "end": "21.040",
-   "id": "f000045",
-   "language": "eng",
-   "lines": [
-    "country\u2019s"
-   ]
-  },
-  {
-   "begin": "21.040",
-   "children": [],
-   "end": "21.760",
-   "id": "f000046",
-   "language": "eng",
-   "lines": [
-    "borders"
-   ]
-  },
-  {
-   "begin": "21.760",
-   "children": [],
-   "end": "22.160",
-   "id": "f000047",
-   "language": "eng",
-   "lines": [
-    "were"
-   ]
-  },
-  {
-   "begin": "22.160",
-   "children": [],
-   "end": "22.400",
-   "id": "f000048",
-   "language": "eng",
-   "lines": [
-    "originally"
-   ]
-  },
-  {
-   "begin": "22.400",
-   "children": [],
-   "end": "22.720",
-   "id": "f000049",
-   "language": "eng",
-   "lines": [
-    "set"
-   ]
-  },
-  {
-   "begin": "22.720",
-   "children": [],
-   "end": "22.840",
-   "id": "f000050",
-   "language": "eng",
-   "lines": [
-    "by"
-   ]
-  },
-  {
-   "begin": "22.840",
-   "children": [],
-   "end": "22.960",
-   "id": "f000051",
-   "language": "eng",
-   "lines": [
-    "the"
-   ]
-  },
-  {
-   "begin": "22.960",
-   "children": [],
-   "end": "23.640",
-   "id": "f000052",
-   "language": "eng",
-   "lines": [
-    "Treaty"
-   ]
-  },
-  {
-   "begin": "23.640",
-   "children": [],
-   "end": "23.760",
-   "id": "f000053",
-   "language": "eng",
-   "lines": [
-    "of"
-   ]
-  },
-  {
-   "begin": "23.760",
-   "children": [],
-   "end": "25.080",
-   "id": "f000054",
-   "language": "eng",
-   "lines": [
-    "Sevres,"
-   ]
-  },
-  {
-   "begin": "25.080",
-   "children": [],
-   "end": "25.560",
-   "id": "f000055",
-   "language": "eng",
-   "lines": [
-    "although"
-   ]
-  },
-  {
-   "begin": "25.560",
-   "children": [],
-   "end": "25.600",
-   "id": "f000056",
-   "language": "eng",
-   "lines": [
-    "it"
-   ]
-  },
-  {
-   "begin": "25.600",
-   "children": [],
-   "end": "25.960",
-   "id": "f000057",
-   "language": "eng",
-   "lines": [
-    "gained"
-   ]
-  },
-  {
-   "begin": "25.960",
-   "children": [],
-   "end": "26.640",
-   "id": "f000058",
-   "language": "eng",
-   "lines": [
-    "formal"
-   ]
-  },
-  {
-   "begin": "26.640",
-   "children": [],
-   "end": "27.240",
-   "id": "f000059",
-   "language": "eng",
-   "lines": [
-    "recognition"
-   ]
-  },
-  {
-   "begin": "27.240",
-   "children": [],
-   "end": "27.400",
-   "id": "f000060",
-   "language": "eng",
-   "lines": [
-    "by"
-   ]
-  },
-  {
-   "begin": "27.400",
-   "children": [],
-   "end": "27.520",
-   "id": "f000061",
-   "language": "eng",
-   "lines": [
-    "the"
-   ]
-  },
-  {
-   "begin": "27.520",
-   "children": [],
-   "end": "27.840",
-   "id": "f000062",
-   "language": "eng",
-   "lines": [
-    "Treaty"
-   ]
-  },
-  {
-   "begin": "27.840",
-   "children": [],
-   "end": "28.080",
-   "id": "f000063",
-   "language": "eng",
-   "lines": [
-    "of"
-   ]
-  },
-  {
-   "begin": "28.080",
-   "children": [],
-   "end": "29.160",
-   "id": "f000064",
-   "language": "eng",
-   "lines": [
-    "Lausanne."
-   ]
-  },
-  {
-   "begin": "29.160",
-   "children": [],
-   "end": "29.320",
-   "id": "f000065",
-   "language": "eng",
-   "lines": [
-    "In"
-   ]
-  },
-  {
-   "begin": "29.320",
-   "children": [],
-   "end": "30.080",
-   "id": "f000066",
-   "language": "eng",
-   "lines": [
-    "response"
-   ]
-  },
-  {
-   "begin": "30.080",
-   "children": [],
-   "end": "30.080",
-   "id": "f000067",
+   "end": "7.000",
+   "id": "f000017",
    "language": "eng",
    "lines": [
     "to"
    ]
   },
   {
-   "begin": "30.080",
+   "begin": "7.000",
    "children": [],
-   "end": "30.120",
-   "id": "f000068",
+   "end": "7.200",
+   "id": "f000018",
    "language": "eng",
    "lines": [
-    "the"
+    "an"
    ]
   },
   {
-   "begin": "30.120",
+   "begin": "7.200",
    "children": [],
-   "end": "30.720",
-   "id": "f000069",
+   "end": "8.280",
+   "id": "f000019",
    "language": "eng",
    "lines": [
-    "overthrow"
+    "agricultural"
    ]
   },
   {
-   "begin": "30.720",
+   "begin": "8.280",
    "children": [],
-   "end": "31.080",
-   "id": "f000070",
+   "end": "8.480",
+   "id": "f000020",
    "language": "eng",
    "lines": [
-    "of"
+    "era"
    ]
   },
   {
-   "begin": "31.080",
+   "begin": "8.480",
    "children": [],
-   "end": "31.760",
-   "id": "f000071",
-   "language": "eng",
-   "lines": [
-    "Archbishop"
-   ]
-  },
-  {
-   "begin": "31.760",
-   "children": [],
-   "end": "32.840",
-   "id": "f000072",
-   "language": "eng",
-   "lines": [
-    "Makarios,"
-   ]
-  },
-  {
-   "begin": "32.840",
-   "children": [],
-   "end": "32.840",
-   "id": "f000073",
-   "language": "eng",
-   "lines": [
-    "it"
-   ]
-  },
-  {
-   "begin": "32.840",
-   "children": [],
-   "end": "33.840",
-   "id": "f000074",
-   "language": "eng",
-   "lines": [
-    "launched"
-   ]
-  },
-  {
-   "begin": "33.840",
-   "children": [],
-   "end": "34.160",
-   "id": "f000075",
-   "language": "eng",
-   "lines": [
-    "a"
-   ]
-  },
-  {
-   "begin": "34.160",
-   "children": [],
-   "end": "35.400",
-   "id": "f000076",
-   "language": "eng",
-   "lines": [
-    "1974"
-   ]
-  },
-  {
-   "begin": "35.400",
-   "children": [],
-   "end": "36.000",
-   "id": "f000077",
-   "language": "eng",
-   "lines": [
-    "invasion"
-   ]
-  },
-  {
-   "begin": "36.000",
-   "children": [],
-   "end": "36.160",
-   "id": "f000078",
-   "language": "eng",
-   "lines": [
-    "and"
-   ]
-  },
-  {
-   "begin": "36.160",
-   "children": [],
-   "end": "36.960",
-   "id": "f000079",
-   "language": "eng",
-   "lines": [
-    "occupation"
-   ]
-  },
-  {
-   "begin": "36.960",
-   "children": [],
-   "end": "37.280",
-   "id": "f000080",
-   "language": "eng",
-   "lines": [
-    "of"
-   ]
-  },
-  {
-   "begin": "37.280",
-   "children": [],
-   "end": "37.280",
-   "id": "f000081",
-   "language": "eng",
-   "lines": [
-    "a"
-   ]
-  },
-  {
-   "begin": "37.280",
-   "children": [],
-   "end": "37.480",
-   "id": "f000082",
-   "language": "eng",
-   "lines": [
-    "nearby"
-   ]
-  },
-  {
-   "begin": "37.480",
-   "children": [],
-   "end": "38.880",
-   "id": "f000083",
-   "language": "eng",
-   "lines": [
-    "nation."
-   ]
-  },
-  {
-   "begin": "38.880",
-   "children": [],
-   "end": "39.280",
-   "id": "f000084",
-   "language": "eng",
-   "lines": [
-    "Ruled"
-   ]
-  },
-  {
-   "begin": "39.280",
-   "children": [],
-   "end": "39.320",
-   "id": "f000085",
-   "language": "eng",
-   "lines": [
-    "during"
-   ]
-  },
-  {
-   "begin": "39.320",
-   "children": [],
-   "end": "39.920",
-   "id": "f000086",
-   "language": "eng",
-   "lines": [
-    "World"
-   ]
-  },
-  {
-   "begin": "39.920",
-   "children": [],
-   "end": "40.200",
-   "id": "f000087",
-   "language": "eng",
-   "lines": [
-    "War"
-   ]
-  },
-  {
-   "begin": "40.200",
-   "children": [],
-   "end": "40.600",
-   "id": "f000088",
-   "language": "eng",
-   "lines": [
-    "II"
-   ]
-  },
-  {
-   "begin": "40.600",
-   "children": [],
-   "end": "40.800",
-   "id": "f000089",
-   "language": "eng",
-   "lines": [
-    "by"
-   ]
-  },
-  {
-   "begin": "40.800",
-   "children": [],
-   "end": "41.440",
-   "id": "f000090",
-   "language": "eng",
-   "lines": [
-    "President"
-   ]
-  },
-  {
-   "begin": "41.440",
-   "children": [],
-   "end": "41.880",
-   "id": "f000091",
-   "language": "eng",
-   "lines": [
-    "Ismet"
-   ]
-  },
-  {
-   "begin": "41.880",
-   "children": [],
-   "end": "42.520",
-   "id": "f000092",
-   "language": "eng",
-   "lines": [
-    "Inonu,"
-   ]
-  },
-  {
-   "begin": "42.520",
-   "children": [],
-   "end": "43.200",
-   "id": "f000093",
-   "language": "eng",
-   "lines": [
-    "this"
-   ]
-  },
-  {
-   "begin": "43.200",
-   "children": [],
-   "end": "43.720",
-   "id": "f000094",
-   "language": "eng",
-   "lines": [
-    "country"
-   ]
-  },
-  {
-   "begin": "43.720",
-   "children": [],
-   "end": "43.920",
-   "id": "f000095",
-   "language": "eng",
-   "lines": [
-    "now"
-   ]
-  },
-  {
-   "begin": "43.920",
-   "children": [],
-   "end": "44.520",
-   "id": "f000096",
-   "language": "eng",
-   "lines": [
-    "controls"
-   ]
-  },
-  {
-   "begin": "44.520",
-   "children": [],
-   "end": "44.920",
-   "id": "f000097",
-   "language": "eng",
-   "lines": [
-    "Northern"
-   ]
-  },
-  {
-   "begin": "44.920",
-   "children": [],
-   "end": "45.760",
-   "id": "f000098",
-   "language": "eng",
-   "lines": [
-    "Cyprus."
-   ]
-  },
-  {
-   "begin": "45.760",
-   "children": [],
-   "end": "46.360",
-   "id": "f000099",
-   "language": "eng",
-   "lines": [
-    "For"
-   ]
-  },
-  {
-   "begin": "46.360",
-   "children": [],
-   "end": "46.720",
-   "id": "f000100",
-   "language": "eng",
-   "lines": [
-    "10"
-   ]
-  },
-  {
-   "begin": "46.720",
-   "children": [],
-   "end": "47.400",
-   "id": "f000101",
-   "language": "eng",
-   "lines": [
-    "points,"
-   ]
-  },
-  {
-   "begin": "47.400",
-   "children": [],
-   "end": "47.960",
-   "id": "f000102",
-   "language": "eng",
-   "lines": [
-    "name"
-   ]
-  },
-  {
-   "begin": "47.960",
-   "children": [],
-   "end": "48.240",
-   "id": "f000103",
-   "language": "eng",
-   "lines": [
-    "this"
-   ]
-  },
-  {
-   "begin": "48.240",
-   "children": [],
-   "end": "48.840",
-   "id": "f000104",
-   "language": "eng",
-   "lines": [
-    "modern-day"
-   ]
-  },
-  {
-   "begin": "48.840",
-   "children": [],
-   "end": "49.360",
-   "id": "f000105",
-   "language": "eng",
-   "lines": [
-    "nation"
-   ]
-  },
-  {
-   "begin": "49.360",
-   "children": [],
-   "end": "49.440",
-   "id": "f000106",
+   "end": "8.520",
+   "id": "f000021",
    "language": "eng",
    "lines": [
     "that"
    ]
   },
   {
-   "begin": "49.440",
+   "begin": "8.520",
    "children": [],
-   "end": "50.240",
-   "id": "f000107",
+   "end": "9.240",
+   "id": "f000022",
    "language": "eng",
    "lines": [
-    "arose"
+    "follows"
    ]
   },
   {
-   "begin": "50.240",
+   "begin": "9.240",
    "children": [],
-   "end": "50.360",
-   "id": "f000108",
+   "end": "9.480",
+   "id": "f000023",
+   "language": "eng",
+   "lines": [
+    "an"
+   ]
+  },
+  {
+   "begin": "9.480",
+   "children": [],
+   "end": "9.760",
+   "id": "f000024",
+   "language": "eng",
+   "lines": [
+    "era"
+   ]
+  },
+  {
+   "begin": "9.760",
+   "children": [],
+   "end": "9.800",
+   "id": "f000025",
+   "language": "eng",
+   "lines": [
+    "named"
+   ]
+  },
+  {
+   "begin": "9.800",
+   "children": [],
+   "end": "10.080",
+   "id": "f000026",
+   "language": "eng",
+   "lines": [
+    "by"
+   ]
+  },
+  {
+   "begin": "10.080",
+   "children": [],
+   "end": "10.320",
+   "id": "f000027",
+   "language": "eng",
+   "lines": [
+    "Edward"
+   ]
+  },
+  {
+   "begin": "10.320",
+   "children": [],
+   "end": "10.320",
+   "id": "f000028",
+   "language": "eng",
+   "lines": [
+    "S."
+   ]
+  },
+  {
+   "begin": "10.320",
+   "children": [],
+   "end": "11.680",
+   "id": "f000029",
+   "language": "eng",
+   "lines": [
+    "Morse;"
+   ]
+  },
+  {
+   "begin": "11.680",
+   "children": [],
+   "end": "12.600",
+   "id": "f000030",
+   "language": "eng",
+   "lines": [
+    "that"
+   ]
+  },
+  {
+   "begin": "12.600",
+   "children": [],
+   "end": "13.000",
+   "id": "f000031",
+   "language": "eng",
+   "lines": [
+    "later"
+   ]
+  },
+  {
+   "begin": "13.000",
+   "children": [],
+   "end": "13.600",
+   "id": "f000032",
+   "language": "eng",
+   "lines": [
+    "era"
+   ]
+  },
+  {
+   "begin": "13.600",
+   "children": [],
+   "end": "13.920",
+   "id": "f000033",
+   "language": "eng",
+   "lines": [
+    "was"
+   ]
+  },
+  {
+   "begin": "13.920",
+   "children": [],
+   "end": "14.200",
+   "id": "f000034",
+   "language": "eng",
+   "lines": [
+    "the"
+   ]
+  },
+  {
+   "begin": "14.200",
+   "children": [],
+   "end": "15.000",
+   "id": "f000035",
+   "language": "eng",
+   "lines": [
+    "Yayoi."
+   ]
+  },
+  {
+   "begin": "15.000",
+   "children": [],
+   "end": "15.040",
+   "id": "f000036",
+   "language": "eng",
+   "lines": [
+    "Women"
+   ]
+  },
+  {
+   "begin": "15.040",
+   "children": [],
+   "end": "15.480",
+   "id": "f000037",
    "language": "eng",
    "lines": [
     "in"
    ]
   },
   {
-   "begin": "50.360",
+   "begin": "15.480",
    "children": [],
-   "end": "51.040",
-   "id": "f000109",
+   "end": "15.760",
+   "id": "f000038",
    "language": "eng",
    "lines": [
-    "Anatolia"
+    "this"
    ]
   },
   {
-   "begin": "51.040",
+   "begin": "15.760",
    "children": [],
-   "end": "51.640",
-   "id": "f000110",
+   "end": "16.360",
+   "id": "f000039",
    "language": "eng",
    "lines": [
-    "following"
+    "country"
    ]
   },
   {
-   "begin": "51.640",
+   "begin": "16.360",
    "children": [],
-   "end": "51.640",
-   "id": "f000111",
+   "end": "16.720",
+   "id": "f000040",
+   "language": "eng",
+   "lines": [
+    "often"
+   ]
+  },
+  {
+   "begin": "16.720",
+   "children": [],
+   "end": "17.120",
+   "id": "f000041",
+   "language": "eng",
+   "lines": [
+    "wrote"
+   ]
+  },
+  {
+   "begin": "17.120",
+   "children": [],
+   "end": "17.240",
+   "id": "f000042",
+   "language": "eng",
+   "lines": [
+    "with"
+   ]
+  },
+  {
+   "begin": "17.240",
+   "children": [],
+   "end": "17.240",
+   "id": "f000043",
    "language": "eng",
    "lines": [
     "the"
    ]
   },
   {
-   "begin": "51.640",
+   "begin": "17.240",
    "children": [],
-   "end": "52.040",
-   "id": "f000112",
+   "end": "17.600",
+   "id": "f000044",
    "language": "eng",
    "lines": [
-    "collapse"
+    "kana"
    ]
   },
   {
-   "begin": "52.040",
+   "begin": "17.600",
    "children": [],
-   "end": "52.040",
-   "id": "f000113",
+   "end": "17.840",
+   "id": "f000045",
+   "language": "eng",
+   "lines": [
+    "script,"
+   ]
+  },
+  {
+   "begin": "17.840",
+   "children": [],
+   "end": "18.600",
+   "id": "f000046",
+   "language": "eng",
+   "lines": [
+    "and"
+   ]
+  },
+  {
+   "begin": "18.600",
+   "children": [],
+   "end": "19.200",
+   "id": "f000047",
+   "language": "eng",
+   "lines": [
+    "one"
+   ]
+  },
+  {
+   "begin": "19.200",
+   "children": [],
+   "end": "19.680",
+   "id": "f000048",
+   "language": "eng",
+   "lines": [
+    "diary"
+   ]
+  },
+  {
+   "begin": "19.680",
+   "children": [],
+   "end": "19.840",
+   "id": "f000049",
+   "language": "eng",
+   "lines": [
+    "from"
+   ]
+  },
+  {
+   "begin": "19.840",
+   "children": [],
+   "end": "20.120",
+   "id": "f000050",
+   "language": "eng",
+   "lines": [
+    "this"
+   ]
+  },
+  {
+   "begin": "20.120",
+   "children": [],
+   "end": "20.640",
+   "id": "f000051",
+   "language": "eng",
+   "lines": [
+    "country"
+   ]
+  },
+  {
+   "begin": "20.640",
+   "children": [],
+   "end": "21.040",
+   "id": "f000052",
+   "language": "eng",
+   "lines": [
+    "discovered"
+   ]
+  },
+  {
+   "begin": "21.040",
+   "children": [],
+   "end": "21.120",
+   "id": "f000053",
+   "language": "eng",
+   "lines": [
+    "on"
+   ]
+  },
+  {
+   "begin": "21.120",
+   "children": [],
+   "end": "21.480",
+   "id": "f000054",
+   "language": "eng",
+   "lines": [
+    "a"
+   ]
+  },
+  {
+   "begin": "21.480",
+   "children": [],
+   "end": "22.080",
+   "id": "f000055",
+   "language": "eng",
+   "lines": [
+    "namesake"
+   ]
+  },
+  {
+   "begin": "22.080",
+   "children": [],
+   "end": "22.640",
+   "id": "f000056",
+   "language": "eng",
+   "lines": [
+    "object"
+   ]
+  },
+  {
+   "begin": "22.640",
+   "children": [],
+   "end": "22.800",
+   "id": "f000057",
+   "language": "eng",
+   "lines": [
+    "was"
+   ]
+  },
+  {
+   "begin": "22.800",
+   "children": [],
+   "end": "22.960",
+   "id": "f000058",
+   "language": "eng",
+   "lines": [
+    "The"
+   ]
+  },
+  {
+   "begin": "22.960",
+   "children": [],
+   "end": "23.320",
+   "id": "f000059",
+   "language": "eng",
+   "lines": [
+    "Pillow"
+   ]
+  },
+  {
+   "begin": "23.320",
+   "children": [],
+   "end": "24.480",
+   "id": "f000060",
+   "language": "eng",
+   "lines": [
+    "Book."
+   ]
+  },
+  {
+   "begin": "24.480",
+   "children": [],
+   "end": "24.720",
+   "id": "f000061",
+   "language": "eng",
+   "lines": [
+    "This"
+   ]
+  },
+  {
+   "begin": "24.720",
+   "children": [],
+   "end": "25.440",
+   "id": "f000062",
+   "language": "eng",
+   "lines": [
+    "country\u2019s"
+   ]
+  },
+  {
+   "begin": "25.440",
+   "children": [],
+   "end": "26.040",
+   "id": "f000063",
+   "language": "eng",
+   "lines": [
+    "adoption"
+   ]
+  },
+  {
+   "begin": "26.040",
+   "children": [],
+   "end": "26.080",
+   "id": "f000064",
    "language": "eng",
    "lines": [
     "of"
    ]
   },
   {
-   "begin": "52.040",
+   "begin": "26.080",
    "children": [],
-   "end": "52.440",
-   "id": "f000114",
+   "end": "26.760",
+   "id": "f000065",
+   "language": "eng",
+   "lines": [
+    "Buddhism"
+   ]
+  },
+  {
+   "begin": "26.760",
+   "children": [],
+   "end": "27.080",
+   "id": "f000066",
+   "language": "eng",
+   "lines": [
+    "from"
+   ]
+  },
+  {
+   "begin": "27.080",
+   "children": [],
+   "end": "27.080",
+   "id": "f000067",
    "language": "eng",
    "lines": [
     "the"
    ]
   },
   {
-   "begin": "52.440",
+   "begin": "27.080",
    "children": [],
-   "end": "53.120",
-   "id": "f000115",
+   "end": "27.520",
+   "id": "f000068",
    "language": "eng",
    "lines": [
-    "Ottoman"
+    "Tang"
    ]
   },
   {
-   "begin": "53.120",
+   "begin": "27.520",
    "children": [],
-   "end": "54.440",
-   "id": "f000116",
+   "end": "27.920",
+   "id": "f000069",
    "language": "eng",
    "lines": [
-    "Empire."
+    "Dynasty"
+   ]
+  },
+  {
+   "begin": "27.920",
+   "children": [],
+   "end": "28.160",
+   "id": "f000070",
+   "language": "eng",
+   "lines": [
+    "occurred"
+   ]
+  },
+  {
+   "begin": "28.160",
+   "children": [],
+   "end": "28.160",
+   "id": "f000071",
+   "language": "eng",
+   "lines": [
+    "in"
+   ]
+  },
+  {
+   "begin": "28.160",
+   "children": [],
+   "end": "28.680",
+   "id": "f000072",
+   "language": "eng",
+   "lines": [
+    "the"
+   ]
+  },
+  {
+   "begin": "28.680",
+   "children": [],
+   "end": "29.200",
+   "id": "f000073",
+   "language": "eng",
+   "lines": [
+    "Asuka"
+   ]
+  },
+  {
+   "begin": "29.200",
+   "children": [],
+   "end": "30.560",
+   "id": "f000074",
+   "language": "eng",
+   "lines": [
+    "period."
+   ]
+  },
+  {
+   "begin": "30.560",
+   "children": [],
+   "end": "30.720",
+   "id": "f000075",
+   "language": "eng",
+   "lines": [
+    "For"
+   ]
+  },
+  {
+   "begin": "30.720",
+   "children": [],
+   "end": "31.120",
+   "id": "f000076",
+   "language": "eng",
+   "lines": [
+    "10"
+   ]
+  },
+  {
+   "begin": "31.120",
+   "children": [],
+   "end": "31.760",
+   "id": "f000077",
+   "language": "eng",
+   "lines": [
+    "points,"
+   ]
+  },
+  {
+   "begin": "31.760",
+   "children": [],
+   "end": "32.880",
+   "id": "f000078",
+   "language": "eng",
+   "lines": [
+    "prehistoric"
+   ]
+  },
+  {
+   "begin": "32.880",
+   "children": [],
+   "end": "33.320",
+   "id": "f000079",
+   "language": "eng",
+   "lines": [
+    "people"
+   ]
+  },
+  {
+   "begin": "33.320",
+   "children": [],
+   "end": "33.720",
+   "id": "f000080",
+   "language": "eng",
+   "lines": [
+    "crossed"
+   ]
+  },
+  {
+   "begin": "33.720",
+   "children": [],
+   "end": "34.200",
+   "id": "f000081",
+   "language": "eng",
+   "lines": [
+    "former"
+   ]
+  },
+  {
+   "begin": "34.200",
+   "children": [],
+   "end": "34.520",
+   "id": "f000082",
+   "language": "eng",
+   "lines": [
+    "land"
+   ]
+  },
+  {
+   "begin": "34.520",
+   "children": [],
+   "end": "34.800",
+   "id": "f000083",
+   "language": "eng",
+   "lines": [
+    "bridges"
+   ]
+  },
+  {
+   "begin": "34.800",
+   "children": [],
+   "end": "35.040",
+   "id": "f000084",
+   "language": "eng",
+   "lines": [
+    "into"
+   ]
+  },
+  {
+   "begin": "35.040",
+   "children": [],
+   "end": "35.520",
+   "id": "f000085",
+   "language": "eng",
+   "lines": [
+    "what"
+   ]
+  },
+  {
+   "begin": "35.520",
+   "children": [],
+   "end": "35.960",
+   "id": "f000086",
+   "language": "eng",
+   "lines": [
+    "island"
+   ]
+  },
+  {
+   "begin": "35.960",
+   "children": [],
+   "end": "36.600",
+   "id": "f000087",
+   "language": "eng",
+   "lines": [
+    "country"
+   ]
+  },
+  {
+   "begin": "36.600",
+   "children": [],
+   "end": "37.000",
+   "id": "f000088",
+   "language": "eng",
+   "lines": [
+    "across"
+   ]
+  },
+  {
+   "begin": "37.000",
+   "children": [],
+   "end": "37.200",
+   "id": "f000089",
+   "language": "eng",
+   "lines": [
+    "a"
+   ]
+  },
+  {
+   "begin": "37.200",
+   "children": [],
+   "end": "37.520",
+   "id": "f000090",
+   "language": "eng",
+   "lines": [
+    "namesake"
+   ]
+  },
+  {
+   "begin": "37.520",
+   "children": [],
+   "end": "37.920",
+   "id": "f000091",
+   "language": "eng",
+   "lines": [
+    "sea"
+   ]
+  },
+  {
+   "begin": "37.920",
+   "children": [],
+   "end": "38.320",
+   "id": "f000092",
+   "language": "eng",
+   "lines": [
+    "from"
+   ]
+  },
+  {
+   "begin": "38.320",
+   "children": [],
+   "end": "39.880",
+   "id": "f000093",
+   "language": "eng",
+   "lines": [
+    "Korea?"
    ]
   }
  ]
