@@ -10,7 +10,7 @@ import aeneas.globalconstants as gc
 import media_creator as mc
 import pandas as pd
 
-def generate_sync_map(audio_file_path = "question.mp3", text_file_path = "myFile.txt", sync_map_file_path = "syncmap.json", question_number=5, subject="History"):
+def generate_sync_map(audio_file_path = "audio.mp3", text_file_path = "myFile.txt", sync_map_file_path = "syncmap.json", question_number=5, subject="History"):
     # Fetch and save the audio file
     mc.saveSpeaking(mc.fetchQuestion(question_number, subject))
     

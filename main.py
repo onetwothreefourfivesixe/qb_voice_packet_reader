@@ -1,12 +1,29 @@
 import pandas as pd
+import json
 import threading
 import time
 import forced_alignment as fa
-from playsound import playsound
+from pygame import mixer
+
+# Read from syncmap json
+def read_from_sync_json(readData = "begin", filePath = "syncmap.json"):
+    data = json.load(open(filePath))
+    arrayOfData = []
+    for fragment in data["fragments"]:
+        if readData == "begin":
+            arrayOfData.append(float(fragment["end"]) - float(fragment["begin"]))
+        else:
+            arrayOfData.append(fragment[readData])
+    return arrayOfData
 
 # Function to play audio
 def play_audio(file_path):
-    playsound(file_path)
+    mixer.init()
+    mixer.music.load(file_path)
+    mixer.music.play()
+    while mixer.music.get_busy():
+        time.sleep(0.1)
+    mixer.music.stop()
 
 # Function to print text from an array at intervals
 def print_text_at_intervals(text_array, intervals):
@@ -17,13 +34,15 @@ def print_text_at_intervals(text_array, intervals):
 fa.generate_sync_map()
 
 # File path to your audio file
-audio_file = 'path_to_your_audio_file.mp3'
+audio_file = "audio.mp3"
+
+
 
 # Array of text to print
-text_array = []
+text_array = read_from_sync_json("lines")
 
 # Array of intervals (in seconds) corresponding to each text
-intervals = []
+intervals = read_from_sync_json()
 
 # Create threads for playing audio and printing text
 audio_thread = threading.Thread(target=play_audio, args=(audio_file,))

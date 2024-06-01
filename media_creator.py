@@ -36,13 +36,13 @@ def fetchQuestion(difficulties=None, categories=None):
 
 def saveSpeaking(text = ""):
     engine = pyttsx3.init()
-    engine.save_to_file(text, "question.mp3")
+    engine.save_to_file(text, "audio.mp3")
     engine.runAndWait()
     print(text)
-    with open(os.path.join('qb_packet_reader/assets',"MyFile.txt"), "w") as outputFile:
+    with open("myFile.txt", "w", encoding='utf-8') as outputFile:
         sentences = text.split()
         for sentence in sentences:
             outputFile.write(sentence + "\n")
 
-    return "qb_packets_reader/assets/question.mp3"
+    return "audio.mp3"
 

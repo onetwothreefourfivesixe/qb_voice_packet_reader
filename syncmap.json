@@ -1,0 +1,1194 @@
+{
+ "fragments": [
+  {
+   "begin": "0.000",
+   "children": [],
+   "end": "0.360",
+   "id": "f000001",
+   "language": "eng",
+   "lines": [
+    "Pope"
+   ]
+  },
+  {
+   "begin": "0.360",
+   "children": [],
+   "end": "0.680",
+   "id": "f000002",
+   "language": "eng",
+   "lines": [
+    "Pius"
+   ]
+  },
+  {
+   "begin": "0.680",
+   "children": [],
+   "end": "1.080",
+   "id": "f000003",
+   "language": "eng",
+   "lines": [
+    "XI"
+   ]
+  },
+  {
+   "begin": "1.080",
+   "children": [],
+   "end": "1.280",
+   "id": "f000004",
+   "language": "eng",
+   "lines": [
+    "issued"
+   ]
+  },
+  {
+   "begin": "1.280",
+   "children": [],
+   "end": "1.440",
+   "id": "f000005",
+   "language": "eng",
+   "lines": [
+    "the"
+   ]
+  },
+  {
+   "begin": "1.440",
+   "children": [],
+   "end": "1.920",
+   "id": "f000006",
+   "language": "eng",
+   "lines": [
+    "encyclical"
+   ]
+  },
+  {
+   "begin": "1.920",
+   "children": [],
+   "end": "2.640",
+   "id": "f000007",
+   "language": "eng",
+   "lines": [
+    "\u201cDilectissima"
+   ]
+  },
+  {
+   "begin": "2.640",
+   "children": [],
+   "end": "2.920",
+   "id": "f000008",
+   "language": "eng",
+   "lines": [
+    "Nobis\u201d"
+   ]
+  },
+  {
+   "begin": "2.920",
+   "children": [],
+   "end": "3.040",
+   "id": "f000009",
+   "language": "eng",
+   "lines": [
+    "about"
+   ]
+  },
+  {
+   "begin": "3.040",
+   "children": [],
+   "end": "3.360",
+   "id": "f000010",
+   "language": "eng",
+   "lines": [
+    "church"
+   ]
+  },
+  {
+   "begin": "3.360",
+   "children": [],
+   "end": "3.920",
+   "id": "f000011",
+   "language": "eng",
+   "lines": [
+    "persecution"
+   ]
+  },
+  {
+   "begin": "3.920",
+   "children": [],
+   "end": "4.000",
+   "id": "f000012",
+   "language": "eng",
+   "lines": [
+    "in"
+   ]
+  },
+  {
+   "begin": "4.000",
+   "children": [],
+   "end": "4.200",
+   "id": "f000013",
+   "language": "eng",
+   "lines": [
+    "this"
+   ]
+  },
+  {
+   "begin": "4.200",
+   "children": [],
+   "end": "4.560",
+   "id": "f000014",
+   "language": "eng",
+   "lines": [
+    "country."
+   ]
+  },
+  {
+   "begin": "4.560",
+   "children": [],
+   "end": "5.400",
+   "id": "f000015",
+   "language": "eng",
+   "lines": [
+    "A"
+   ]
+  },
+  {
+   "begin": "5.400",
+   "children": [],
+   "end": "5.640",
+   "id": "f000016",
+   "language": "eng",
+   "lines": [
+    "writer"
+   ]
+  },
+  {
+   "begin": "5.640",
+   "children": [],
+   "end": "5.760",
+   "id": "f000017",
+   "language": "eng",
+   "lines": [
+    "from"
+   ]
+  },
+  {
+   "begin": "5.760",
+   "children": [],
+   "end": "5.960",
+   "id": "f000018",
+   "language": "eng",
+   "lines": [
+    "this"
+   ]
+  },
+  {
+   "begin": "5.960",
+   "children": [],
+   "end": "6.280",
+   "id": "f000019",
+   "language": "eng",
+   "lines": [
+    "modern"
+   ]
+  },
+  {
+   "begin": "6.280",
+   "children": [],
+   "end": "6.440",
+   "id": "f000020",
+   "language": "eng",
+   "lines": [
+    "day"
+   ]
+  },
+  {
+   "begin": "6.440",
+   "children": [],
+   "end": "6.760",
+   "id": "f000021",
+   "language": "eng",
+   "lines": [
+    "country"
+   ]
+  },
+  {
+   "begin": "6.760",
+   "children": [],
+   "end": "6.960",
+   "id": "f000022",
+   "language": "eng",
+   "lines": [
+    "was"
+   ]
+  },
+  {
+   "begin": "6.960",
+   "children": [],
+   "end": "7.320",
+   "id": "f000023",
+   "language": "eng",
+   "lines": [
+    "imprisoned"
+   ]
+  },
+  {
+   "begin": "7.320",
+   "children": [],
+   "end": "7.440",
+   "id": "f000024",
+   "language": "eng",
+   "lines": [
+    "for"
+   ]
+  },
+  {
+   "begin": "7.440",
+   "children": [],
+   "end": "7.640",
+   "id": "f000025",
+   "language": "eng",
+   "lines": [
+    "four"
+   ]
+  },
+  {
+   "begin": "7.640",
+   "children": [],
+   "end": "8.240",
+   "id": "f000026",
+   "language": "eng",
+   "lines": [
+    "years"
+   ]
+  },
+  {
+   "begin": "8.240",
+   "children": [],
+   "end": "8.600",
+   "id": "f000027",
+   "language": "eng",
+   "lines": [
+    "for"
+   ]
+  },
+  {
+   "begin": "8.600",
+   "children": [],
+   "end": "9.440",
+   "id": "f000028",
+   "language": "eng",
+   "lines": [
+    "translating"
+   ]
+  },
+  {
+   "begin": "9.440",
+   "children": [],
+   "end": "9.440",
+   "id": "f000029",
+   "language": "eng",
+   "lines": [
+    "the"
+   ]
+  },
+  {
+   "begin": "9.440",
+   "children": [],
+   "end": "9.440",
+   "id": "f000030",
+   "language": "eng",
+   "lines": [
+    "Song"
+   ]
+  },
+  {
+   "begin": "9.440",
+   "children": [],
+   "end": "9.440",
+   "id": "f000031",
+   "language": "eng",
+   "lines": [
+    "of"
+   ]
+  },
+  {
+   "begin": "9.440",
+   "children": [],
+   "end": "10.080",
+   "id": "f000032",
+   "language": "eng",
+   "lines": [
+    "Songs."
+   ]
+  },
+  {
+   "begin": "10.080",
+   "children": [],
+   "end": "10.240",
+   "id": "f000033",
+   "language": "eng",
+   "lines": [
+    "The"
+   ]
+  },
+  {
+   "begin": "10.240",
+   "children": [],
+   "end": "10.480",
+   "id": "f000034",
+   "language": "eng",
+   "lines": [
+    "Jewish"
+   ]
+  },
+  {
+   "begin": "10.480",
+   "children": [],
+   "end": "10.800",
+   "id": "f000035",
+   "language": "eng",
+   "lines": [
+    "vizier"
+   ]
+  },
+  {
+   "begin": "10.800",
+   "children": [],
+   "end": "11.040",
+   "id": "f000036",
+   "language": "eng",
+   "lines": [
+    "Joseph"
+   ]
+  },
+  {
+   "begin": "11.040",
+   "children": [],
+   "end": "11.240",
+   "id": "f000037",
+   "language": "eng",
+   "lines": [
+    "ibn"
+   ]
+  },
+  {
+   "begin": "11.240",
+   "children": [],
+   "end": "11.720",
+   "id": "f000038",
+   "language": "eng",
+   "lines": [
+    "Naghrela"
+   ]
+  },
+  {
+   "begin": "11.720",
+   "children": [],
+   "end": "12.120",
+   "id": "f000039",
+   "language": "eng",
+   "lines": [
+    "was"
+   ]
+  },
+  {
+   "begin": "12.120",
+   "children": [],
+   "end": "12.320",
+   "id": "f000040",
+   "language": "eng",
+   "lines": [
+    "killed"
+   ]
+  },
+  {
+   "begin": "12.320",
+   "children": [],
+   "end": "12.320",
+   "id": "f000041",
+   "language": "eng",
+   "lines": [
+    "in"
+   ]
+  },
+  {
+   "begin": "12.320",
+   "children": [],
+   "end": "12.480",
+   "id": "f000042",
+   "language": "eng",
+   "lines": [
+    "a"
+   ]
+  },
+  {
+   "begin": "12.480",
+   "children": [],
+   "end": "13.760",
+   "id": "f000043",
+   "language": "eng",
+   "lines": [
+    "1066"
+   ]
+  },
+  {
+   "begin": "13.760",
+   "children": [],
+   "end": "14.280",
+   "id": "f000044",
+   "language": "eng",
+   "lines": [
+    "massacre"
+   ]
+  },
+  {
+   "begin": "14.280",
+   "children": [],
+   "end": "14.280",
+   "id": "f000045",
+   "language": "eng",
+   "lines": [
+    "in"
+   ]
+  },
+  {
+   "begin": "14.280",
+   "children": [],
+   "end": "14.280",
+   "id": "f000046",
+   "language": "eng",
+   "lines": [
+    "here"
+   ]
+  },
+  {
+   "begin": "14.280",
+   "children": [],
+   "end": "14.520",
+   "id": "f000047",
+   "language": "eng",
+   "lines": [
+    "during"
+   ]
+  },
+  {
+   "begin": "14.520",
+   "children": [],
+   "end": "14.760",
+   "id": "f000048",
+   "language": "eng",
+   "lines": [
+    "an"
+   ]
+  },
+  {
+   "begin": "14.760",
+   "children": [],
+   "end": "15.160",
+   "id": "f000049",
+   "language": "eng",
+   "lines": [
+    "overall"
+   ]
+  },
+  {
+   "begin": "15.160",
+   "children": [],
+   "end": "15.520",
+   "id": "f000050",
+   "language": "eng",
+   "lines": [
+    "peaceful"
+   ]
+  },
+  {
+   "begin": "15.520",
+   "children": [],
+   "end": "15.960",
+   "id": "f000051",
+   "language": "eng",
+   "lines": [
+    "period"
+   ]
+  },
+  {
+   "begin": "15.960",
+   "children": [],
+   "end": "16.120",
+   "id": "f000052",
+   "language": "eng",
+   "lines": [
+    "of"
+   ]
+  },
+  {
+   "begin": "16.120",
+   "children": [],
+   "end": "16.360",
+   "id": "f000053",
+   "language": "eng",
+   "lines": [
+    "religious"
+   ]
+  },
+  {
+   "begin": "16.360",
+   "children": [],
+   "end": "16.760",
+   "id": "f000054",
+   "language": "eng",
+   "lines": [
+    "tolerance"
+   ]
+  },
+  {
+   "begin": "16.760",
+   "children": [],
+   "end": "16.920",
+   "id": "f000055",
+   "language": "eng",
+   "lines": [
+    "known"
+   ]
+  },
+  {
+   "begin": "16.920",
+   "children": [],
+   "end": "17.240",
+   "id": "f000056",
+   "language": "eng",
+   "lines": [
+    "as"
+   ]
+  },
+  {
+   "begin": "17.240",
+   "children": [],
+   "end": "17.240",
+   "id": "f000057",
+   "language": "eng",
+   "lines": [
+    "\u201cThe"
+   ]
+  },
+  {
+   "begin": "17.240",
+   "children": [],
+   "end": "18.680",
+   "id": "f000058",
+   "language": "eng",
+   "lines": [
+    "Coexistence.\u201d"
+   ]
+  },
+  {
+   "begin": "18.680",
+   "children": [],
+   "end": "18.760",
+   "id": "f000059",
+   "language": "eng",
+   "lines": [
+    "Important"
+   ]
+  },
+  {
+   "begin": "18.760",
+   "children": [],
+   "end": "18.800",
+   "id": "f000060",
+   "language": "eng",
+   "lines": [
+    "centers"
+   ]
+  },
+  {
+   "begin": "18.800",
+   "children": [],
+   "end": "19.520",
+   "id": "f000061",
+   "language": "eng",
+   "lines": [
+    "of"
+   ]
+  },
+  {
+   "begin": "19.520",
+   "children": [],
+   "end": "20.080",
+   "id": "f000062",
+   "language": "eng",
+   "lines": [
+    "scholarship"
+   ]
+  },
+  {
+   "begin": "20.080",
+   "children": [],
+   "end": "20.160",
+   "id": "f000063",
+   "language": "eng",
+   "lines": [
+    "in"
+   ]
+  },
+  {
+   "begin": "20.160",
+   "children": [],
+   "end": "20.360",
+   "id": "f000064",
+   "language": "eng",
+   "lines": [
+    "what"
+   ]
+  },
+  {
+   "begin": "20.360",
+   "children": [],
+   "end": "20.480",
+   "id": "f000065",
+   "language": "eng",
+   "lines": [
+    "is"
+   ]
+  },
+  {
+   "begin": "20.480",
+   "children": [],
+   "end": "20.720",
+   "id": "f000066",
+   "language": "eng",
+   "lines": [
+    "now"
+   ]
+  },
+  {
+   "begin": "20.720",
+   "children": [],
+   "end": "20.840",
+   "id": "f000067",
+   "language": "eng",
+   "lines": [
+    "this"
+   ]
+  },
+  {
+   "begin": "20.840",
+   "children": [],
+   "end": "21.120",
+   "id": "f000068",
+   "language": "eng",
+   "lines": [
+    "country"
+   ]
+  },
+  {
+   "begin": "21.120",
+   "children": [],
+   "end": "21.440",
+   "id": "f000069",
+   "language": "eng",
+   "lines": [
+    "include"
+   ]
+  },
+  {
+   "begin": "21.440",
+   "children": [],
+   "end": "21.480",
+   "id": "f000070",
+   "language": "eng",
+   "lines": [
+    "the"
+   ]
+  },
+  {
+   "begin": "21.480",
+   "children": [],
+   "end": "21.880",
+   "id": "f000071",
+   "language": "eng",
+   "lines": [
+    "Nasrid"
+   ]
+  },
+  {
+   "begin": "21.880",
+   "children": [],
+   "end": "21.880",
+   "id": "f000072",
+   "language": "eng",
+   "lines": [
+    "court"
+   ]
+  },
+  {
+   "begin": "21.880",
+   "children": [],
+   "end": "21.880",
+   "id": "f000073",
+   "language": "eng",
+   "lines": [
+    "and"
+   ]
+  },
+  {
+   "begin": "21.880",
+   "children": [],
+   "end": "22.320",
+   "id": "f000074",
+   "language": "eng",
+   "lines": [
+    "the"
+   ]
+  },
+  {
+   "begin": "22.320",
+   "children": [],
+   "end": "22.880",
+   "id": "f000075",
+   "language": "eng",
+   "lines": [
+    "University"
+   ]
+  },
+  {
+   "begin": "22.880",
+   "children": [],
+   "end": "22.960",
+   "id": "f000076",
+   "language": "eng",
+   "lines": [
+    "of"
+   ]
+  },
+  {
+   "begin": "22.960",
+   "children": [],
+   "end": "24.280",
+   "id": "f000077",
+   "language": "eng",
+   "lines": [
+    "Salamanca."
+   ]
+  },
+  {
+   "begin": "24.280",
+   "children": [],
+   "end": "24.640",
+   "id": "f000078",
+   "language": "eng",
+   "lines": [
+    "Along"
+   ]
+  },
+  {
+   "begin": "24.640",
+   "children": [],
+   "end": "24.680",
+   "id": "f000079",
+   "language": "eng",
+   "lines": [
+    "with"
+   ]
+  },
+  {
+   "begin": "24.680",
+   "children": [],
+   "end": "24.840",
+   "id": "f000080",
+   "language": "eng",
+   "lines": [
+    "its"
+   ]
+  },
+  {
+   "begin": "24.840",
+   "children": [],
+   "end": "25.200",
+   "id": "f000081",
+   "language": "eng",
+   "lines": [
+    "western"
+   ]
+  },
+  {
+   "begin": "25.200",
+   "children": [],
+   "end": "25.560",
+   "id": "f000082",
+   "language": "eng",
+   "lines": [
+    "neighbor,"
+   ]
+  },
+  {
+   "begin": "25.560",
+   "children": [],
+   "end": "25.600",
+   "id": "f000083",
+   "language": "eng",
+   "lines": [
+    "this"
+   ]
+  },
+  {
+   "begin": "25.600",
+   "children": [],
+   "end": "26.080",
+   "id": "f000084",
+   "language": "eng",
+   "lines": [
+    "country"
+   ]
+  },
+  {
+   "begin": "26.080",
+   "children": [],
+   "end": "26.600",
+   "id": "f000085",
+   "language": "eng",
+   "lines": [
+    "carried"
+   ]
+  },
+  {
+   "begin": "26.600",
+   "children": [],
+   "end": "26.720",
+   "id": "f000086",
+   "language": "eng",
+   "lines": [
+    "out"
+   ]
+  },
+  {
+   "begin": "26.720",
+   "children": [],
+   "end": "27.000",
+   "id": "f000087",
+   "language": "eng",
+   "lines": [
+    "many"
+   ]
+  },
+  {
+   "begin": "27.000",
+   "children": [],
+   "end": "27.520",
+   "id": "f000088",
+   "language": "eng",
+   "lines": [
+    "auto-da-fe"
+   ]
+  },
+  {
+   "begin": "27.520",
+   "children": [],
+   "end": "27.920",
+   "id": "f000089",
+   "language": "eng",
+   "lines": [
+    "rituals"
+   ]
+  },
+  {
+   "begin": "27.920",
+   "children": [],
+   "end": "28.200",
+   "id": "f000090",
+   "language": "eng",
+   "lines": [
+    "against"
+   ]
+  },
+  {
+   "begin": "28.200",
+   "children": [],
+   "end": "28.720",
+   "id": "f000091",
+   "language": "eng",
+   "lines": [
+    "heretics."
+   ]
+  },
+  {
+   "begin": "28.720",
+   "children": [],
+   "end": "29.560",
+   "id": "f000092",
+   "language": "eng",
+   "lines": [
+    "This"
+   ]
+  },
+  {
+   "begin": "29.560",
+   "children": [],
+   "end": "29.840",
+   "id": "f000093",
+   "language": "eng",
+   "lines": [
+    "modern"
+   ]
+  },
+  {
+   "begin": "29.840",
+   "children": [],
+   "end": "30.000",
+   "id": "f000094",
+   "language": "eng",
+   "lines": [
+    "day"
+   ]
+  },
+  {
+   "begin": "30.000",
+   "children": [],
+   "end": "30.400",
+   "id": "f000095",
+   "language": "eng",
+   "lines": [
+    "country"
+   ]
+  },
+  {
+   "begin": "30.400",
+   "children": [],
+   "end": "30.680",
+   "id": "f000096",
+   "language": "eng",
+   "lines": [
+    "expelled"
+   ]
+  },
+  {
+   "begin": "30.680",
+   "children": [],
+   "end": "31.120",
+   "id": "f000097",
+   "language": "eng",
+   "lines": [
+    "Sephardic"
+   ]
+  },
+  {
+   "begin": "31.120",
+   "children": [],
+   "end": "31.400",
+   "id": "f000098",
+   "language": "eng",
+   "lines": [
+    "Jews"
+   ]
+  },
+  {
+   "begin": "31.400",
+   "children": [],
+   "end": "31.440",
+   "id": "f000099",
+   "language": "eng",
+   "lines": [
+    "in"
+   ]
+  },
+  {
+   "begin": "31.440",
+   "children": [],
+   "end": "32.160",
+   "id": "f000100",
+   "language": "eng",
+   "lines": [
+    "1492"
+   ]
+  },
+  {
+   "begin": "32.160",
+   "children": [],
+   "end": "32.520",
+   "id": "f000101",
+   "language": "eng",
+   "lines": [
+    "after"
+   ]
+  },
+  {
+   "begin": "32.520",
+   "children": [],
+   "end": "32.720",
+   "id": "f000102",
+   "language": "eng",
+   "lines": [
+    "the"
+   ]
+  },
+  {
+   "begin": "32.720",
+   "children": [],
+   "end": "33.240",
+   "id": "f000103",
+   "language": "eng",
+   "lines": [
+    "Alhambra"
+   ]
+  },
+  {
+   "begin": "33.240",
+   "children": [],
+   "end": "33.400",
+   "id": "f000104",
+   "language": "eng",
+   "lines": [
+    "decree"
+   ]
+  },
+  {
+   "begin": "33.400",
+   "children": [],
+   "end": "33.600",
+   "id": "f000105",
+   "language": "eng",
+   "lines": [
+    "was"
+   ]
+  },
+  {
+   "begin": "33.600",
+   "children": [],
+   "end": "33.920",
+   "id": "f000106",
+   "language": "eng",
+   "lines": [
+    "issued."
+   ]
+  },
+  {
+   "begin": "33.920",
+   "children": [],
+   "end": "34.800",
+   "id": "f000107",
+   "language": "eng",
+   "lines": [
+    "For"
+   ]
+  },
+  {
+   "begin": "34.800",
+   "children": [],
+   "end": "35.000",
+   "id": "f000108",
+   "language": "eng",
+   "lines": [
+    "10"
+   ]
+  },
+  {
+   "begin": "35.000",
+   "children": [],
+   "end": "35.480",
+   "id": "f000109",
+   "language": "eng",
+   "lines": [
+    "points,"
+   ]
+  },
+  {
+   "begin": "35.480",
+   "children": [],
+   "end": "35.960",
+   "id": "f000110",
+   "language": "eng",
+   "lines": [
+    "name"
+   ]
+  },
+  {
+   "begin": "35.960",
+   "children": [],
+   "end": "36.040",
+   "id": "f000111",
+   "language": "eng",
+   "lines": [
+    "this"
+   ]
+  },
+  {
+   "begin": "36.040",
+   "children": [],
+   "end": "36.400",
+   "id": "f000112",
+   "language": "eng",
+   "lines": [
+    "site"
+   ]
+  },
+  {
+   "begin": "36.400",
+   "children": [],
+   "end": "36.560",
+   "id": "f000113",
+   "language": "eng",
+   "lines": [
+    "of"
+   ]
+  },
+  {
+   "begin": "36.560",
+   "children": [],
+   "end": "37.160",
+   "id": "f000114",
+   "language": "eng",
+   "lines": [
+    "Ferdinand"
+   ]
+  },
+  {
+   "begin": "37.160",
+   "children": [],
+   "end": "37.160",
+   "id": "f000115",
+   "language": "eng",
+   "lines": [
+    "II\u2019s"
+   ]
+  },
+  {
+   "begin": "37.160",
+   "children": [],
+   "end": "37.280",
+   "id": "f000116",
+   "language": "eng",
+   "lines": [
+    "brutal"
+   ]
+  },
+  {
+   "begin": "37.280",
+   "children": [],
+   "end": "38.040",
+   "id": "f000117",
+   "language": "eng",
+   "lines": [
+    "Inquisition"
+   ]
+  },
+  {
+   "begin": "38.040",
+   "children": [],
+   "end": "38.320",
+   "id": "f000118",
+   "language": "eng",
+   "lines": [
+    "against"
+   ]
+  },
+  {
+   "begin": "38.320",
+   "children": [],
+   "end": "39.600",
+   "id": "f000119",
+   "language": "eng",
+   "lines": [
+    "non-Christians."
+   ]
+  }
+ ]
+}
