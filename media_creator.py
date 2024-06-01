@@ -1,4 +1,5 @@
-import pyttsx3
+# import pyttsx3
+from gtts import gTTS
 import json
 import re
 import os
@@ -35,9 +36,11 @@ def fetchQuestion(difficulties=None, categories=None):
         return "An error" 
 
 def saveSpeaking(text = ""):
-    engine = pyttsx3.init()
-    engine.save_to_file(text, "audio.mp3")
-    engine.runAndWait()
+    # engine = pyttsx3.init()
+    # engine.save_to_file(text, "audio.mp3")
+    # engine.runAndWait()
+    myobj = gTTS(text=text, lang="en", slow=False)
+    myobj.save("audio.mp3")
     print(text)
     with open("myFile.txt", "w", encoding='utf-8') as outputFile:
         sentences = text.split()
