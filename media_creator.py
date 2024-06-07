@@ -3,7 +3,7 @@ from gtts import gTTS
 import json
 import re
 import os
-import requests 
+import requests
 
 def fetchQuestion(difficulties=None, categories=None):
     url = 'https://www.qbreader.org/api/random-tossup'
@@ -24,12 +24,13 @@ def fetchQuestion(difficulties=None, categories=None):
     
     if response.status_code == 200:
         data = response.json()
-        tossups = data['tossups'][0]['question']
+        tossups = data['tossups'][0]['question_sanitized']
+        answer = data['tossups'][0]['answer_sanitized']
         # Clean the tossups from HTML tags, parentheses, and brackets
         tossups = re.sub(r'<[^>]*>', '', tossups)
         tossups = re.sub(r'\([^)]*\)', '', tossups)
         tossups = re.sub(r'\[[^\]]*\]', '', tossups)
-        return tossups
+        return tossups, answer
     else:
         print(f"Error: {response.status_code}")
         print(response.text)
@@ -39,8 +40,10 @@ def saveSpeaking(text = ""):
     # engine = pyttsx3.init()
     # engine.save_to_file(text, "audio.mp3")
     # engine.runAndWait()
-    myobj = gTTS(text=text, lang="en", slow=False)
-    myobj.save("audio.mp3")
+    os.remove("audio.mp3")
+    tts = gTTS(text=text, lang='en')
+    audio_file_path = 'audio.mp3'
+    tts.save(audio_file_path)
     print(text)
     with open("myFile.txt", "w", encoding='utf-8') as outputFile:
         sentences = text.split()
