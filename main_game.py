@@ -3,9 +3,9 @@ import json
 import pygame
 import forced_alignment
 import time
+import pygame_textinput
 
 # helper function
-
 def read_from_sync_json(readData="begin", filePath="syncmap.json"):
     with open(filePath, 'r') as file:
         data = json.load(file)
@@ -18,11 +18,9 @@ def read_from_sync_json(readData="begin", filePath="syncmap.json"):
     return arrayOfData
 
 # question setup
-answer = forced_alignment.generate_sync_map()
+answer = ""
 text_array = []
-with io.open('myFile.txt', 'r', encoding='utf-8') as questions:
-    text_array = questions.read().split("\n")
-intervals = read_from_sync_json()
+intervals = []
 
 # pygame setup
 pygame.init()
@@ -32,14 +30,13 @@ screen = pygame.display.set_mode((length, height))
 clock = pygame.time.Clock()
 running = True
 audio_file = "audio.mp3"
-
-pygame.mixer.music.load(audio_file)
+textinput = pygame_textinput.TextInputVisualizer()
 
 # used variables
 displayedText = []
 currentLine = ""
 currentWord = 0
-currentYLocation = 10
+currentYLocation = 30
 paused = False
 pause_duration = 2  # in seconds
 start = False
@@ -59,28 +56,33 @@ while running:
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_s and not start:
                 start = True
-                if nextQuestion:
-                    displayedText = []
-                    currentLine = ""
-                    currentWord = 0
-                    forced_alignment.generate_sync_map()
-                    print("Made Sync Map")
-                    text_array = []
-                    with io.open('myFile.txt', 'r', encoding='utf-8') as questions:
-                        print("Splitting and processing text")
-                        text_array = questions.read().split("\n")
-                    intervals = read_from_sync_json()
-                    pygame.mixer.music.load(audio_file)
-
+                displayedText = []
+                currentLine = ""
+                currentWord = 0
+                answer = forced_alignment.generate_sync_map()
+                print("Made Sync Map")
+                text_array = []
+                with io.open('myFile.txt', 'r', encoding='utf-8') as questions:
+                    print("Splitting and processing text")
+                    text_array = questions.read().split("\n")
+                intervals = read_from_sync_json()
+                pygame.mixer.music.load(audio_file)
                 print("Played audio")
                 pygame.mixer.music.play()
             if event.key == pygame.K_SPACE:
                 paused = not paused
                 if paused:
                     pygame.mixer.music.pause()
-                else:
-                    pygame.mixer.music.unpause()
-                    audio_start_time = time.time() - (pygame.mixer.music.get_pos() / 1000)  # Adjust text start time based on audio position
+                # else:
+                #     pygame.mixer.music.unpause()
+                #     audio_start_time = time.time() - (pygame.mixer.music.get_pos() / 1000)  # Adjust text start time based on audio position
+                #     time.sleep(0.05)
+            if event.key == pygame.K_RETURN:
+                paused = not paused
+                print(textinput.value)
+                pygame.mixer.music.unpause()
+                audio_start_time = time.time() - (pygame.mixer.music.get_pos() / 1000)  # Adjust text start time based on audio position
+                time.sleep(0.05)
 
     # game logic
     if not paused:
@@ -97,7 +99,7 @@ while running:
             #print(audio_elapsed, text_elapsed)
 
             # Synchronize text display with audio playback position
-            if text_elapsed >= intervals[currentWord] - 0.01:
+            if text_elapsed >= intervals[currentWord]:
                 currentLine += " " + str(text_array[currentWord])
                 currentWord += 1
                 text_start_time = time.time()
@@ -110,6 +112,15 @@ while running:
     screen.fill("white")
 
     # RENDER YOUR GAME HERE
+    answerPrompt = font.render("Answer: ", True, (0, 0, 0))
+    screen.blit(answerPrompt, (30, 10))
+    if paused:
+        events = pygame.event.get()
+        # Feed it with events every frame
+        textinput.update(events)
+        # Blit its surface onto the screen
+        screen.blit(textinput.surface, (100, 10))
+
     previousYLocation = currentYLocation
     topLine = font.render(str(currentLine), True, (0, 0, 0))
     screen.blit(topLine, (30, currentYLocation + (20 * (len(displayedText) + 1))))
@@ -120,6 +131,7 @@ while running:
 
     # flip() the display to put your work on screen
     pygame.display.flip()
+    pygame.display.update()
 
     clock.tick(120)  # limits FPS to 60
 

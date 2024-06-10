@@ -3,147 +3,147 @@
   {
    "begin": "0.000",
    "children": [],
-   "end": "0.440",
+   "end": "0.560",
    "id": "f000001",
    "language": "eng",
    "lines": [
-    "Paul"
+    "E.C."
    ]
   },
   {
-   "begin": "0.440",
+   "begin": "0.560",
    "children": [],
-   "end": "1.200",
+   "end": "1.080",
    "id": "f000002",
    "language": "eng",
    "lines": [
-    "Hausser"
+    "Booz's"
    ]
   },
   {
-   "begin": "1.200",
+   "begin": "1.080",
    "children": [],
-   "end": "1.520",
+   "end": "1.760",
    "id": "f000003",
    "language": "eng",
    "lines": [
-    "earned"
+    "distinctive"
    ]
   },
   {
-   "begin": "1.520",
+   "begin": "1.760",
    "children": [],
-   "end": "1.520",
+   "end": "2.240",
    "id": "f000004",
    "language": "eng",
    "lines": [
-    "the"
+    "whiskey"
    ]
   },
   {
-   "begin": "1.520",
+   "begin": "2.240",
    "children": [],
-   "end": "1.640",
+   "end": "3.000",
    "id": "f000005",
    "language": "eng",
    "lines": [
-    "Oak"
+    "bottles"
    ]
   },
   {
-   "begin": "1.640",
+   "begin": "3.000",
    "children": [],
-   "end": "1.920",
+   "end": "3.000",
    "id": "f000006",
    "language": "eng",
    "lines": [
-    "Leaves"
+    "in"
    ]
   },
   {
-   "begin": "1.920",
+   "begin": "3.000",
    "children": [],
-   "end": "2.280",
+   "end": "3.120",
    "id": "f000007",
    "language": "eng",
    "lines": [
-    "after"
-   ]
-  },
-  {
-   "begin": "2.280",
-   "children": [],
-   "end": "2.720",
-   "id": "f000008",
-   "language": "eng",
-   "lines": [
-    "this"
-   ]
-  },
-  {
-   "begin": "2.720",
-   "children": [],
-   "end": "3.120",
-   "id": "f000009",
-   "language": "eng",
-   "lines": [
-    "battle"
+    "support"
    ]
   },
   {
    "begin": "3.120",
    "children": [],
    "end": "3.400",
-   "id": "f000010",
+   "id": "f000008",
    "language": "eng",
    "lines": [
-    "despite"
+    "of"
    ]
   },
   {
    "begin": "3.400",
    "children": [],
    "end": "3.640",
-   "id": "f000011",
+   "id": "f000009",
    "language": "eng",
    "lines": [
-    "disobeying"
+    "this"
    ]
   },
   {
    "begin": "3.640",
    "children": [],
-   "end": "4.040",
-   "id": "f000012",
+   "end": "4.320",
+   "id": "f000010",
    "language": "eng",
    "lines": [
-    "Hitler"
+    "candidate"
    ]
   },
   {
-   "begin": "4.040",
+   "begin": "4.320",
    "children": [],
-   "end": "4.520",
-   "id": "f000013",
+   "end": "4.400",
+   "id": "f000011",
    "language": "eng",
    "lines": [
-    "and"
+    "are"
+   ]
+  },
+  {
+   "begin": "4.400",
+   "children": [],
+   "end": "4.520",
+   "id": "f000012",
+   "language": "eng",
+   "lines": [
+    "the"
    ]
   },
   {
    "begin": "4.520",
    "children": [],
-   "end": "5.160",
-   "id": "f000014",
+   "end": "4.960",
+   "id": "f000013",
    "language": "eng",
    "lines": [
-    "withdrawing"
+    "source"
    ]
   },
   {
-   "begin": "5.160",
+   "begin": "4.960",
    "children": [],
-   "end": "6.560",
+   "end": "5.080",
+   "id": "f000014",
+   "language": "eng",
+   "lines": [
+    "for"
+   ]
+  },
+  {
+   "begin": "5.080",
+   "children": [],
+   "end": "5.200",
    "id": "f000015",
    "language": "eng",
    "lines": [
@@ -151,469 +151,469 @@
    ]
   },
   {
-   "begin": "6.560",
+   "begin": "5.200",
    "children": [],
-   "end": "7.640",
+   "end": "5.720",
    "id": "f000016",
    "language": "eng",
    "lines": [
-    "SS-Panzer"
+    "term"
    ]
   },
   {
-   "begin": "7.640",
+   "begin": "5.720",
    "children": [],
-   "end": "8.440",
+   "end": "7.360",
    "id": "f000017",
    "language": "eng",
    "lines": [
-    "Corps."
+    "\"booze.\""
    ]
   },
   {
-   "begin": "8.440",
+   "begin": "7.360",
    "children": [],
-   "end": "8.840",
+   "end": "7.680",
    "id": "f000018",
    "language": "eng",
    "lines": [
-    "Before"
+    "Supporters"
    ]
   },
   {
-   "begin": "8.840",
+   "begin": "7.680",
    "children": [],
-   "end": "9.160",
+   "end": "8.200",
    "id": "f000019",
+   "language": "eng",
+   "lines": [
+    "of"
+   ]
+  },
+  {
+   "begin": "8.200",
+   "children": [],
+   "end": "8.480",
+   "id": "f000020",
    "language": "eng",
    "lines": [
     "this"
    ]
   },
   {
-   "begin": "9.160",
+   "begin": "8.480",
    "children": [],
-   "end": "9.880",
-   "id": "f000020",
-   "language": "eng",
-   "lines": [
-    "battle,"
-   ]
-  },
-  {
-   "begin": "9.880",
-   "children": [],
-   "end": "10.200",
+   "end": "9.080",
    "id": "f000021",
    "language": "eng",
    "lines": [
-    "one"
+    "candidate"
    ]
   },
   {
-   "begin": "10.200",
+   "begin": "9.080",
    "children": [],
-   "end": "10.680",
+   "end": "9.560",
    "id": "f000022",
    "language": "eng",
    "lines": [
-    "side\u2019s"
+    "pushing"
    ]
   },
   {
-   "begin": "10.680",
+   "begin": "9.560",
    "children": [],
-   "end": "11.280",
+   "end": "9.920",
    "id": "f000023",
    "language": "eng",
    "lines": [
-    "forces"
+    "leather"
    ]
   },
   {
-   "begin": "11.280",
+   "begin": "9.920",
    "children": [],
-   "end": "11.840",
+   "end": "10.160",
    "id": "f000024",
-   "language": "eng",
-   "lines": [
-    "became"
-   ]
-  },
-  {
-   "begin": "11.840",
-   "children": [],
-   "end": "12.640",
-   "id": "f000025",
-   "language": "eng",
-   "lines": [
-    "overextended"
-   ]
-  },
-  {
-   "begin": "12.640",
-   "children": [],
-   "end": "12.840",
-   "id": "f000026",
-   "language": "eng",
-   "lines": [
-    "after"
-   ]
-  },
-  {
-   "begin": "12.840",
-   "children": [],
-   "end": "13.480",
-   "id": "f000027",
-   "language": "eng",
-   "lines": [
-    "rapid"
-   ]
-  },
-  {
-   "begin": "13.480",
-   "children": [],
-   "end": "14.120",
-   "id": "f000028",
-   "language": "eng",
-   "lines": [
-    "advances"
-   ]
-  },
-  {
-   "begin": "14.120",
-   "children": [],
-   "end": "14.560",
-   "id": "f000029",
-   "language": "eng",
-   "lines": [
-    "during"
-   ]
-  },
-  {
-   "begin": "14.560",
-   "children": [],
-   "end": "15.200",
-   "id": "f000030",
-   "language": "eng",
-   "lines": [
-    "Operations"
-   ]
-  },
-  {
-   "begin": "15.200",
-   "children": [],
-   "end": "15.840",
-   "id": "f000031",
-   "language": "eng",
-   "lines": [
-    "Star"
-   ]
-  },
-  {
-   "begin": "15.840",
-   "children": [],
-   "end": "16.920",
-   "id": "f000032",
    "language": "eng",
    "lines": [
     "and"
    ]
   },
   {
-   "begin": "16.920",
+   "begin": "10.160",
    "children": [],
-   "end": "17.560",
-   "id": "f000033",
+   "end": "10.520",
+   "id": "f000025",
    "language": "eng",
    "lines": [
-    "Gallop,"
+    "tin"
    ]
   },
   {
-   "begin": "17.560",
+   "begin": "10.520",
    "children": [],
-   "end": "18.040",
-   "id": "f000034",
+   "end": "11.040",
+   "id": "f000026",
    "language": "eng",
    "lines": [
-    "allowing"
+    "spheres"
    ]
   },
   {
-   "begin": "18.040",
+   "begin": "11.040",
    "children": [],
-   "end": "18.040",
-   "id": "f000035",
-   "language": "eng",
-   "lines": [
-    "the"
-   ]
-  },
-  {
-   "begin": "18.040",
-   "children": [],
-   "end": "18.040",
-   "id": "f000036",
-   "language": "eng",
-   "lines": [
-    "other"
-   ]
-  },
-  {
-   "begin": "18.040",
-   "children": [],
-   "end": "18.200",
-   "id": "f000037",
+   "end": "11.320",
+   "id": "f000027",
    "language": "eng",
    "lines": [
     "to"
    ]
   },
   {
-   "begin": "18.200",
+   "begin": "11.320",
    "children": [],
-   "end": "18.640",
-   "id": "f000038",
+   "end": "11.600",
+   "id": "f000028",
    "language": "eng",
    "lines": [
-    "execute"
+    "campaign"
    ]
   },
   {
-   "begin": "18.640",
+   "begin": "11.600",
    "children": [],
-   "end": "18.880",
+   "end": "12.160",
+   "id": "f000029",
+   "language": "eng",
+   "lines": [
+    "stops"
+   ]
+  },
+  {
+   "begin": "12.160",
+   "children": [],
+   "end": "12.800",
+   "id": "f000030",
+   "language": "eng",
+   "lines": [
+    "originated"
+   ]
+  },
+  {
+   "begin": "12.800",
+   "children": [],
+   "end": "13.760",
+   "id": "f000031",
+   "language": "eng",
+   "lines": [
+    "the"
+   ]
+  },
+  {
+   "begin": "13.760",
+   "children": [],
+   "end": "14.240",
+   "id": "f000032",
+   "language": "eng",
+   "lines": [
+    "phrase"
+   ]
+  },
+  {
+   "begin": "14.240",
+   "children": [],
+   "end": "14.520",
+   "id": "f000033",
+   "language": "eng",
+   "lines": [
+    "\"keep"
+   ]
+  },
+  {
+   "begin": "14.520",
+   "children": [],
+   "end": "14.560",
+   "id": "f000034",
+   "language": "eng",
+   "lines": [
+    "the"
+   ]
+  },
+  {
+   "begin": "14.560",
+   "children": [],
+   "end": "14.760",
+   "id": "f000035",
+   "language": "eng",
+   "lines": [
+    "ball"
+   ]
+  },
+  {
+   "begin": "14.760",
+   "children": [],
+   "end": "15.960",
+   "id": "f000036",
+   "language": "eng",
+   "lines": [
+    "rolling.\""
+   ]
+  },
+  {
+   "begin": "15.960",
+   "children": [],
+   "end": "16.240",
+   "id": "f000037",
+   "language": "eng",
+   "lines": [
+    "A"
+   ]
+  },
+  {
+   "begin": "16.240",
+   "children": [],
+   "end": "16.680",
+   "id": "f000038",
+   "language": "eng",
+   "lines": [
+    "speech"
+   ]
+  },
+  {
+   "begin": "16.680",
+   "children": [],
+   "end": "17.120",
    "id": "f000039",
    "language": "eng",
    "lines": [
-    "a"
+    "supporting"
+   ]
+  },
+  {
+   "begin": "17.120",
+   "children": [],
+   "end": "17.360",
+   "id": "f000040",
+   "language": "eng",
+   "lines": [
+    "this"
+   ]
+  },
+  {
+   "begin": "17.360",
+   "children": [],
+   "end": "18.040",
+   "id": "f000041",
+   "language": "eng",
+   "lines": [
+    "candidate"
+   ]
+  },
+  {
+   "begin": "18.040",
+   "children": [],
+   "end": "18.280",
+   "id": "f000042",
+   "language": "eng",
+   "lines": [
+    "argued"
+   ]
+  },
+  {
+   "begin": "18.280",
+   "children": [],
+   "end": "18.560",
+   "id": "f000043",
+   "language": "eng",
+   "lines": [
+    "that"
+   ]
+  },
+  {
+   "begin": "18.560",
+   "children": [],
+   "end": "18.880",
+   "id": "f000044",
+   "language": "eng",
+   "lines": [
+    "an"
    ]
   },
   {
    "begin": "18.880",
    "children": [],
-   "end": "19.480",
-   "id": "f000040",
+   "end": "19.280",
+   "id": "f000045",
    "language": "eng",
    "lines": [
-    "backhand"
+    "opponent"
    ]
   },
   {
-   "begin": "19.480",
+   "begin": "19.280",
    "children": [],
-   "end": "19.720",
-   "id": "f000041",
+   "end": "20.320",
+   "id": "f000046",
    "language": "eng",
    "lines": [
-    "blow"
+    "was"
    ]
   },
   {
-   "begin": "19.720",
+   "begin": "20.320",
    "children": [],
-   "end": "20.720",
-   "id": "f000042",
+   "end": "20.840",
+   "id": "f000047",
    "language": "eng",
    "lines": [
-    "counterstrike"
+    "shaping"
    ]
   },
   {
-   "begin": "20.720",
+   "begin": "20.840",
    "children": [],
-   "end": "20.920",
-   "id": "f000043",
+   "end": "21.400",
+   "id": "f000048",
    "language": "eng",
    "lines": [
-    "against"
+    "gardens"
    ]
   },
   {
-   "begin": "20.920",
+   "begin": "21.400",
    "children": [],
-   "end": "21.080",
-   "id": "f000044",
+   "end": "21.720",
+   "id": "f000049",
+   "language": "eng",
+   "lines": [
+    "like"
+   ]
+  },
+  {
+   "begin": "21.720",
+   "children": [],
+   "end": "22.320",
+   "id": "f000050",
+   "language": "eng",
+   "lines": [
+    "\"an"
+   ]
+  },
+  {
+   "begin": "22.320",
+   "children": [],
+   "end": "22.720",
+   "id": "f000051",
+   "language": "eng",
+   "lines": [
+    "Amazon's"
+   ]
+  },
+  {
+   "begin": "22.720",
+   "children": [],
+   "end": "23.160",
+   "id": "f000052",
+   "language": "eng",
+   "lines": [
+    "bosom\""
+   ]
+  },
+  {
+   "begin": "23.160",
+   "children": [],
+   "end": "23.200",
+   "id": "f000053",
+   "language": "eng",
+   "lines": [
+    "in"
+   ]
+  },
+  {
+   "begin": "23.200",
+   "children": [],
+   "end": "23.480",
+   "id": "f000054",
    "language": "eng",
    "lines": [
     "the"
    ]
   },
   {
-   "begin": "21.080",
-   "children": [],
-   "end": "21.840",
-   "id": "f000045",
-   "language": "eng",
-   "lines": [
-    "vulnerable"
-   ]
-  },
-  {
-   "begin": "21.840",
-   "children": [],
-   "end": "23.440",
-   "id": "f000046",
-   "language": "eng",
-   "lines": [
-    "spearheads."
-   ]
-  },
-  {
-   "begin": "23.440",
+   "begin": "23.480",
    "children": [],
    "end": "23.920",
-   "id": "f000047",
+   "id": "f000055",
    "language": "eng",
    "lines": [
-    "Despite"
+    "Gold"
    ]
   },
   {
    "begin": "23.920",
    "children": [],
-   "end": "24.320",
-   "id": "f000048",
+   "end": "24.000",
+   "id": "f000056",
    "language": "eng",
    "lines": [
-    "being"
+    "Spoon"
    ]
   },
   {
-   "begin": "24.320",
+   "begin": "24.000",
    "children": [],
-   "end": "25.000",
-   "id": "f000049",
+   "end": "25.720",
+   "id": "f000057",
    "language": "eng",
    "lines": [
-    "outnumbered"
+    "Oration."
    ]
   },
   {
-   "begin": "25.000",
+   "begin": "25.720",
    "children": [],
-   "end": "25.320",
-   "id": "f000050",
+   "end": "25.800",
+   "id": "f000058",
    "language": "eng",
    "lines": [
-    "five"
+    "A"
    ]
   },
   {
-   "begin": "25.320",
+   "begin": "25.800",
    "children": [],
-   "end": "25.400",
-   "id": "f000051",
+   "end": "26.160",
+   "id": "f000059",
    "language": "eng",
    "lines": [
-    "to"
+    "campaign"
    ]
   },
   {
-   "begin": "25.400",
+   "begin": "26.160",
    "children": [],
-   "end": "26.320",
-   "id": "f000052",
+   "end": "26.480",
+   "id": "f000060",
    "language": "eng",
    "lines": [
-    "one,"
+    "song"
    ]
   },
   {
-   "begin": "26.320",
-   "children": [],
-   "end": "26.640",
-   "id": "f000053",
-   "language": "eng",
-   "lines": [
-    "Erich"
-   ]
-  },
-  {
-   "begin": "26.640",
+   "begin": "26.480",
    "children": [],
    "end": "27.040",
-   "id": "f000054",
+   "id": "f000061",
    "language": "eng",
    "lines": [
-    "von"
+    "supporting"
    ]
   },
   {
    "begin": "27.040",
    "children": [],
-   "end": "27.480",
-   "id": "f000055",
-   "language": "eng",
-   "lines": [
-    "Manstein"
-   ]
-  },
-  {
-   "begin": "27.480",
-   "children": [],
-   "end": "28.120",
-   "id": "f000056",
-   "language": "eng",
-   "lines": [
-    "managed"
-   ]
-  },
-  {
-   "begin": "28.120",
-   "children": [],
-   "end": "28.320",
-   "id": "f000057",
-   "language": "eng",
-   "lines": [
-    "to"
-   ]
-  },
-  {
-   "begin": "28.320",
-   "children": [],
-   "end": "28.600",
-   "id": "f000058",
-   "language": "eng",
-   "lines": [
-    "rout"
-   ]
-  },
-  {
-   "begin": "28.600",
-   "children": [],
-   "end": "29.080",
-   "id": "f000059",
-   "language": "eng",
-   "lines": [
-    "enemy"
-   ]
-  },
-  {
-   "begin": "29.080",
-   "children": [],
-   "end": "29.560",
-   "id": "f000060",
-   "language": "eng",
-   "lines": [
-    "forces"
-   ]
-  },
-  {
-   "begin": "29.560",
-   "children": [],
-   "end": "29.840",
-   "id": "f000061",
-   "language": "eng",
-   "lines": [
-    "during"
-   ]
-  },
-  {
-   "begin": "29.840",
-   "children": [],
-   "end": "30.120",
+   "end": "27.040",
    "id": "f000062",
    "language": "eng",
    "lines": [
@@ -621,89 +621,89 @@
    ]
   },
   {
-   "begin": "30.120",
+   "begin": "27.040",
    "children": [],
-   "end": "31.000",
+   "end": "28.360",
    "id": "f000063",
    "language": "eng",
    "lines": [
-    "battle,"
+    "candidate"
    ]
   },
   {
-   "begin": "31.000",
+   "begin": "28.360",
    "children": [],
-   "end": "31.400",
+   "end": "28.880",
    "id": "f000064",
    "language": "eng",
    "lines": [
-    "ending"
+    "referenced"
    ]
   },
   {
-   "begin": "31.400",
+   "begin": "28.880",
    "children": [],
-   "end": "31.640",
+   "end": "29.160",
    "id": "f000065",
+   "language": "eng",
+   "lines": [
+    "his"
+   ]
+  },
+  {
+   "begin": "29.160",
+   "children": [],
+   "end": "29.400",
+   "id": "f000066",
+   "language": "eng",
+   "lines": [
+    "victory"
+   ]
+  },
+  {
+   "begin": "29.400",
+   "children": [],
+   "end": "29.800",
+   "id": "f000067",
+   "language": "eng",
+   "lines": [
+    "over"
+   ]
+  },
+  {
+   "begin": "29.800",
+   "children": [],
+   "end": "30.040",
+   "id": "f000068",
    "language": "eng",
    "lines": [
     "the"
    ]
   },
   {
-   "begin": "31.640",
+   "begin": "30.040",
    "children": [],
-   "end": "32.160",
-   "id": "f000066",
-   "language": "eng",
-   "lines": [
-    "initiative"
-   ]
-  },
-  {
-   "begin": "32.160",
-   "children": [],
-   "end": "32.320",
-   "id": "f000067",
-   "language": "eng",
-   "lines": [
-    "they"
-   ]
-  },
-  {
-   "begin": "32.320",
-   "children": [],
-   "end": "32.520",
-   "id": "f000068",
-   "language": "eng",
-   "lines": [
-    "had"
-   ]
-  },
-  {
-   "begin": "32.520",
-   "children": [],
-   "end": "33.080",
+   "end": "30.600",
    "id": "f000069",
    "language": "eng",
    "lines": [
-    "gained"
+    "Shawnee"
    ]
   },
   {
-   "begin": "33.080",
+   "begin": "30.600",
    "children": [],
-   "end": "33.240",
+   "end": "32.360",
    "id": "f000070",
    "language": "eng",
    "lines": [
-    "after"
+    "during"
    ]
   },
   {
-   "begin": "33.240",
+   "begin": "32.360",
    "children": [],
-   "end": "33.400",
+   "end": "32.720",
    "id": "f000071",
    "language": "eng",
    "lines": [
@@ -711,19 +711,19 @@
    ]
   },
   {
-   "begin": "33.400",
+   "begin": "32.720",
    "children": [],
-   "end": "34.520",
+   "end": "33.120",
    "id": "f000072",
    "language": "eng",
    "lines": [
-    "Battle"
+    "War"
    ]
   },
   {
-   "begin": "34.520",
+   "begin": "33.120",
    "children": [],
-   "end": "35.240",
+   "end": "33.840",
    "id": "f000073",
    "language": "eng",
    "lines": [
@@ -731,129 +731,129 @@
    ]
   },
   {
-   "begin": "35.240",
+   "begin": "33.840",
    "children": [],
-   "end": "35.440",
+   "end": "35.400",
    "id": "f000074",
    "language": "eng",
    "lines": [
-    "Stalingrad."
+    "1812."
    ]
   },
   {
-   "begin": "35.440",
+   "begin": "35.400",
    "children": [],
-   "end": "35.760",
+   "end": "35.680",
    "id": "f000075",
    "language": "eng",
    "lines": [
-    "For"
+    "This"
    ]
   },
   {
-   "begin": "35.760",
+   "begin": "35.680",
    "children": [],
-   "end": "36.160",
+   "end": "36.080",
    "id": "f000076",
    "language": "eng",
    "lines": [
-    "ten"
+    "man"
    ]
   },
   {
-   "begin": "36.160",
+   "begin": "36.080",
    "children": [],
-   "end": "36.720",
+   "end": "36.200",
    "id": "f000077",
    "language": "eng",
    "lines": [
-    "points,"
+    "beat"
    ]
   },
   {
-   "begin": "36.720",
+   "begin": "36.200",
    "children": [],
-   "end": "37.040",
+   "end": "37.400",
    "id": "f000078",
    "language": "eng",
    "lines": [
-    "name"
+    "an"
    ]
   },
   {
-   "begin": "37.040",
+   "begin": "37.400",
    "children": [],
-   "end": "37.320",
+   "end": "38.120",
    "id": "f000079",
    "language": "eng",
    "lines": [
-    "this"
+    "incumbent"
    ]
   },
   {
-   "begin": "37.320",
+   "begin": "38.120",
    "children": [],
-   "end": "37.760",
+   "end": "38.360",
    "id": "f000080",
    "language": "eng",
    "lines": [
-    "battle"
+    "nicknamed"
    ]
   },
   {
-   "begin": "37.760",
+   "begin": "38.360",
    "children": [],
-   "end": "37.960",
+   "end": "38.480",
    "id": "f000081",
    "language": "eng",
    "lines": [
-    "which"
+    "\"Van"
    ]
   },
   {
-   "begin": "37.960",
+   "begin": "38.480",
    "children": [],
-   "end": "38.280",
+   "end": "38.480",
    "id": "f000082",
    "language": "eng",
    "lines": [
-    "saw"
+    "Ruin.\""
    ]
   },
   {
-   "begin": "38.280",
+   "begin": "38.480",
    "children": [],
-   "end": "38.760",
+   "end": "38.520",
    "id": "f000083",
    "language": "eng",
    "lines": [
-    "German"
+    "The"
    ]
   },
   {
-   "begin": "38.760",
+   "begin": "38.520",
    "children": [],
-   "end": "39.280",
+   "end": "39.640",
    "id": "f000084",
    "language": "eng",
    "lines": [
-    "forces"
+    "slogan"
    ]
   },
   {
-   "begin": "39.280",
+   "begin": "39.640",
    "children": [],
-   "end": "39.800",
+   "end": "40.000",
    "id": "f000085",
    "language": "eng",
    "lines": [
-    "encircle"
+    "\"Tippecanoe"
    ]
   },
   {
-   "begin": "39.800",
+   "begin": "40.000",
    "children": [],
-   "end": "40.120",
+   "end": "40.040",
    "id": "f000086",
    "language": "eng",
    "lines": [
@@ -861,163 +861,333 @@
    ]
   },
   {
-   "begin": "40.120",
+   "begin": "40.040",
    "children": [],
-   "end": "40.640",
+   "end": "40.320",
    "id": "f000087",
    "language": "eng",
    "lines": [
-    "destroy"
+    "Tyler"
    ]
   },
   {
-   "begin": "40.640",
+   "begin": "40.320",
    "children": [],
-   "end": "41.120",
+   "end": "40.320",
    "id": "f000088",
    "language": "eng",
    "lines": [
-    "several"
+    "Too\""
    ]
   },
   {
-   "begin": "41.120",
+   "begin": "40.320",
    "children": [],
-   "end": "41.680",
+   "end": "41.280",
    "id": "f000089",
    "language": "eng",
    "lines": [
-    "Soviet"
+    "supported"
    ]
   },
   {
-   "begin": "41.680",
+   "begin": "41.280",
    "children": [],
-   "end": "42.240",
+   "end": "41.560",
    "id": "f000090",
    "language": "eng",
    "lines": [
-    "armored"
+    "this"
    ]
   },
   {
-   "begin": "42.240",
+   "begin": "41.560",
    "children": [],
-   "end": "43.840",
+   "end": "41.840",
    "id": "f000091",
    "language": "eng",
    "lines": [
-    "spearheads,"
+    "Whig"
    ]
   },
   {
-   "begin": "43.840",
+   "begin": "41.840",
    "children": [],
-   "end": "44.600",
+   "end": "42.480",
    "id": "f000092",
    "language": "eng",
    "lines": [
-    "allowing"
+    "candidate,"
    ]
   },
   {
-   "begin": "44.600",
+   "begin": "42.480",
    "children": [],
-   "end": "44.760",
+   "end": "43.080",
    "id": "f000093",
    "language": "eng",
    "lines": [
-    "them"
+    "who"
    ]
   },
   {
-   "begin": "44.760",
+   "begin": "43.080",
    "children": [],
-   "end": "44.920",
+   "end": "43.360",
    "id": "f000094",
    "language": "eng",
    "lines": [
-    "to"
+    "gave"
    ]
   },
   {
-   "begin": "44.920",
+   "begin": "43.360",
    "children": [],
-   "end": "45.200",
+   "end": "43.760",
    "id": "f000095",
-   "language": "eng",
-   "lines": [
-    "prepare"
-   ]
-  },
-  {
-   "begin": "45.200",
-   "children": [],
-   "end": "45.960",
-   "id": "f000096",
-   "language": "eng",
-   "lines": [
-    "defenses"
-   ]
-  },
-  {
-   "begin": "45.960",
-   "children": [],
-   "end": "46.080",
-   "id": "f000097",
-   "language": "eng",
-   "lines": [
-    "for"
-   ]
-  },
-  {
-   "begin": "46.080",
-   "children": [],
-   "end": "46.160",
-   "id": "f000098",
    "language": "eng",
    "lines": [
     "the"
    ]
   },
   {
-   "begin": "46.160",
+   "begin": "43.760",
    "children": [],
-   "end": "46.640",
+   "end": "44.680",
+   "id": "f000096",
+   "language": "eng",
+   "lines": [
+    "longest-ever"
+   ]
+  },
+  {
+   "begin": "44.680",
+   "children": [],
+   "end": "45.040",
+   "id": "f000097",
+   "language": "eng",
+   "lines": [
+    "Inaugural"
+   ]
+  },
+  {
+   "begin": "45.040",
+   "children": [],
+   "end": "45.600",
+   "id": "f000098",
+   "language": "eng",
+   "lines": [
+    "Address"
+   ]
+  },
+  {
+   "begin": "45.600",
+   "children": [],
+   "end": "45.640",
    "id": "f000099",
    "language": "eng",
    "lines": [
-    "subsequent"
+    "in"
    ]
   },
   {
-   "begin": "46.640",
+   "begin": "45.640",
    "children": [],
-   "end": "46.960",
+   "end": "46.520",
    "id": "f000100",
    "language": "eng",
    "lines": [
-    "Battle"
+    "pouring"
    ]
   },
   {
-   "begin": "46.960",
+   "begin": "46.520",
    "children": [],
-   "end": "47.400",
+   "end": "47.160",
    "id": "f000101",
+   "language": "eng",
+   "lines": [
+    "rain."
+   ]
+  },
+  {
+   "begin": "47.160",
+   "children": [],
+   "end": "47.520",
+   "id": "f000102",
+   "language": "eng",
+   "lines": [
+    "For"
+   ]
+  },
+  {
+   "begin": "47.520",
+   "children": [],
+   "end": "47.520",
+   "id": "f000103",
+   "language": "eng",
+   "lines": [
+    "10"
+   ]
+  },
+  {
+   "begin": "47.520",
+   "children": [],
+   "end": "48.440",
+   "id": "f000104",
+   "language": "eng",
+   "lines": [
+    "points,"
+   ]
+  },
+  {
+   "begin": "48.440",
+   "children": [],
+   "end": "48.760",
+   "id": "f000105",
+   "language": "eng",
+   "lines": [
+    "name"
+   ]
+  },
+  {
+   "begin": "48.760",
+   "children": [],
+   "end": "49.040",
+   "id": "f000106",
+   "language": "eng",
+   "lines": [
+    "this"
+   ]
+  },
+  {
+   "begin": "49.040",
+   "children": [],
+   "end": "49.240",
+   "id": "f000107",
+   "language": "eng",
+   "lines": [
+    "victor"
+   ]
+  },
+  {
+   "begin": "49.240",
+   "children": [],
+   "end": "49.240",
+   "id": "f000108",
    "language": "eng",
    "lines": [
     "of"
    ]
   },
   {
-   "begin": "47.400",
+   "begin": "49.240",
    "children": [],
-   "end": "48.480",
-   "id": "f000102",
+   "end": "49.560",
+   "id": "f000109",
    "language": "eng",
    "lines": [
-    "Kursk."
+    "the"
+   ]
+  },
+  {
+   "begin": "49.560",
+   "children": [],
+   "end": "50.560",
+   "id": "f000110",
+   "language": "eng",
+   "lines": [
+    "1840"
+   ]
+  },
+  {
+   "begin": "50.560",
+   "children": [],
+   "end": "51.520",
+   "id": "f000111",
+   "language": "eng",
+   "lines": [
+    "Presidential"
+   ]
+  },
+  {
+   "begin": "51.520",
+   "children": [],
+   "end": "51.880",
+   "id": "f000112",
+   "language": "eng",
+   "lines": [
+    "Election"
+   ]
+  },
+  {
+   "begin": "51.880",
+   "children": [],
+   "end": "52.040",
+   "id": "f000113",
+   "language": "eng",
+   "lines": [
+    "who"
+   ]
+  },
+  {
+   "begin": "52.040",
+   "children": [],
+   "end": "52.080",
+   "id": "f000114",
+   "language": "eng",
+   "lines": [
+    "died"
+   ]
+  },
+  {
+   "begin": "52.080",
+   "children": [],
+   "end": "52.560",
+   "id": "f000115",
+   "language": "eng",
+   "lines": [
+    "after"
+   ]
+  },
+  {
+   "begin": "52.560",
+   "children": [],
+   "end": "52.960",
+   "id": "f000116",
+   "language": "eng",
+   "lines": [
+    "one"
+   ]
+  },
+  {
+   "begin": "52.960",
+   "children": [],
+   "end": "53.240",
+   "id": "f000117",
+   "language": "eng",
+   "lines": [
+    "month"
+   ]
+  },
+  {
+   "begin": "53.240",
+   "children": [],
+   "end": "53.320",
+   "id": "f000118",
+   "language": "eng",
+   "lines": [
+    "in"
+   ]
+  },
+  {
+   "begin": "53.320",
+   "children": [],
+   "end": "55.000",
+   "id": "f000119",
+   "language": "eng",
+   "lines": [
+    "office."
    ]
   }
  ]
