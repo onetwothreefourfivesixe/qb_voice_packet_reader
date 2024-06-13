@@ -24,12 +24,13 @@ def fetchQuestion(difficulties=None, categories=None):
     
     if response.status_code == 200:
         data = response.json()
-        tossups = data['tossups'][0]['question']
+        tossups = data['tossups'][0]['question_sanitized']
+        answer = data['tossups'][0]['answer_sanitized']
         # Clean the tossups from HTML tags, parentheses, and brackets
-        tossups = re.sub(r'<[^>]*>', '', tossups)
-        tossups = re.sub(r'\([^)]*\)', '', tossups)
-        tossups = re.sub(r'\[[^\]]*\]', '', tossups)
-        return tossups
+        # tossups = re.sub(r'<[^>]*>', '', tossups)
+        # tossups = re.sub(r'\([^)]*\)', '', tossups)
+        # tossups = re.sub(r'\[[^\]]*\]', '', tossups)
+        return tossups, answer
     else:
         print(f"Error: {response.status_code}")
         print(response.text)

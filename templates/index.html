@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Audio with Synchronized Text</title>
+</head>
+<body>
+    <h1>Play Audio with Synchronized Text</h1>
+    <audio id="audio" controls>
+        <source src="{{ url_for('audio', filename='audio.mp3') }}" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <button id="playButton">Play Audio and Start Text</button>
+    <button id="nextQuestion">Get the next question</button>
+    <div id="text">
+        <p id="question" class="question"></p>
+    </div>
+
+    <style>
+        #audio {
+            display: none;
+        }
+        .question {
+            max-width: 30%;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('audio');
+            const playButton = document.getElementById('playButton');
+            const nextButton = document.getElementById('nextQuestion');
+            const textDiv = document.getElementById('question');
+
+            let textCues = [];
+            let answer = '';
+            let lastDisplayedText = '';
+            let onWord = 0;
+            let intervalId = null;
+            let hasntStarted = false;
+
+            // Function to fetch text cues from the server
+            function fetchTextCues() {
+                return fetch('/api/get_text')
+                    .then(response => response.json())
+                    .then(data => {
+                        textCues = data;
+                        console.log('Text Cues:', textCues);  // Log the fetched text cues
+                    })
+                    .catch(error => console.error('Error fetching text cues:', error));
+            }
+
+            // Function to update the text based on the current time
+            function updateText() {
+                const currentTime = audio.currentTime;
+                // console.log('Current Time:', currentTime);  // Log the current time
+
+                // Update the text when the current time reaches the next interval
+                if (onWord < textCues.length && currentTime >= textCues[onWord].time) {
+                    const latestText = textCues[onWord].text;
+                    onWord++;
+
+                    // Update the text only if it has changed
+                    if (latestText !== lastDisplayedText) {
+                        textDiv.textContent += " " + latestText;
+                        lastDisplayedText = latestText;
+                        // console.log('Text:', latestText);  // Log the text being displayed
+                    }
+                }
+            }
+
+            // Event listener for the next question button
+            nextButton.addEventListener('click', function() {
+                fetch('/api/get_next_question_and_answer')
+                    .then(response => response.json())
+                    .then(data => {
+                        answer = data.answer;
+                        console.log('Next Question and Answer:', data);  // Log the fetched next question and answer
+                    })
+                    .catch(error => console.error('Error fetching next question and answer:', error));
+                audio.pause();
+                audio.currentTime = 0;
+                lastDisplayedText = '';
+                textDiv.textContent = '';
+                onWord = 0;
+                audio.load();
+                fetchTextCues().then(() => {
+                    audio.play();
+                    hasntStarted = true;
+                    intervalId = setInterval(updateText, 100);
+                });
+            });
+
+            // Event listener for the play button
+            playButton.addEventListener('click', function() {
+                if (hasntStarted) {
+                    audio.pause();
+                    hasntStarted = false;
+                }
+                else {
+                    audio.play();
+                    hasntStarted = true;
+                    intervalId = setInterval(updateText, 100);
+                }
+            });
+
+            // Clear the interval when the audio ends
+            audio.addEventListener('ended', function() {
+                clearInterval(intervalId);
+            });
+        });
+    </script>
+</body>
+</html>

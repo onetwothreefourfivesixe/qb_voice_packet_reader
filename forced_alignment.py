@@ -12,16 +12,16 @@ import pandas as pd
 
 def generate_sync_map(audio_file_path = "audio.mp3", text_file_path = "myFile.txt", sync_map_file_path = "syncmap.json", question_number=5, subject="History"):
     # Fetch and save the audio file
-    mc.saveSpeaking(mc.fetchQuestion(question_number, subject))
+    tossup, answer = mc.fetchQuestion(question_number, subject)
+    mc.saveSpeaking(tossup)
     
     # Configure task
     config = TaskConfiguration()
     config[gc.PPN_TASK_LANGUAGE] = Language.ENG
     config[gc.PPN_TASK_IS_TEXT_FILE_FORMAT] = TextFileFormat.PLAIN
-    config[gc.PPN_TASK_OS_FILE_FORMAT] = SyncMapFormat.CSV
-
-    config_string = "task_language=eng|is_text_type=plain|os_task_file_format=json"
-    task = Task(config_string=config_string)
+    config[gc.PPN_TASK_OS_FILE_FORMAT] = SyncMapFormat.JSON
+    task = Task()
+    task.configuration = config
     
     # Set file paths
     task.audio_file_path_absolute = audio_file_path
@@ -34,5 +34,4 @@ def generate_sync_map(audio_file_path = "audio.mp3", text_file_path = "myFile.tx
     # Print produced sync map
     task.output_sync_map_file()
 
-    
-
+    return answer
