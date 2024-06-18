@@ -25,10 +25,15 @@ def get_text():
     response.sort(key=lambda x: x['time'])
     return jsonify(response)
 
-@app.route('/api/get_next_question_and_answer')
-def get_next_question_and_answer():
-    answer = forced_alignment.generate_sync_map()
-    return answer
+@app.route('/api/get_next_question')
+def get_next_question():
+    forced_alignment.generate_sync_map()
+    return "Done"
+
+@app.route('/api/get_answer')
+def get_answer():
+    with open("answer.txt", "r") as answer:
+        return answer.read()
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -17,6 +17,12 @@
     <div id="text">
         <p id="question" class="question"></p>
     </div>
+    <div id="answerLine">
+        <ul>
+            <li id="actualAnswer"></li>
+            <li><button id="answerRight">I was correct</button></li>
+        </ul>
+    </div>
 
     <style>
         #audio {
@@ -24,6 +30,14 @@
         }
         .question {
             max-width: 30%;
+        }
+
+        ul {
+            list-style: none;
+        }
+        li {
+            display: inline-block;
+            margin-right: 10px;
         }
     </style>
 
@@ -35,6 +49,8 @@
             const nextButton = document.getElementById('nextQuestion');
             const textDiv = document.getElementById('question');
             const textInput = document.getElementById('answer');
+            const answerBox = document.getElementById('answerLine')
+            const answerDisplay = document.getElementById('actualAnswer')
 
             let textCues = [];
             let answer = '';
@@ -74,31 +90,82 @@
                 }
             }
 
-            // Event listener for the next question button
-            nextButton.addEventListener('click', function() {
-                fetch('/api/get_next_question_and_answer')
-                    .then(response => response.json())
-                    .then(data => {
-                        answer = data.answer;
-                        console.log('Next Question and Answer:', data);  // Log the fetched next question and answer
-                    })
-                    .catch(error => console.error('Error fetching next question and answer:', error));
-                audio.pause();
-                audio.currentTime = 0;
-                lastDisplayedText = '';
-                textDiv.textContent = '';
-                textCues = []
-                onWord = 0;
+            function checkAnswer(userAnswer) {
+                return answer.toLocaleLowerCase().indexOf(userAnswer.toLocaleLowerCase()) >= 0;
+            }
 
-                // Update the audio source to force reload from server
-                audioSource.src = `{{ url_for('audio', filename='audio.mp3') }}?t=${new Date().getTime()}`;
-                audio.load();
-                
-                fetchTextCues().then(() => {
-                    audio.play();
-                    hasntStarted = true;
-                    intervalId = setInterval(updateText, 200);
-                });
+            // Event listener for the next question button
+            let isFirstRun = true;
+            nextButton.addEventListener('click', async function() {
+                if (isFirstRun) {
+                    isFirstRun = false;
+                    try {
+                        // Fetch the next question and answer before proceeding
+                        fetch('/api/get_next_question').catch(error => console.error('Error fetching next question and answer:', error));
+                        const response = await fetch('/api/get_answer');
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! Status: ${response.status}`);
+                        }
+                        answer = await response.text();
+                        console.log('Next Question and Answer:', answer);  // Log the fetched next question and answer
+            
+                        // Execute the rest of the code
+                        answerBox.style.display = 'none';
+                        audio.pause();
+                        audio.currentTime = 0;
+                        lastDisplayedText = '';
+                        textDiv.textContent = '';
+                        textCues = [];
+                        onWord = 0;
+            
+                        // Update the audio source to force reload from server
+                        audioSource.src = `{{ url_for('audio', filename='audio.mp3') }}?t=${new Date().getTime()}`;
+                        audio.load();
+            
+                        await fetchTextCues(); // Ensure text cues are fetched before playing the audio
+                        audio.play();
+                        hasntStarted = true;
+                        intervalId = setInterval(updateText, 200);
+            
+                    } catch (error) {
+                        console.error('Error fetching next question and answer:', error);
+                    }
+                } else {
+                    // For subsequent runs, execute the rest of the code first and fetch asynchronously
+                    answerBox.style.display = 'none';
+                    audio.pause();
+                    audio.currentTime = 0;
+                    lastDisplayedText = '';
+                    textDiv.textContent = '';
+                    textCues = [];
+                    onWord = 0;
+            
+                    // Update the audio source to force reload from server
+                    audioSource.src = `{{ url_for('audio', filename='audio.mp3') }}?t=${new Date().getTime()}`;
+                    audio.load();
+            
+                    fetchTextCues().then(() => {
+                        audio.play();
+                        hasntStarted = true;
+                        intervalId = setInterval(updateText, 200);
+                    });
+            
+                    // Fetch the next question and answer asynchronously
+                    fetch('/api/get_next_question').catch(error => console.error('Error fetching next question and answer:', error));
+                    fetch('/api/get_answer')
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error(`HTTP error! Status: ${response.status}`);
+                            }
+                            return response.text();
+                        })
+                        .then(data => {
+                            console.log('Next Answer:', data);  // Log the fetched next question and answer
+                            answer = data;
+                            // Use the answer as needed
+                        })
+                        .catch(error => console.error('Error fetching next question and answer:', error));
+                }
             });
 
             // Event listener for the play button
@@ -131,6 +198,7 @@
                     buzzedIn = false;
                     const inputValue = textInput.value;
                     console.log("Answer: ", inputValue);
+                    console.log("Correct: ", checkAnswer(inputValue));
                     buzzer.click();
                 }
             });
@@ -138,6 +206,8 @@
             // Clear the interval when the audio ends
             audio.addEventListener('ended', function() {
                 clearInterval(intervalId);
+                answerDisplay.textContent = answer;
+                answerBox.style.display = 'block';
             });
         });
     </script>
