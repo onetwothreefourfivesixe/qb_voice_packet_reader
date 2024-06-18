@@ -21,7 +21,7 @@ def get_text():
         data = json.load(interval)
         intervals = [float(fragment["begin"]) for fragment in data["fragments"]]
     basic_dictionary = {intervals[i]: text[i] for i in range(len(intervals))}
-    response = [{'time': int(time), 'text': text} for time, text in basic_dictionary.items()]
+    response = [{'time': float(time), 'text': text} for time, text in basic_dictionary.items()]
     response.sort(key=lambda x: x['time'])
     return jsonify(response)
 

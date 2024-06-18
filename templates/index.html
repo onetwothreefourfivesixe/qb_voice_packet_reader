@@ -8,11 +8,12 @@
 <body>
     <h1>Play Audio with Synchronized Text</h1>
     <audio id="audio" controls>
-        <source src="{{ url_for('audio', filename='audio.mp3') }}" type="audio/mpeg">
+        <source id="audioSource" src="{{ url_for('audio', filename='audio.mp3') }}" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-    <button id="playButton">Play Audio and Start Text</button>
+    <button id="buzzer">Buzz</button>
     <button id="nextQuestion">Get the next question</button>
+    <input type="text" id="answer" style="display: none;" placeholder="Answer">
     <div id="text">
         <p id="question" class="question"></p>
     </div>
@@ -29,9 +30,11 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const audio = document.getElementById('audio');
-            const playButton = document.getElementById('playButton');
+            const audioSource = document.getElementById('audioSource');
+            const buzzer = document.getElementById('buzzer');
             const nextButton = document.getElementById('nextQuestion');
             const textDiv = document.getElementById('question');
+            const textInput = document.getElementById('answer');
 
             let textCues = [];
             let answer = '';
@@ -39,6 +42,7 @@
             let onWord = 0;
             let intervalId = null;
             let hasntStarted = false;
+            let buzzedIn = false;
 
             // Function to fetch text cues from the server
             function fetchTextCues() {
@@ -83,25 +87,51 @@
                 audio.currentTime = 0;
                 lastDisplayedText = '';
                 textDiv.textContent = '';
+                textCues = []
                 onWord = 0;
+
+                // Update the audio source to force reload from server
+                audioSource.src = `{{ url_for('audio', filename='audio.mp3') }}?t=${new Date().getTime()}`;
                 audio.load();
+                
                 fetchTextCues().then(() => {
                     audio.play();
                     hasntStarted = true;
-                    intervalId = setInterval(updateText, 100);
+                    intervalId = setInterval(updateText, 200);
                 });
             });
 
             // Event listener for the play button
-            playButton.addEventListener('click', function() {
+            buzzer.addEventListener('click', function() {
                 if (hasntStarted) {
                     audio.pause();
                     hasntStarted = false;
+                    textInput.style.display = 'block';
                 }
                 else {
                     audio.play();
                     hasntStarted = true;
-                    intervalId = setInterval(updateText, 100);
+                    textInput.style.display = 'none';
+                    intervalId = setInterval(updateText, 200);
+                }
+            });
+
+            // Event listener for keydown events
+            document.addEventListener('keydown', function(event) {
+                if (!buzzedIn && (event.key === 'n' || event.key === 'N')) {
+                    console.log("n pressed")
+                    nextButton.click(); // Simulate a click on the next question button
+                }
+                else if (!buzzedIn && event.key === ' ') { // Spacebar
+                    console.log("space pressed")
+                    buzzedIn = true;
+                    buzzer.click(); // Simulate a click on the buzzer button
+                }
+                else if (buzzedIn && event.key === 'Enter') {
+                    buzzedIn = false;
+                    const inputValue = textInput.value;
+                    console.log("Answer: ", inputValue);
+                    buzzer.click();
                 }
             });
 
