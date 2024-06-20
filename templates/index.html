@@ -4,26 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play Audio with Synchronized Text</title>
-</head>
-<body>
-    <h1>Play Audio with Synchronized Text</h1>
-    <audio id="audio" controls>
-        <source id="audioSource" src="{{ url_for('audio', filename='audio.mp3') }}" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    <button id="buzzer">Buzz</button>
-    <button id="nextQuestion">Get the next question</button>
-    <input type="text" id="answer" style="display: none;" placeholder="Answer">
-    <div id="text">
-        <p id="question" class="question"></p>
-    </div>
-    <div id="answerLine">
-        <ul>
-            <li id="actualAnswer"></li>
-            <li><button id="answerRight">I was correct</button></li>
-        </ul>
-    </div>
-
     <style>
         #audio {
             display: none;
@@ -31,27 +11,47 @@
         .question {
             max-width: 30%;
         }
-
-        ul {
+        #answerLine ul {
+            align-items: left;
             list-style: none;
-        }
-        li {
-            display: inline-block;
-            margin-right: 10px;
+          }
+        #answerLine li {
+            padding-right: 2%;
+            display: inline;
         }
     </style>
+</head>
+<body>
+    <h1>Play Audio with Synchronized Text</h1>
+    <audio id="audio" controls>
+        <source id="audioSource" src="{{ url_for('audio', filename='audio.mp3') }}" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <p id="score">Score: 0</p>
+    <button id="buzzer">Buzz</button>
+    <button id="nextQuestion">Get the next question</button>
+    <input type="text" id="answer" style="display: none;" placeholder="Answer">
+    <div id="text">
+        <p id="question" class="question"></p>
+    </div>
+    <ul style="display: none;" id="answerLine">
+        <li id="actualAnswer"></li>
+        <li><button id="answerRight">I was correct</button></li>
+    </ul>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', () => {
             const audio = document.getElementById('audio');
             const audioSource = document.getElementById('audioSource');
             const buzzer = document.getElementById('buzzer');
             const nextButton = document.getElementById('nextQuestion');
             const textDiv = document.getElementById('question');
             const textInput = document.getElementById('answer');
-            const answerBox = document.getElementById('answerLine')
-            const answerDisplay = document.getElementById('actualAnswer')
+            const answerBox = document.getElementById('answerLine');
+            const answerDisplay = document.getElementById('actualAnswer');
+            const displayedScore = document.getElementById('score');
 
+            let score = 0;
             let textCues = [];
             let answer = '';
             let lastDisplayedText = '';
@@ -59,123 +59,91 @@
             let intervalId = null;
             let hasntStarted = false;
             let buzzedIn = false;
+            let questionEnded = false;
 
-            // Function to fetch text cues from the server
-            function fetchTextCues() {
-                return fetch('/api/get_text')
-                    .then(response => response.json())
-                    .then(data => {
-                        textCues = data;
-                        console.log('Text Cues:', textCues);  // Log the fetched text cues
-                    })
-                    .catch(error => console.error('Error fetching text cues:', error));
-            }
+            const fetchTextCues = () => fetch('/api/get_text')
+                .then(response => response.json())
+                .then(data => { textCues = data; })
+                .catch(error => console.error('Error fetching text cues:', error));
 
-            // Function to update the text based on the current time
-            function updateText() {
+            const updateText = () => {
                 const currentTime = audio.currentTime;
-                // console.log('Current Time:', currentTime);  // Log the current time
-
-                // Update the text when the current time reaches the next interval
                 if (onWord < textCues.length && currentTime >= textCues[onWord].time) {
                     const latestText = textCues[onWord].text;
                     onWord++;
-
-                    // Update the text only if it has changed
                     if (latestText !== lastDisplayedText) {
                         textDiv.textContent += " " + latestText;
                         lastDisplayedText = latestText;
-                        // console.log('Text:', latestText);  // Log the text being displayed
                     }
                 }
-            }
+            };
 
-            function checkAnswer(userAnswer) {
-                return answer.toLocaleLowerCase().indexOf(userAnswer.toLocaleLowerCase()) >= 0;
-            }
+            const checkAnswer = userAnswer => answer.toLocaleLowerCase().indexOf(userAnswer.toLocaleLowerCase());
 
-            // Event listener for the next question button
+            const calculateScore = correct => {
+                if (correct != -1) {
+                    if (textDiv.textContent.indexOf('(*)') < 0)
+                        score += 5;
+                    score += 10;
+                }
+                else {
+                    if (!questionEnded)
+                        score -= 5;
+                }
+                console.log("Score: ", score);
+                displayedScore.textContent = "Answer" + score;
+            };
+
             let isFirstRun = true;
-            nextButton.addEventListener('click', async function() {
-                if (isFirstRun) {
-                    isFirstRun = false;
-                    try {
-                        // Fetch the next question and answer before proceeding
-                        fetch('/api/get_next_question').catch(error => console.error('Error fetching next question and answer:', error));
-                        const response = await fetch('/api/get_answer');
-                        if (!response.ok) {
-                            throw new Error(`HTTP error! Status: ${response.status}`);
-                        }
-                        answer = await response.text();
-                        console.log('Next Question and Answer:', answer);  // Log the fetched next question and answer
-            
-                        // Execute the rest of the code
-                        answerBox.style.display = 'none';
-                        audio.pause();
-                        audio.currentTime = 0;
-                        lastDisplayedText = '';
-                        textDiv.textContent = '';
-                        textCues = [];
-                        onWord = 0;
-            
-                        // Update the audio source to force reload from server
-                        audioSource.src = `{{ url_for('audio', filename='audio.mp3') }}?t=${new Date().getTime()}`;
-                        audio.load();
-            
-                        await fetchTextCues(); // Ensure text cues are fetched before playing the audio
-                        audio.play();
-                        hasntStarted = true;
-                        intervalId = setInterval(updateText, 200);
-            
-                    } catch (error) {
-                        console.error('Error fetching next question and answer:', error);
-                    }
-                } else {
-                    // For subsequent runs, execute the rest of the code first and fetch asynchronously
+            nextButton.addEventListener('click', async () => {
+                const resetAndFetch = async () => {
                     answerBox.style.display = 'none';
+                    textInput.style.display = 'none';
                     audio.pause();
                     audio.currentTime = 0;
                     lastDisplayedText = '';
                     textDiv.textContent = '';
                     textCues = [];
                     onWord = 0;
-            
-                    // Update the audio source to force reload from server
                     audioSource.src = `{{ url_for('audio', filename='audio.mp3') }}?t=${new Date().getTime()}`;
                     audio.load();
-            
-                    fetchTextCues().then(() => {
-                        audio.play();
-                        hasntStarted = true;
-                        intervalId = setInterval(updateText, 200);
-                    });
-            
-                    // Fetch the next question and answer asynchronously
-                    fetch('/api/get_next_question').catch(error => console.error('Error fetching next question and answer:', error));
+                    await fetchTextCues();
+                    audio.play();
+                    hasntStarted = true;
+                    questionEnded = false;
+                    intervalId = setInterval(updateText, 200);
+                };
+
+                if (isFirstRun) {
+                    isFirstRun = false;
+                    try {
+                        fetch('/api/get_next_question');
+                        const response = await fetch('/api/get_answer');
+                        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+                        answer = await response.text();
+                        await resetAndFetch();
+                    } catch (error) {
+                        console.error('Error fetching next question and answer:', error);
+                    }
+                } else {
+                    resetAndFetch();
+                    fetch('/api/get_next_question');
                     fetch('/api/get_answer')
                         .then(response => {
-                            if (!response.ok) {
-                                throw new Error(`HTTP error! Status: ${response.status}`);
-                            }
+                            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
                             return response.text();
                         })
-                        .then(data => {
-                            console.log('Next Answer:', data);  // Log the fetched next question and answer
-                            answer = data;
-                            // Use the answer as needed
-                        })
+                        .then(data => { answer = data; })
                         .catch(error => console.error('Error fetching next question and answer:', error));
                 }
             });
 
-            // Event listener for the play button
-            buzzer.addEventListener('click', function() {
+            buzzer.addEventListener('click', () => {
                 if (hasntStarted) {
                     audio.pause();
                     hasntStarted = false;
                     textInput.style.display = 'block';
-                }
-                else {
+                } else {
                     audio.play();
                     hasntStarted = true;
                     textInput.style.display = 'none';
@@ -183,31 +151,39 @@
                 }
             });
 
-            // Event listener for keydown events
-            document.addEventListener('keydown', function(event) {
-                if (!buzzedIn && (event.key === 'n' || event.key === 'N')) {
-                    console.log("n pressed")
-                    nextButton.click(); // Simulate a click on the next question button
-                }
-                else if (!buzzedIn && event.key === ' ') { // Spacebar
-                    console.log("space pressed")
+            document.addEventListener('keydown', event => {
+                if (!buzzedIn && (event.key === 'n' || event.key === 'N')) nextButton.click();
+                else if (!questionEnded && !buzzedIn && event.key === ' ') {
                     buzzedIn = true;
-                    buzzer.click(); // Simulate a click on the buzzer button
-                }
-                else if (buzzedIn && event.key === 'Enter') {
-                    buzzedIn = false;
-                    const inputValue = textInput.value;
-                    console.log("Answer: ", inputValue);
-                    console.log("Correct: ", checkAnswer(inputValue));
                     buzzer.click();
+                } else if (buzzedIn && event.key === 'Enter') {
+                    const inputValue = textInput.value;
+                    console.log("Answer: ", answer);
+                    correct = checkAnswer(inputValue);
+                    console.log("Correct: ", correct);
+                    calculateScore(correct);
+                    if (correct != -1) {
+                        textDiv.textContent = textCues.map(cue => cue.text).join(' ');
+                        audio.pause();
+                        answerDisplay.textContent = answer;
+                        audio.dispatchEvent(new Event('ended'));
+                    } else {
+                        buzzedIn = false;
+                        buzzer.click();
+                    }
                 }
             });
 
-            // Clear the interval when the audio ends
-            audio.addEventListener('ended', function() {
+            audio.addEventListener('ended', () => {
+                questionEnded = true;
                 clearInterval(intervalId);
-                answerDisplay.textContent = answer;
                 answerBox.style.display = 'block';
+                if (!buzzedIn) {
+                    setTimeout(function() {
+                        answerDisplay.textContent = answer;
+                        buzzedIn = true;
+                    }, 5000)
+                }
             });
         });
     </script>
