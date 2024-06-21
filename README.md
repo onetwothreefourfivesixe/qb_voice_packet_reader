@@ -35,6 +35,7 @@ But to install and run the Flask version of QB Voice Packet Reader, follow these
 
     ```bash
     pip install -r requirements.txt
+    ```
 
     For Windows Users, you will need to first install the Aeneas Python package seperately beforehand. Go to the following link and use the installer to do so.
 
