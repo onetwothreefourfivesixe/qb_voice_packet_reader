@@ -7,7 +7,6 @@ This branch of the QB Voice Packet Reader repository contains the Flask implemen
 - [About](#about)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## About
@@ -56,3 +55,7 @@ But to install and run the Flask version of QB Voice Packet Reader, follow these
 To actually make use of the application, press the 'n' key to bring up the next question, press space to buzz in, and press enter to submit your answer to the question.
 
 Keep in mind, I am still working on this, so many features, such as changing the question type or reading speed, are not implemented yet.
+
+## License
+
+This project is licensed under the MIT License.
