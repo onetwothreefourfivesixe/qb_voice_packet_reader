@@ -10,6 +10,9 @@
         }
         .question {
             max-width: 30%;
+            border-style: solid;
+            border-radius: 1px;
+            padding: 1%;
         }
         #answerLine ul {
             align-items: left;
@@ -61,6 +64,9 @@
             let buzzedIn = false;
             let questionEnded = false;
 
+            let timerPromise = null;
+            let timerPaused = false;
+
             const fetchTextCues = () => fetch('/api/get_text')
                 .then(response => response.json())
                 .then(data => { textCues = data; })
@@ -91,8 +97,25 @@
                         score -= 5;
                 }
                 console.log("Score: ", score);
-                displayedScore.textContent = "Answer" + score;
+                displayedScore.textContent = "Score: " + score;
             };
+
+            function startTimer() {
+                console.log('Timer started');
+                timerPromise = new Promise((resolve) => {
+                  let remainingTime = 5;
+                  const intervalId = setInterval(() => {
+                    if (!timerPaused) {
+                      console.log(remainingTime);
+                      remainingTime -= 1;
+                      if (remainingTime <= 0) {
+                        clearInterval(intervalId);
+                        resolve();
+                      }
+                    }
+                  }, 1000); // Timer ticks every second
+                });
+            }              
 
             let isFirstRun = true;
             nextButton.addEventListener('click', async () => {
@@ -155,6 +178,7 @@
                 if (!buzzedIn && (event.key === 'n' || event.key === 'N')) nextButton.click();
                 else if (!questionEnded && !buzzedIn && event.key === ' ') {
                     buzzedIn = true;
+                    timerPaused = true;
                     buzzer.click();
                 } else if (buzzedIn && event.key === 'Enter') {
                     const inputValue = textInput.value;
@@ -162,27 +186,30 @@
                     correct = checkAnswer(inputValue);
                     console.log("Correct: ", correct);
                     calculateScore(correct);
+                    buzzedIn = false;
+                    if (timerPaused && questionEnded) {
+                        timerPaused = false;
+                        startTimer();
+                    }
                     if (correct != -1) {
                         textDiv.textContent = textCues.map(cue => cue.text).join(' ');
                         audio.pause();
                         answerDisplay.textContent = answer;
                         audio.dispatchEvent(new Event('ended'));
                     } else {
-                        buzzedIn = false;
                         buzzer.click();
                     }
                 }
             });
 
             audio.addEventListener('ended', () => {
-                questionEnded = true;
                 clearInterval(intervalId);
                 answerBox.style.display = 'block';
                 if (!buzzedIn) {
-                    setTimeout(function() {
+                    startTimer().then(() => {
+                        questionEnded = true;
                         answerDisplay.textContent = answer;
-                        buzzedIn = true;
-                    }, 5000)
+                    });
                 }
             });
         });

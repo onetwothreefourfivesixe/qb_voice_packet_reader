@@ -28,7 +28,7 @@ def fetchQuestion(difficulties=None, categories=None):
         answer = data['tossups'][0]['answer_sanitized']
         # Clean the tossups from HTML tags, parentheses, and brackets
         # tossups = re.sub(r'<[^>]*>', '', tossups)
-        # tossups = re.sub(r'\([^)]*\)', '', tossups)
+        # tossups = re.sub(r'\([^)]\)', '', tossups)
         # tossups = re.sub(r'\[[^\]]*\]', '', tossups)
         return tossups, answer
     else:
