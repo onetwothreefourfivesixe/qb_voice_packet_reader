@@ -5,7 +5,6 @@ This branch of the QB Voice Packet Reader repository contains the Flask implemen
 ## Table of Contents
 
 - [About](#about)
-- [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
