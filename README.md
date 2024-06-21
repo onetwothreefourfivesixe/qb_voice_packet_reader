@@ -23,6 +23,7 @@ But to install and run the Flask version of QB Voice Packet Reader, follow these
 
    ```bash
    git clone https://github.com/onetwothreefourfivesixe/qb_packet_reader.git
+   ```
 
    Or use Github Desktop.
 
