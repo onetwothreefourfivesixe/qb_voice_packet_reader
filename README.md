@@ -43,6 +43,9 @@ But to install and run the Flask version of QB Voice Packet Reader, follow these
 
     ```bash
     aeneas==1.7.3
+    ```
+
+    before running the previous command.
 
 4. Run the application with the following command:
 
