@@ -43,6 +43,30 @@
     </ul>
 
     <script>
+        function Timer(callback, delay) {
+            var args = arguments,
+                self = this,
+                timer, start;
+        
+            this.clear = function () {
+                clearTimeout(timer);
+            };
+        
+            this.pause = function () {
+                this.clear();
+                delay -= new Date() - start;
+            };
+        
+            this.resume = function () {
+                start = new Date();
+                timer = setTimeout(function () {
+                    callback.apply(self, Array.prototype.slice.call(args, 2, args.length));
+                }, delay);
+            };
+        
+            this.resume();
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             const audio = document.getElementById('audio');
             const audioSource = document.getElementById('audioSource');
@@ -57,13 +81,18 @@
             let score = 0;
             let textCues = [];
             let answer = '';
+            let nextAnswer = '';
             let lastDisplayedText = '';
             let onWord = 0;
+            let startTime = 0;
             let intervalId = null;
+
             let hasntStarted = false;
             let buzzedIn = false;
             let questionEnded = false;
+            let questionDone = false;
 
+            let timer = null;
             let timerPromise = null;
             let timerPaused = false;
 
@@ -98,24 +127,7 @@
                 }
                 console.log("Score: ", score);
                 displayedScore.textContent = "Score: " + score;
-            };
-
-            function startTimer() {
-                console.log('Timer started');
-                timerPromise = new Promise((resolve) => {
-                  let remainingTime = 5;
-                  const intervalId = setInterval(() => {
-                    if (!timerPaused) {
-                      console.log(remainingTime);
-                      remainingTime -= 1;
-                      if (remainingTime <= 0) {
-                        clearInterval(intervalId);
-                        resolve();
-                      }
-                    }
-                  }, 1000); // Timer ticks every second
-                });
-            }              
+            };            
 
             let isFirstRun = true;
             nextButton.addEventListener('click', async () => {
@@ -134,31 +146,54 @@
                     audio.play();
                     hasntStarted = true;
                     questionEnded = false;
-                    intervalId = setInterval(updateText, 200);
+                    intervalId = setInterval(updateText, 100);
                 };
-
                 if (isFirstRun) {
                     isFirstRun = false;
                     try {
-                        fetch('/api/get_next_question');
-                        const response = await fetch('/api/get_answer');
-                        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+                        await fetch('/api/get_next_question');
+                        let response = await fetch('/api/get_answer');
                         answer = await response.text();
+                        console.log("Answer: ", answer)
                         await resetAndFetch();
                     } catch (error) {
                         console.error('Error fetching next question and answer:', error);
                     }
+                    nextButton.dispatchEvent(new Event('click'));
                 } else {
-                    resetAndFetch();
-                    fetch('/api/get_next_question');
-                    fetch('/api/get_answer')
-                        .then(response => {
-                            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-                            return response.text();
-                        })
-                        .then(data => { answer = data; })
-                        .catch(error => console.error('Error fetching next question and answer:', error));
+                    try {
+                        fetch('/api/get_next_question');
+                        let response = await fetch('/api/get_answer');
+                        answer = await response.text();
+                        console.log("Answer: ", answer)
+                        await resetAndFetch();
+                    } catch (error) {
+                        console.error('Error fetching next question and answer:', error);
+                    }
                 }
+                
+                
+                /*if (isFirstRun) {
+                    isFirstRun = false;
+                    try {
+                        fetch('/api/get_next_question');
+                        let response = await fetch('/api/get_answer');
+                        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+                        answer = await response.text();
+                        console.log("Answer: ", answer)
+                        await resetAndFetch();
+                        response = fetch('/api/get_answer');
+                        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+                        nextAnswer = response.text();
+                    } 
+                } else {
+                    answer = nextAnswer;
+                    fetch('/api/get_next_question');
+                    resetAndFetch();
+                    let response = fetch('/api/get_answer');
+                    if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+                    nextAnswer = response.text();
+                }*/
             });
 
             buzzer.addEventListener('click', () => {
@@ -178,7 +213,10 @@
                 if (!buzzedIn && (event.key === 'n' || event.key === 'N')) nextButton.click();
                 else if (!questionEnded && !buzzedIn && event.key === ' ') {
                     buzzedIn = true;
-                    timerPaused = true;
+                    if (questionDone) {
+                        timer.pause();
+                        timerPaused = true;
+                    }
                     buzzer.click();
                 } else if (buzzedIn && event.key === 'Enter') {
                     const inputValue = textInput.value;
@@ -188,8 +226,7 @@
                     calculateScore(correct);
                     buzzedIn = false;
                     if (timerPaused && questionEnded) {
-                        timerPaused = false;
-                        startTimer();
+                        timer.resume()
                     }
                     if (correct != -1) {
                         textDiv.textContent = textCues.map(cue => cue.text).join(' ');
@@ -203,13 +240,14 @@
             });
 
             audio.addEventListener('ended', () => {
+                questionDone = true;
                 clearInterval(intervalId);
                 answerBox.style.display = 'block';
                 if (!buzzedIn) {
-                    startTimer().then(() => {
+                    timer = new Timer(function() {
                         questionEnded = true;
                         answerDisplay.textContent = answer;
-                    });
+                    }, 5000);
                 }
             });
         });
