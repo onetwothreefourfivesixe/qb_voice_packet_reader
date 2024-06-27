@@ -1,4 +1,4 @@
-from flask import Flask, send_from_directory, render_template, jsonify
+from flask import Flask, send_from_directory, render_template, jsonify, request
 import json
 import forced_alignment
 
@@ -25,9 +25,11 @@ def get_text():
     response.sort(key=lambda x: x['time'])
     return jsonify(response)
 
-@app.route('/api/get_next_question')
+@app.route('/api/get_next_question', methods=['GET'])
 def get_next_question():
-    forced_alignment.generate_sync_map()
+    question_numbers = request.args.getlist('question_numbers')
+    subjects = request.args.getlist('subjects')
+    forced_alignment.generate_sync_map(question_numbers=question_numbers, subjects=subjects)
     return "Done"
 
 @app.route('/api/get_answer')

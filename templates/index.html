@@ -30,7 +30,41 @@
         <source id="audioSource" src="{{ url_for('audio', filename='audio.mp3') }}" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-    <p id="score">Score: 0</p>
+    <ul>
+        <li id="score">Score: 0</li>
+        <li> <form id="dropdownForm">
+            <label for="categories">Select question categories:</label>
+            <select id="categories" name="dropdown1" multiple>
+                <option value="Literature">Literature</option>
+                <option value="History">History</option>
+                <option value="Science">Science</option>
+                <option value="Fine Arts">Fine Arts</option>
+                <option value="Religion">Religion</option>
+                <option value="Mythology">Mythology</option>
+                <option value="Philosophy">Philosophy</option>
+                <option value="Social Science">Social Science</option>
+                <option value="Current Events">Current Events</option>
+                <option value="Geography">Geography</option>
+                <option value="Trash">Trash</option>
+            </select>
+            
+            <label for="difficulties">Select difficulties:</label>
+            <select id="difficulties" name="dropdown2" multiple>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+    
+            <button type="button" id="submitButton">Submit</button>
+        </form></li>
+    </ul>
     <button id="buzzer">Buzz</button>
     <button id="nextQuestion">Get the next question</button>
     <input type="text" id="answer" style="display: none;" placeholder="Answer">
@@ -96,9 +130,41 @@
             let timerPromise = null;
             let timerPaused = false;
 
+            let previousSubjects = [];
+            let previousDifficulties = [];
+
+            function get_next_question() {
+                const subjects = Array.from(document.getElementById('categories').selectedOptions).map(option => option.value);
+                const question_numbers = Array.from(document.getElementById('difficulties').selectedOptions).map(option => option.value);
+
+                if (JSON.stringify(subjects) !== JSON.stringify(previousSubjects) || JSON.stringify(question_numbers) !== JSON.stringify(previousDifficulties)) {
+                    previousSubjects = subjects;
+                    previousDifficulties = question_numbers;
+                }
+
+                const params = new URLSearchParams();
+                params.append('subjects', JSON.stringify(previousSubjects));
+                params.append('question_numbers', JSON.stringify(previousDifficulties));
+
+                const url = '/get_next_question?' + params.toString();
+
+                return fetch(url);
+            }
+
+
             const fetchTextCues = () => fetch('/api/get_text')
                 .then(response => response.json())
-                .then(data => { textCues = data; })
+                .then(data => {
+                    textCues = data; 
+                })
+                .catch(error => console.error('Error fetching text cues:', error));
+
+            const fetchAnswer = () => fetch('/api/get_answer')
+                .then(response => response.text()) // Corrected typo here
+                .then(text => {
+                answer = text;
+                console.log("Answer: ", answer);
+                })
                 .catch(error => console.error('Error fetching text cues:', error));
 
             const updateText = () => {
@@ -129,7 +195,6 @@
                 displayedScore.textContent = "Score: " + score;
             };            
 
-            let isFirstRun = true;
             nextButton.addEventListener('click', async () => {
                 const resetAndFetch = async () => {
                     answerBox.style.display = 'none';
@@ -143,57 +208,20 @@
                     audioSource.src = `{{ url_for('audio', filename='audio.mp3') }}?t=${new Date().getTime()}`;
                     audio.load();
                     await fetchTextCues();
+                    fetchAnswer();
                     audio.play();
                     hasntStarted = true;
                     questionEnded = false;
+                    buzzedIn = false;
                     intervalId = setInterval(updateText, 100);
                 };
-                if (isFirstRun) {
-                    isFirstRun = false;
-                    try {
-                        await fetch('/api/get_next_question');
-                        let response = await fetch('/api/get_answer');
-                        answer = await response.text();
-                        console.log("Answer: ", answer)
-                        await resetAndFetch();
-                    } catch (error) {
-                        console.error('Error fetching next question and answer:', error);
-                    }
-                    nextButton.dispatchEvent(new Event('click'));
-                } else {
-                    try {
-                        fetch('/api/get_next_question');
-                        let response = await fetch('/api/get_answer');
-                        answer = await response.text();
-                        console.log("Answer: ", answer)
-                        await resetAndFetch();
-                    } catch (error) {
-                        console.error('Error fetching next question and answer:', error);
-                    }
+                try {
+                    get_next_question().then(
+                        resetAndFetch()
+                    );
+                } catch (error) {
+                    console.error('Error fetching next question and answer:', error);
                 }
-                
-                
-                /*if (isFirstRun) {
-                    isFirstRun = false;
-                    try {
-                        fetch('/api/get_next_question');
-                        let response = await fetch('/api/get_answer');
-                        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-                        answer = await response.text();
-                        console.log("Answer: ", answer)
-                        await resetAndFetch();
-                        response = fetch('/api/get_answer');
-                        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-                        nextAnswer = response.text();
-                    } 
-                } else {
-                    answer = nextAnswer;
-                    fetch('/api/get_next_question');
-                    resetAndFetch();
-                    let response = fetch('/api/get_answer');
-                    if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-                    nextAnswer = response.text();
-                }*/
             });
 
             buzzer.addEventListener('click', () => {
@@ -232,6 +260,7 @@
                         textDiv.textContent = textCues.map(cue => cue.text).join(' ');
                         audio.pause();
                         answerDisplay.textContent = answer;
+                        timer.clear();
                         audio.dispatchEvent(new Event('ended'));
                     } else {
                         buzzer.click();
