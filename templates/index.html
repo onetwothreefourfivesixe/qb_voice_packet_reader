@@ -146,7 +146,7 @@
                 params.append('subjects', JSON.stringify(previousSubjects));
                 params.append('question_numbers', JSON.stringify(previousDifficulties));
 
-                const url = '/get_next_question?' + params.toString();
+                const url = '/api/get_next_question?' + params.toString();
 
                 return fetch(url);
             }
@@ -260,6 +260,7 @@
                         textDiv.textContent = textCues.map(cue => cue.text).join(' ');
                         audio.pause();
                         answerDisplay.textContent = answer;
+                        answerBox.display = true;
                         timer.clear();
                         audio.dispatchEvent(new Event('ended'));
                     } else {
