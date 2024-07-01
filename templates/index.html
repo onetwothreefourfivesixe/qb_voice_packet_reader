@@ -43,13 +43,31 @@
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
         }
+        .checklist {
+            list-style-type: none;
+            padding: 0;
+            display: none; /* Initially collapsed */
+        }
+        .checklist li {
+            margin: 10px 0;
+            margin-right: 1%;
+        }
+        .collapsible {
+            cursor: pointer;
+            padding: 10px;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            background-color: #f1f1f1;
+            margin: 10px 0;
+        }
     </style>
 </head>
 <body>
      <!-- Top Bar -->
      <div class = "w-100 bg-primary py-2 px-4 d-flex fs-5 justify-content-center" style="height: 52px;">
         <p class = "text-light">Play Audio with Synchronized Text</p>
-        <button class = "btn btn-outline-light ms-auto py-0 px-3 me-3" onclick={alert("Welcome!")}>?</button>
     </div>
 
     <!-- <h1>Play Audio with Synchronized Text</h1> -->
@@ -60,37 +78,35 @@
     <div class = "row w-100"> 
         <!-- height: 100vh - 52px; -->
         <div class = "col-md-2 p-4 overflow-scroll" style="background-color: lightgray;">
-            <form id="dropdownForm">
-                <label for="categories">Select question categories:</label>
-                <select id="categories" name="dropdown1" multiple>
-                    <option value="Literature">Literature</option>
-                    <option value="History">History</option>
-                    <option value="Science">Science</option>
-                    <option value="Fine Arts">Fine Arts</option>
-                    <option value="Religion">Religion</option>
-                    <option value="Mythology">Mythology</option>
-                    <option value="Philosophy">Philosophy</option>
-                    <option value="Social Science">Social Science</option>
-                    <option value="Current Events">Current Events</option>
-                    <option value="Geography">Geography</option>
-                    <option value="Trash">Trash</option>
-                </select>
-                
-                <label for="difficulties">Select difficulties:</label>
-                <select id="difficulties" name="dropdown2" multiple>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
+            <form id="checklistForm">
+                <button type="button" class="collapsible" onclick="toggleVisibility('categories')">Select question categories:</button>
+                <ul class="checklist" id="categories">
+                    <li><input type="checkbox" id="category1" name="categories" value="Literature"><label for="category1"> Literature</label></li>
+                    <li><input type="checkbox" id="category2" name="categories" value="History"><label for="category2"> History</label></li>
+                    <li><input type="checkbox" id="category3" name="categories" value="Science"><label for="category3"> Science</label></li>
+                    <li><input type="checkbox" id="category4" name="categories" value="Fine Arts"><label for="category4"> Fine Arts</label></li>
+                    <li><input type="checkbox" id="category5" name="categories" value="Religion"><label for="category5"> Religion</label></li>
+                    <li><input type="checkbox" id="category6" name="categories" value="Mythology"><label for="category6"> Mythology</label></li>
+                    <li><input type="checkbox" id="category7" name="categories" value="Philosophy"><label for="category7"> Philosophy</label></li>
+                    <li><input type="checkbox" id="category8" name="categories" value="Social Science"><label for="category8"> Social Science</label></li>
+                    <li><input type="checkbox" id="category9" name="categories" value="Current Events"><label for="category9"> Current Events</label></li>
+                    <li><input type="checkbox" id="category10" name="categories" value="Geography"><label for="category10"> Geography</label></li>
+                    <li><input type="checkbox" id="category11" name="categories" value="Trash"><label for="category11"> Trash</label></li>
+                </ul>
         
-                <button type="button" id="submitButton">Apply</button>
+                <button type="button" class="collapsible" onclick="toggleVisibility('difficulties')">Select difficulties:</button>
+                <ul class="checklist" id="difficulties">
+                    <li><input type="checkbox" id="difficulty1" name="difficulties" value="1"><label for="difficulty1"> 1</label></li>
+                    <li><input type="checkbox" id="difficulty2" name="difficulties" value="2"><label for="difficulty2"> 2</label></li>
+                    <li><input type="checkbox" id="difficulty3" name="difficulties" value="3"><label for="difficulty3"> 3</label></li>
+                    <li><input type="checkbox" id="difficulty4" name="difficulties" value="4"><label for="difficulty4"> 4</label></li>
+                    <li><input type="checkbox" id="difficulty5" name="difficulties" value="5"><label for="difficulty5"> 5</label></li>
+                    <li><input type="checkbox" id="difficulty6" name="difficulties" value="6"><label for="difficulty6"> 6</label></li>
+                    <li><input type="checkbox" id="difficulty7" name="difficulties" value="7"><label for="difficulty7"> 7</label></li>
+                    <li><input type="checkbox" id="difficulty8" name="difficulties" value="8"><label for="difficulty8"> 8</label></li>
+                    <li><input type="checkbox" id="difficulty9" name="difficulties" value="9"><label for="difficulty9"> 9</label></li>
+                    <li><input type="checkbox" id="difficulty10" name="difficulties" value="10"><label for="difficulty10"> 10</label></li>
+                </ul>
             </form>
         </div>
         
@@ -140,6 +156,15 @@
             this.resume();
         }
 
+        function toggleVisibility(id) {
+            const element = document.getElementById(id);
+            if (element.style.display === "none") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             const audio = document.getElementById('audio');
             const audioSource = document.getElementById('audioSource');
@@ -150,6 +175,7 @@
             const answerBox = document.getElementById('answerLine');
             const answerDisplay = document.getElementById('actualAnswer');
             const displayedScore = document.getElementById('score');
+            const answerRight = document.getElementById('answerRight')
 
             let score = 0;
             let textCues = [];
@@ -158,12 +184,15 @@
             let lastDisplayedText = '';
             let onWord = 0;
             let startTime = 0;
+            let lastScore = 0;
             let intervalId = null;
 
             let hasntStarted = false;
             let buzzedIn = false;
             let questionEnded = false;
             let questionDone = false;
+            let inPower = false;
+            let interrupt = false;
 
             let timer = null;
             let timerPromise = null;
@@ -173,20 +202,20 @@
             let previousDifficulties = [];
 
             function get_next_question() {
-                const subjects = Array.from(document.getElementById('categories').selectedOptions).map(option => option.value);
-                const question_numbers = Array.from(document.getElementById('difficulties').selectedOptions).map(option => option.value);
-
+                const subjects = Array.from(document.querySelectorAll('#categories input[type="checkbox"]:checked')).map(checkbox => checkbox.value);
+                const question_numbers = Array.from(document.querySelectorAll('#difficulties input[type="checkbox"]:checked')).map(checkbox => checkbox.value);
+    
                 if (JSON.stringify(subjects) !== JSON.stringify(previousSubjects) || JSON.stringify(question_numbers) !== JSON.stringify(previousDifficulties)) {
                     previousSubjects = subjects;
                     previousDifficulties = question_numbers;
                 }
-
+    
                 const params = new URLSearchParams();
                 params.append('subjects', JSON.stringify(previousSubjects));
                 params.append('question_numbers', JSON.stringify(previousDifficulties));
-
+    
                 const url = '/api/get_next_question?' + params.toString();
-
+    
                 return fetch(url);
             }
 
@@ -221,14 +250,21 @@
             const checkAnswer = userAnswer => answer.toLocaleLowerCase().indexOf(userAnswer.toLocaleLowerCase());
 
             const calculateScore = correct => {
+                lastScore = 0;
                 if (correct != -1) {
-                    if (textDiv.textContent.indexOf('(*)') < 0)
-                        score += 5;
-                    score += 10;
+                    if (textDiv.textContent.indexOf('(*)') < 0) {
+                        inPower = true;
+                    }
+                    if (inPower) {
+                        lastScore += 5;
+                    }
+                    lastScore += 10;
+                    score += lastScore
                 }
                 else {
                     if (!questionEnded)
-                        score -= 5;
+                        lastScore -= 5;
+                        score += lastScore;
                 }
                 console.log("Score: ", score);
                 displayedScore.textContent = "Score: " + score;
@@ -251,7 +287,10 @@
                     audio.play();
                     hasntStarted = true;
                     questionEnded = false;
+                    questionDone = false;
                     buzzedIn = false;
+                    interrupt = false;
+                    inPower = 0;
                     intervalId = setInterval(updateText, 100);
                 };
                 try {
@@ -284,6 +323,9 @@
                         timer.pause();
                         timerPaused = true;
                     }
+                    else {
+                        interrupt = true;
+                    }
                     buzzer.click();
                 } else if (buzzedIn && event.key === 'Enter') {
                     const inputValue = textInput.value;
@@ -296,27 +338,49 @@
                         timer.resume()
                     }
                     if (correct != -1) {
+                        questionEnded = true;
                         textDiv.textContent = textCues.map(cue => cue.text).join(' ');
                         audio.pause();
-                        answerDisplay.textContent = answer;
-                        answerBox.display = true;
-                        timer.clear();
+                        answerDisplay.textContent = "Answer: " + answer;
+                        if (timer != null) timer.clear();
+                        answerRight.textContent = "I was incorrect";
                         audio.dispatchEvent(new Event('ended'));
                     } else {
                         buzzer.click();
+                        answerRight.textContent = "I was correct";
                     }
                 }
             });
 
             audio.addEventListener('ended', () => {
                 questionDone = true;
+                answerDisplay.textContent = "Answer: " + answer;
                 clearInterval(intervalId);
-                answerBox.style.display = 'block';
-                if (!buzzedIn) {
+                if (!buzzedIn && !questionEnded) {
                     timer = new Timer(function() {
+                        answerBox.style.display = 'block';
                         questionEnded = true;
-                        answerDisplay.textContent = answer;
                     }, 5000);
+                }
+                answerBox.style.display = 'block';
+            });
+
+            answerRight.addEventListener('click', () => {
+                if (correct) {
+                    score -= lastScore;
+                    if (interrupt) {
+                        lastScore += -5;
+                        score -= lastScore;
+                    }
+                    answerRight.textContent = "I was correct"
+                    correct = !correct;
+                }
+                else {
+                    if (lastScore < 0)
+                        score += 5;
+                    calculateScore(true);
+                    answerRight.textContent = "I was incorrect";
+                    correct = !correct;
                 }
             });
         });

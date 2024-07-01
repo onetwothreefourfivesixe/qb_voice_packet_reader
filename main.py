@@ -28,11 +28,19 @@ def get_text():
 @app.route('/api/get_next_question', methods=['GET'])
 def get_next_question():
     question_numbers = request.args.getlist('question_numbers')[0]
-    question_numbers = [int(number) for number in ''.join([char for char in question_numbers if char not in [';', ':', '!', "*", " ", "[", "]",'"']]).split(",")]
+    if len(question_numbers) > 2:
+        question_numbers = [int(number) for number in ''.join([char for char in question_numbers if char not in [';', ':', '!', "*", " ", "[", "]",'"']]).split(",")]
     subjects = request.args.getlist('subjects')[0]
     print(question_numbers)
     print(subjects)
-    forced_alignment.generate_sync_map(question_numbers=question_numbers, subjects=subjects)
+    if  len(question_numbers) > 2 and len(subjects) > 2:
+        forced_alignment.generate_sync_map(question_numbers=question_numbers, subjects=subjects)
+    elif len(question_numbers) > 2:
+        forced_alignment.generate_sync_map(question_numbers=question_numbers)
+    elif len(subjects) > 2:
+         forced_alignment.generate_sync_map(subjects=subjects)
+    else:
+        forced_alignment.generate_sync_map()
     return "Done"
 
 @app.route('/api/get_answer')
