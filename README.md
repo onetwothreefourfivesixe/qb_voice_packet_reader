@@ -42,10 +42,15 @@ But to install and run the Flask version of QB Voice Packet Reader, follow these
 4. Create a Python Enviorment (venv). If you are using VS Code and Windows, do the following:
     
     a. Open the project in VS Code.
+    
     b. Press ```bash Ctrl + Shift + P``` to bring up the commands.
+    
     c. Search ```bash Python: Create Enviroment```.
+    
     d. select ```bash Venv ```.
+    
     e. If you used the Aeneas Python installer, select to use the 3.9.13 Python interpreter when making the enviorment.
+    
     f. Run ```bash .venv\Scripts\activate```.
 
     For Non-Windows users, go to the following tutorial in order to do the same thing: https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/.
