@@ -67,7 +67,7 @@
 <body>
      <!-- Top Bar -->
      <div class = "w-100 bg-primary py-2 px-4 d-flex fs-5 justify-content-center" style="height: 52px;">
-        <p class = "text-light">Play Audio with Synchronized Text</p>
+        <p class = "text-light">QB Voice Tossup Reader</p>
     </div>
 
     <!-- <h1>Play Audio with Synchronized Text</h1> -->
@@ -184,7 +184,6 @@
             let lastDisplayedText = '';
             let onWord = 0;
             let startTime = 0;
-            let lastScore = 0;
             let intervalId = null;
 
             let hasntStarted = false;
@@ -235,9 +234,22 @@
                 })
                 .catch(error => console.error('Error fetching text cues:', error));
 
-            const updateText = () => {
+            /*const updateText = () => {
                 const currentTime = audio.currentTime;
                 if (onWord < textCues.length && currentTime >= textCues[onWord].time) {
+                    const latestText = textCues[onWord].text;
+                    onWord++;
+                    if (latestText !== lastDisplayedText) {
+                        textDiv.textContent += " " + latestText;
+                        lastDisplayedText = latestText;
+                    }
+                }
+            };*/
+            const updateText = () => {
+                const currentTime = audio.currentTime;
+            
+                // Loop through all text cues that should have been displayed by now
+                while (onWord < textCues.length && currentTime >= textCues[onWord].time) {
                     const latestText = textCues[onWord].text;
                     onWord++;
                     if (latestText !== lastDisplayedText) {
@@ -250,21 +262,18 @@
             const checkAnswer = userAnswer => answer.toLocaleLowerCase().indexOf(userAnswer.toLocaleLowerCase());
 
             const calculateScore = correct => {
-                lastScore = 0;
                 if (correct != -1) {
                     if (textDiv.textContent.indexOf('(*)') < 0) {
                         inPower = true;
                     }
                     if (inPower) {
-                        lastScore += 5;
+                        score += 5;
                     }
-                    lastScore += 10;
-                    score += lastScore
+                    score += 10;
                 }
                 else {
                     if (!questionEnded)
-                        lastScore -= 5;
-                        score += lastScore;
+                        score -= 5;
                 }
                 console.log("Score: ", score);
                 displayedScore.textContent = "Score: " + score;
@@ -278,6 +287,7 @@
                     audio.currentTime = 0;
                     lastDisplayedText = '';
                     textDiv.textContent = '';
+                    textInput.value = "";
                     textCues = [];
                     onWord = 0;
                     audioSource.src = `{{ url_for('audio', filename='audio.mp3') }}?t=${new Date().getTime()}`;
@@ -311,7 +321,7 @@
                     audio.play();
                     hasntStarted = true;
                     textInput.style.display = 'none';
-                    intervalId = setInterval(updateText, 200);
+                    intervalId = setInterval(updateText, 100);
                 }
             });
 
@@ -347,6 +357,7 @@
                         audio.dispatchEvent(new Event('ended'));
                     } else {
                         buzzer.click();
+                        textInput.value = "";
                         answerRight.textContent = "I was correct";
                     }
                 }
@@ -366,21 +377,34 @@
             });
 
             answerRight.addEventListener('click', () => {
-                if (correct) {
-                    score -= lastScore;
-                    if (interrupt) {
-                        lastScore += -5;
-                        score -= lastScore;
+                console.log()
+                if (correct != -1) {
+                    if (inPower) {
+                        score -= 15;
                     }
+                    else {
+                        score -= 10;
+                    }
+                    if (interrupt) {
+                        score -= 5;
+                    }
+                    displayedScore.textContent = "Score: " + score;
                     answerRight.textContent = "I was correct"
-                    correct = !correct;
+                    correct = -1;
                 }
                 else {
-                    if (lastScore < 0)
+                    if (interrupt) {
                         score += 5;
-                    calculateScore(true);
+                    }
+                    if (inPower) {
+                        score += 15;
+                    }
+                    else {
+                        score += 10;
+                    }
+                    displayedScore.textContent = "Score: " + score;
                     answerRight.textContent = "I was incorrect";
-                    correct = !correct;
+                    correct = 10;
                 }
             });
         });
