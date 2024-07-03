@@ -1,3 +1,15 @@
+/* 
+TODO:
+- add some kind of indication (ie. arrows) to show when dropdowns are collapsed
+- make sure it looks good on smaller window sizes
+- actually have a color theme
+- style buttons for I was correct/incorrect
+
+Reference: 
+    white: f1f1f1
+    border radius: 15px
+*/
+
 * {
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
@@ -28,8 +40,6 @@
 }
 
 
-
-
 /* Hide scrollbar */
 *::-webkit-scrollbar {
     display: none; /* Chrome, Safari and Opera */
@@ -40,19 +50,52 @@
 scrollbar-width: none;  /* Firefox */
 }
 
-/* Other styles */
 
-#audio {
-    display: none;
-}
+
+/* Position of dropdowns */
+/* breakpoints:
+    large >= 992px
+    medium >= 768px
+    small >= 576px
+*/
 
 @media (min-width: 992px) {
     .col-lg-3, .col-lg-9 {
         height: calc(100vh - 52px);
-        /* position: fixed; */
+    }
+
+    .collapsible, .checklist {
+        width: 100%;
+    }
+}
+@media (max-width: 991px) {
+    .collapsible, .checklist {
+        width: 50%;
+        margin-left: 25%;
+    }
+}
+@media (max-width: 600px) {
+    .collapsible, .checklist {
+        width: 80%;
+        margin-left: 10%;
     }
 }
 
+
+/* Dropdowns */
+.collapsible {
+    border-radius: 15px 15px 0px 0px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    padding: 20px 10px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    margin-top: 20px;
+    /* margin: 10px 0; */
+
+    text-align: center;
+}
 
 .checklist {
     background-color: #f1f1f1;
@@ -73,35 +116,12 @@ li > label {
     margin-left: 7px;
 }
 
-/* li:has(input:checked){
-    background-color: green ;
-} */
-
-
 input[type='checkbox'] {
-    /* display: none; */
     width: 10%;
 }
 
-.collapsible {
-    border-radius: 15px 15px 0px 0px;
-    background-color: #f1f1f1;
-    cursor: pointer;
-    padding: 20px 10px;
-    border: none;
-    outline: none;
-    font-size: 18px;
-    margin-top: 20px;
-    /* margin: 10px 0; */
+/* Misc */
 
-    text-align: center;
-    width: 100%;
+#audio {
+    display: none;
 }
-
-
-
-/* 
-    white: f1f1f1
-    border radius: 15px
-*/
-
