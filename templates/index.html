@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play Audio with Synchronized Text</title>
+    <title>Voice Packet Reader</title>
     <!-- Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -43,8 +44,8 @@
                 <p id="question" class="question"></p>
             </div>
             
-            <ul style="display: none;" id="answerLine">
-                <li id="actualAnswer"></li>
+            <ul style="display: none; list-style-type: none;" id="answerLine">
+                <li id="actualAnswer" class = "text-qb-white"></li>
                 <li><button id="answerRight">I was correct</button></li>
             </ul>
         </div>
@@ -182,6 +183,7 @@
             const fetchTextCues = () => fetch('/api/get_text')
                 .then(response => response.json())
                 .then(data => {
+                    console.log(data);
                     textCues = data; 
                 })
                 .catch(error => console.error('Error fetching text cues:', error));
@@ -209,8 +211,8 @@
                 const currentTime = audio.currentTime;
             
                 // Loop through all text cues that should have been displayed by now
-                while (onWord < textCues.length && currentTime >= textCues[onWord].time) {
-                    const latestText = textCues[onWord].text;
+                while (onWord < textCues.length && currentTime >= textCues[onWord][0]) {
+                    const latestText = textCues[onWord][1];
                     onWord++;
                     if (latestText !== lastDisplayedText) {
                         textDiv.textContent += " " + latestText;
@@ -304,12 +306,12 @@
                     console.log("Correct: ", correct);
                     calculateScore(correct);
                     buzzedIn = false;
-                    if (timerPaused && questionEnded) {
-                        timer.resume()
+                    if (timerPaused) {
+                        timer.resume();
                     }
                     if (correct != -1) {
                         questionEnded = true;
-                        textDiv.textContent = textCues.map(cue => cue.text).join(' ');
+                        textDiv.textContent = textCues.map(row => row[1]).join(' ');
                         audio.pause();
                         answerDisplay.textContent = "Answer: " + answer;
                         if (timer != null) timer.clear();
@@ -327,13 +329,16 @@
                 questionDone = true;
                 answerDisplay.textContent = "Answer: " + answer;
                 clearInterval(intervalId);
-                if (!buzzedIn && !questionEnded) {
+                if (!questionEnded) {
+                    console.log("Timer started")
                     timer = new Timer(function() {
                         answerBox.style.display = 'block';
                         questionEnded = true;
                     }, 5000);
                 }
-                answerBox.style.display = 'block';
+                else {
+                    answerBox.style.display = 'block';
+                }
             });
 
             answerRight.addEventListener('click', () => {

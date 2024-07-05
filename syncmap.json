@@ -7,777 +7,1277 @@
    "id": "f000001",
    "language": "eng",
    "lines": [
-    "This"
+    "When"
    ]
   },
   {
    "begin": "0.320",
    "children": [],
-   "end": "0.640",
+   "end": "0.680",
    "id": "f000002",
    "language": "eng",
    "lines": [
-    "type"
+    "deriving"
    ]
   },
   {
-   "begin": "0.640",
+   "begin": "0.680",
    "children": [],
-   "end": "0.840",
+   "end": "1.120",
    "id": "f000003",
    "language": "eng",
    "lines": [
-    "of"
+    "the"
    ]
   },
   {
-   "begin": "0.840",
+   "begin": "1.120",
    "children": [],
-   "end": "1.720",
+   "end": "2.320",
    "id": "f000004",
    "language": "eng",
    "lines": [
-    "mathematical"
+    "Aharonov-Bohm"
    ]
   },
   {
-   "begin": "1.720",
+   "begin": "2.320",
    "children": [],
-   "end": "2.120",
+   "end": "2.600",
    "id": "f000005",
    "language": "eng",
    "lines": [
-    "behavior"
-   ]
-  },
-  {
-   "begin": "2.120",
-   "children": [],
-   "end": "2.600",
-   "id": "f000006",
-   "language": "eng",
-   "lines": [
-    "is"
+    "effect,"
    ]
   },
   {
    "begin": "2.600",
    "children": [],
-   "end": "2.960",
+   "end": "3.160",
+   "id": "f000006",
+   "language": "eng",
+   "lines": [
+    "it"
+   ]
+  },
+  {
+   "begin": "3.160",
+   "children": [],
+   "end": "3.480",
    "id": "f000007",
-   "language": "eng",
-   "lines": [
-    "modeled"
-   ]
-  },
-  {
-   "begin": "2.960",
-   "children": [],
-   "end": "3.240",
-   "id": "f000008",
-   "language": "eng",
-   "lines": [
-    "by"
-   ]
-  },
-  {
-   "begin": "3.240",
-   "children": [],
-   "end": "3.400",
-   "id": "f000009",
-   "language": "eng",
-   "lines": [
-    "the"
-   ]
-  },
-  {
-   "begin": "3.400",
-   "children": [],
-   "end": "4.000",
-   "id": "f000010",
-   "language": "eng",
-   "lines": [
-    "differential"
-   ]
-  },
-  {
-   "begin": "4.000",
-   "children": [],
-   "end": "4.600",
-   "id": "f000011",
-   "language": "eng",
-   "lines": [
-    "equation"
-   ]
-  },
-  {
-   "begin": "4.600",
-   "children": [],
-   "end": "5.320",
-   "id": "f000012",
-   "language": "eng",
-   "lines": [
-    "dx"
-   ]
-  },
-  {
-   "begin": "5.320",
-   "children": [],
-   "end": "5.680",
-   "id": "f000013",
-   "language": "eng",
-   "lines": [
-    "over"
-   ]
-  },
-  {
-   "begin": "5.680",
-   "children": [],
-   "end": "6.040",
-   "id": "f000014",
-   "language": "eng",
-   "lines": [
-    "dt"
-   ]
-  },
-  {
-   "begin": "6.040",
-   "children": [],
-   "end": "6.360",
-   "id": "f000015",
-   "language": "eng",
-   "lines": [
-    "equals"
-   ]
-  },
-  {
-   "begin": "6.360",
-   "children": [],
-   "end": "7.960",
-   "id": "f000016",
-   "language": "eng",
-   "lines": [
-    "kx."
-   ]
-  },
-  {
-   "begin": "7.960",
-   "children": [],
-   "end": "8.160",
-   "id": "f000017",
-   "language": "eng",
-   "lines": [
-    "The"
-   ]
-  },
-  {
-   "begin": "8.160",
-   "children": [],
-   "end": "8.600",
-   "id": "f000018",
-   "language": "eng",
-   "lines": [
-    "parent"
-   ]
-  },
-  {
-   "begin": "8.600",
-   "children": [],
-   "end": "8.920",
-   "id": "f000019",
-   "language": "eng",
-   "lines": [
-    "graph"
-   ]
-  },
-  {
-   "begin": "8.920",
-   "children": [],
-   "end": "9.040",
-   "id": "f000020",
-   "language": "eng",
-   "lines": [
-    "of"
-   ]
-  },
-  {
-   "begin": "9.040",
-   "children": [],
-   "end": "9.280",
-   "id": "f000021",
-   "language": "eng",
-   "lines": [
-    "this"
-   ]
-  },
-  {
-   "begin": "9.280",
-   "children": [],
-   "end": "9.560",
-   "id": "f000022",
-   "language": "eng",
-   "lines": [
-    "type"
-   ]
-  },
-  {
-   "begin": "9.560",
-   "children": [],
-   "end": "9.760",
-   "id": "f000023",
-   "language": "eng",
-   "lines": [
-    "of"
-   ]
-  },
-  {
-   "begin": "9.760",
-   "children": [],
-   "end": "10.320",
-   "id": "f000024",
-   "language": "eng",
-   "lines": [
-    "function"
-   ]
-  },
-  {
-   "begin": "10.320",
-   "children": [],
-   "end": "10.840",
-   "id": "f000025",
-   "language": "eng",
-   "lines": [
-    "has"
-   ]
-  },
-  {
-   "begin": "10.840",
-   "children": [],
-   "end": "10.960",
-   "id": "f000026",
-   "language": "eng",
-   "lines": [
-    "a"
-   ]
-  },
-  {
-   "begin": "10.960",
-   "children": [],
-   "end": "11.240",
-   "id": "f000027",
-   "language": "eng",
-   "lines": [
-    "horizontal"
-   ]
-  },
-  {
-   "begin": "11.240",
-   "children": [],
-   "end": "12.080",
-   "id": "f000028",
-   "language": "eng",
-   "lines": [
-    "asymptote"
-   ]
-  },
-  {
-   "begin": "12.080",
-   "children": [],
-   "end": "12.720",
-   "id": "f000029",
-   "language": "eng",
-   "lines": [
-    "along"
-   ]
-  },
-  {
-   "begin": "12.720",
-   "children": [],
-   "end": "12.720",
-   "id": "f000030",
-   "language": "eng",
-   "lines": [
-    "the"
-   ]
-  },
-  {
-   "begin": "12.720",
-   "children": [],
-   "end": "13.440",
-   "id": "f000031",
-   "language": "eng",
-   "lines": [
-    "x-axis"
-   ]
-  },
-  {
-   "begin": "13.440",
-   "children": [],
-   "end": "14.520",
-   "id": "f000032",
-   "language": "eng",
-   "lines": [
-    "and,"
-   ]
-  },
-  {
-   "begin": "14.520",
-   "children": [],
-   "end": "15.160",
-   "id": "f000033",
-   "language": "eng",
-   "lines": [
-    "thus,"
-   ]
-  },
-  {
-   "begin": "15.160",
-   "children": [],
-   "end": "15.880",
-   "id": "f000034",
-   "language": "eng",
-   "lines": [
-    "cannot"
-   ]
-  },
-  {
-   "begin": "15.880",
-   "children": [],
-   "end": "16.240",
-   "id": "f000035",
-   "language": "eng",
-   "lines": [
-    "go"
-   ]
-  },
-  {
-   "begin": "16.240",
-   "children": [],
-   "end": "17.000",
-   "id": "f000036",
-   "language": "eng",
-   "lines": [
-    "negative."
-   ]
-  },
-  {
-   "begin": "17.000",
-   "children": [],
-   "end": "17.920",
-   "id": "f000037",
-   "language": "eng",
-   "lines": [
-    "Logarithmic"
-   ]
-  },
-  {
-   "begin": "17.920",
-   "children": [],
-   "end": "18.600",
-   "id": "f000038",
-   "language": "eng",
-   "lines": [
-    "functions"
-   ]
-  },
-  {
-   "begin": "18.600",
-   "children": [],
-   "end": "18.760",
-   "id": "f000039",
-   "language": "eng",
-   "lines": [
-    "are"
-   ]
-  },
-  {
-   "begin": "18.760",
-   "children": [],
-   "end": "19.080",
-   "id": "f000040",
-   "language": "eng",
-   "lines": [
-    "the"
-   ]
-  },
-  {
-   "begin": "19.080",
-   "children": [],
-   "end": "20.160",
-   "id": "f000041",
-   "language": "eng",
-   "lines": [
-    "(*)"
-   ]
-  },
-  {
-   "begin": "20.160",
-   "children": [],
-   "end": "20.720",
-   "id": "f000042",
-   "language": "eng",
-   "lines": [
-    "inverse"
-   ]
-  },
-  {
-   "begin": "20.720",
-   "children": [],
-   "end": "20.760",
-   "id": "f000043",
-   "language": "eng",
-   "lines": [
-    "of"
-   ]
-  },
-  {
-   "begin": "20.760",
-   "children": [],
-   "end": "21.080",
-   "id": "f000044",
-   "language": "eng",
-   "lines": [
-    "this"
-   ]
-  },
-  {
-   "begin": "21.080",
-   "children": [],
-   "end": "21.280",
-   "id": "f000045",
-   "language": "eng",
-   "lines": [
-    "type"
-   ]
-  },
-  {
-   "begin": "21.280",
-   "children": [],
-   "end": "21.480",
-   "id": "f000046",
-   "language": "eng",
-   "lines": [
-    "of"
-   ]
-  },
-  {
-   "begin": "21.480",
-   "children": [],
-   "end": "22.040",
-   "id": "f000047",
-   "language": "eng",
-   "lines": [
-    "function,"
-   ]
-  },
-  {
-   "begin": "22.040",
-   "children": [],
-   "end": "22.560",
-   "id": "f000048",
-   "language": "eng",
-   "lines": [
-    "which"
-   ]
-  },
-  {
-   "begin": "22.560",
-   "children": [],
-   "end": "22.920",
-   "id": "f000049",
    "language": "eng",
    "lines": [
     "is"
    ]
   },
   {
-   "begin": "22.920",
+   "begin": "3.480",
    "children": [],
-   "end": "23.400",
-   "id": "f000050",
+   "end": "3.840",
+   "id": "f000008",
    "language": "eng",
    "lines": [
-    "subject"
+    "noted"
    ]
   },
   {
-   "begin": "23.400",
+   "begin": "3.840",
    "children": [],
-   "end": "23.600",
-   "id": "f000051",
-   "language": "eng",
-   "lines": [
-    "to"
-   ]
-  },
-  {
-   "begin": "23.600",
-   "children": [],
-   "end": "23.680",
-   "id": "f000052",
-   "language": "eng",
-   "lines": [
-    "the"
-   ]
-  },
-  {
-   "begin": "23.680",
-   "children": [],
-   "end": "24.360",
-   "id": "f000053",
-   "language": "eng",
-   "lines": [
-    "shortcut"
-   ]
-  },
-  {
-   "begin": "24.360",
-   "children": [],
-   "end": "25.040",
-   "id": "f000054",
-   "language": "eng",
-   "lines": [
-    "\"rule"
-   ]
-  },
-  {
-   "begin": "25.040",
-   "children": [],
-   "end": "25.160",
-   "id": "f000055",
-   "language": "eng",
-   "lines": [
-    "of"
-   ]
-  },
-  {
-   "begin": "25.160",
-   "children": [],
-   "end": "25.600",
-   "id": "f000056",
-   "language": "eng",
-   "lines": [
-    "70.\""
-   ]
-  },
-  {
-   "begin": "25.600",
-   "children": [],
-   "end": "26.240",
-   "id": "f000057",
-   "language": "eng",
-   "lines": [
-    "For"
-   ]
-  },
-  {
-   "begin": "26.240",
-   "children": [],
-   "end": "26.600",
-   "id": "f000058",
-   "language": "eng",
-   "lines": [
-    "10"
-   ]
-  },
-  {
-   "begin": "26.600",
-   "children": [],
-   "end": "27.600",
-   "id": "f000059",
-   "language": "eng",
-   "lines": [
-    "points,"
-   ]
-  },
-  {
-   "begin": "27.600",
-   "children": [],
-   "end": "27.800",
-   "id": "f000060",
-   "language": "eng",
-   "lines": [
-    "give"
-   ]
-  },
-  {
-   "begin": "27.800",
-   "children": [],
-   "end": "28.160",
-   "id": "f000061",
-   "language": "eng",
-   "lines": [
-    "this"
-   ]
-  },
-  {
-   "begin": "28.160",
-   "children": [],
-   "end": "28.760",
-   "id": "f000062",
-   "language": "eng",
-   "lines": [
-    "adjective"
-   ]
-  },
-  {
-   "begin": "28.760",
-   "children": [],
-   "end": "28.920",
-   "id": "f000063",
+   "end": "4.000",
+   "id": "f000009",
    "language": "eng",
    "lines": [
     "that"
    ]
   },
   {
-   "begin": "28.920",
+   "begin": "4.000",
    "children": [],
-   "end": "29.560",
-   "id": "f000064",
-   "language": "eng",
-   "lines": [
-    "describes"
-   ]
-  },
-  {
-   "begin": "29.560",
-   "children": [],
-   "end": "30.240",
-   "id": "f000065",
-   "language": "eng",
-   "lines": [
-    "expressions"
-   ]
-  },
-  {
-   "begin": "30.240",
-   "children": [],
-   "end": "30.320",
-   "id": "f000066",
-   "language": "eng",
-   "lines": [
-    "of"
-   ]
-  },
-  {
-   "begin": "30.320",
-   "children": [],
-   "end": "30.520",
-   "id": "f000067",
+   "end": "4.200",
+   "id": "f000010",
    "language": "eng",
    "lines": [
     "the"
    ]
   },
   {
-   "begin": "30.520",
+   "begin": "4.200",
    "children": [],
-   "end": "31.080",
-   "id": "f000068",
+   "end": "4.680",
+   "id": "f000011",
    "language": "eng",
    "lines": [
-    "form"
+    "difference"
    ]
   },
   {
-   "begin": "31.080",
+   "begin": "4.680",
    "children": [],
-   "end": "31.080",
-   "id": "f000069",
+   "end": "4.880",
+   "id": "f000012",
    "language": "eng",
    "lines": [
-    "e"
+    "in"
    ]
   },
   {
-   "begin": "31.080",
+   "begin": "4.880",
    "children": [],
-   "end": "31.280",
-   "id": "f000070",
+   "end": "5.320",
+   "id": "f000013",
    "language": "eng",
    "lines": [
-    "to"
+    "phase"
    ]
   },
   {
-   "begin": "31.280",
+   "begin": "5.320",
    "children": [],
-   "end": "31.640",
-   "id": "f000071",
+   "end": "5.840",
+   "id": "f000014",
+   "language": "eng",
+   "lines": [
+    "between"
+   ]
+  },
+  {
+   "begin": "5.840",
+   "children": [],
+   "end": "6.320",
+   "id": "f000015",
    "language": "eng",
    "lines": [
     "the"
    ]
   },
   {
-   "begin": "31.640",
+   "begin": "6.320",
    "children": [],
-   "end": "32.000",
-   "id": "f000072",
+   "end": "6.320",
+   "id": "f000016",
    "language": "eng",
    "lines": [
-    "x,"
+    "two"
    ]
   },
   {
-   "begin": "32.000",
+   "begin": "6.320",
    "children": [],
-   "end": "32.800",
-   "id": "f000073",
+   "end": "6.760",
+   "id": "f000017",
+   "language": "eng",
+   "lines": [
+    "electron"
+   ]
+  },
+  {
+   "begin": "6.760",
+   "children": [],
+   "end": "7.160",
+   "id": "f000018",
+   "language": "eng",
+   "lines": [
+    "beams"
+   ]
+  },
+  {
+   "begin": "7.160",
+   "children": [],
+   "end": "7.400",
+   "id": "f000019",
+   "language": "eng",
+   "lines": [
+    "is"
+   ]
+  },
+  {
+   "begin": "7.400",
+   "children": [],
+   "end": "7.920",
+   "id": "f000020",
+   "language": "eng",
+   "lines": [
+    "invariant"
+   ]
+  },
+  {
+   "begin": "7.920",
+   "children": [],
+   "end": "8.200",
+   "id": "f000021",
+   "language": "eng",
+   "lines": [
+    "under"
+   ]
+  },
+  {
+   "begin": "8.200",
+   "children": [],
+   "end": "9.520",
+   "id": "f000022",
+   "language": "eng",
+   "lines": [
+    "this"
+   ]
+  },
+  {
+   "begin": "9.520",
+   "children": [],
+   "end": "10.720",
+   "id": "f000023",
+   "language": "eng",
+   "lines": [
+    "operation."
+   ]
+  },
+  {
+   "begin": "10.720",
+   "children": [],
+   "end": "11.160",
+   "id": "f000024",
+   "language": "eng",
+   "lines": [
+    "This"
+   ]
+  },
+  {
+   "begin": "11.160",
+   "children": [],
+   "end": "11.760",
+   "id": "f000025",
+   "language": "eng",
+   "lines": [
+    "operation"
+   ]
+  },
+  {
+   "begin": "11.760",
+   "children": [],
+   "end": "12.760",
+   "id": "f000026",
+   "language": "eng",
+   "lines": [
+    "corresponds"
+   ]
+  },
+  {
+   "begin": "12.760",
+   "children": [],
+   "end": "12.920",
+   "id": "f000027",
+   "language": "eng",
+   "lines": [
+    "with"
+   ]
+  },
+  {
+   "begin": "12.920",
+   "children": [],
+   "end": "13.440",
+   "id": "f000028",
+   "language": "eng",
+   "lines": [
+    "rotating"
+   ]
+  },
+  {
+   "begin": "13.440",
+   "children": [],
+   "end": "13.560",
+   "id": "f000029",
+   "language": "eng",
+   "lines": [
+    "a"
+   ]
+  },
+  {
+   "begin": "13.560",
+   "children": [],
+   "end": "13.920",
+   "id": "f000030",
+   "language": "eng",
+   "lines": [
+    "vector"
+   ]
+  },
+  {
+   "begin": "13.920",
+   "children": [],
+   "end": "14.200",
+   "id": "f000031",
+   "language": "eng",
+   "lines": [
+    "for"
+   ]
+  },
+  {
+   "begin": "14.200",
+   "children": [],
+   "end": "14.320",
+   "id": "f000032",
+   "language": "eng",
+   "lines": [
+    "a"
+   ]
+  },
+  {
+   "begin": "14.320",
+   "children": [],
+   "end": "14.320",
+   "id": "f000033",
+   "language": "eng",
+   "lines": [
+    "given"
+   ]
+  },
+  {
+   "begin": "14.320",
+   "children": [],
+   "end": "14.880",
+   "id": "f000034",
+   "language": "eng",
+   "lines": [
+    "quark"
+   ]
+  },
+  {
+   "begin": "14.880",
+   "children": [],
+   "end": "14.880",
+   "id": "f000035",
+   "language": "eng",
+   "lines": [
+    "in"
+   ]
+  },
+  {
+   "begin": "14.880",
+   "children": [],
+   "end": "15.160",
+   "id": "f000036",
+   "language": "eng",
+   "lines": [
+    "color"
+   ]
+  },
+  {
+   "begin": "15.160",
+   "children": [],
+   "end": "15.680",
+   "id": "f000037",
+   "language": "eng",
+   "lines": [
+    "space"
+   ]
+  },
+  {
+   "begin": "15.680",
+   "children": [],
+   "end": "16.080",
+   "id": "f000038",
+   "language": "eng",
+   "lines": [
+    "in"
+   ]
+  },
+  {
+   "begin": "16.080",
+   "children": [],
+   "end": "17.800",
+   "id": "f000039",
+   "language": "eng",
+   "lines": [
+    "Yang-Mills"
+   ]
+  },
+  {
+   "begin": "17.800",
+   "children": [],
+   "end": "18.680",
+   "id": "f000040",
+   "language": "eng",
+   "lines": [
+    "theory."
+   ]
+  },
+  {
+   "begin": "18.680",
+   "children": [],
+   "end": "19.200",
+   "id": "f000041",
+   "language": "eng",
+   "lines": [
+    "This"
+   ]
+  },
+  {
+   "begin": "19.200",
+   "children": [],
+   "end": "20.120",
+   "id": "f000042",
+   "language": "eng",
+   "lines": [
+    "operation,"
+   ]
+  },
+  {
+   "begin": "20.120",
+   "children": [],
+   "end": "20.440",
+   "id": "f000043",
    "language": "eng",
    "lines": [
     "which"
    ]
   },
   {
-   "begin": "32.800",
+   "begin": "20.440",
    "children": [],
-   "end": "33.280",
+   "end": "21.320",
+   "id": "f000044",
+   "language": "eng",
+   "lines": [
+    "corresponds"
+   ]
+  },
+  {
+   "begin": "21.320",
+   "children": [],
+   "end": "21.600",
+   "id": "f000045",
+   "language": "eng",
+   "lines": [
+    "to"
+   ]
+  },
+  {
+   "begin": "21.600",
+   "children": [],
+   "end": "21.800",
+   "id": "f000046",
+   "language": "eng",
+   "lines": [
+    "moving"
+   ]
+  },
+  {
+   "begin": "21.800",
+   "children": [],
+   "end": "22.240",
+   "id": "f000047",
+   "language": "eng",
+   "lines": [
+    "between"
+   ]
+  },
+  {
+   "begin": "22.240",
+   "children": [],
+   "end": "22.520",
+   "id": "f000048",
+   "language": "eng",
+   "lines": [
+    "two"
+   ]
+  },
+  {
+   "begin": "22.520",
+   "children": [],
+   "end": "22.920",
+   "id": "f000049",
+   "language": "eng",
+   "lines": [
+    "different"
+   ]
+  },
+  {
+   "begin": "22.920",
+   "children": [],
+   "end": "23.600",
+   "id": "f000050",
+   "language": "eng",
+   "lines": [
+    "sections"
+   ]
+  },
+  {
+   "begin": "23.600",
+   "children": [],
+   "end": "23.680",
+   "id": "f000051",
+   "language": "eng",
+   "lines": [
+    "of"
+   ]
+  },
+  {
+   "begin": "23.680",
+   "children": [],
+   "end": "23.720",
+   "id": "f000052",
+   "language": "eng",
+   "lines": [
+    "a"
+   ]
+  },
+  {
+   "begin": "23.720",
+   "children": [],
+   "end": "24.320",
+   "id": "f000053",
+   "language": "eng",
+   "lines": [
+    "principal"
+   ]
+  },
+  {
+   "begin": "24.320",
+   "children": [],
+   "end": "25.520",
+   "id": "f000054",
+   "language": "eng",
+   "lines": [
+    "bundle,"
+   ]
+  },
+  {
+   "begin": "25.520",
+   "children": [],
+   "end": "26.040",
+   "id": "f000055",
+   "language": "eng",
+   "lines": [
+    "leads"
+   ]
+  },
+  {
+   "begin": "26.040",
+   "children": [],
+   "end": "26.040",
+   "id": "f000056",
+   "language": "eng",
+   "lines": [
+    "to"
+   ]
+  },
+  {
+   "begin": "26.040",
+   "children": [],
+   "end": "26.200",
+   "id": "f000057",
+   "language": "eng",
+   "lines": [
+    "the"
+   ]
+  },
+  {
+   "begin": "26.200",
+   "children": [],
+   "end": "27.080",
+   "id": "f000058",
+   "language": "eng",
+   "lines": [
+    "conservation"
+   ]
+  },
+  {
+   "begin": "27.080",
+   "children": [],
+   "end": "27.800",
+   "id": "f000059",
+   "language": "eng",
+   "lines": [
+    "of"
+   ]
+  },
+  {
+   "begin": "27.800",
+   "children": [],
+   "end": "28.520",
+   "id": "f000060",
+   "language": "eng",
+   "lines": [
+    "(*)"
+   ]
+  },
+  {
+   "begin": "28.520",
+   "children": [],
+   "end": "29.400",
+   "id": "f000061",
+   "language": "eng",
+   "lines": [
+    "charge"
+   ]
+  },
+  {
+   "begin": "29.400",
+   "children": [],
+   "end": "30.120",
+   "id": "f000062",
+   "language": "eng",
+   "lines": [
+    "according"
+   ]
+  },
+  {
+   "begin": "30.120",
+   "children": [],
+   "end": "30.120",
+   "id": "f000063",
+   "language": "eng",
+   "lines": [
+    "to"
+   ]
+  },
+  {
+   "begin": "30.120",
+   "children": [],
+   "end": "30.520",
+   "id": "f000064",
+   "language": "eng",
+   "lines": [
+    "Noether's"
+   ]
+  },
+  {
+   "begin": "30.520",
+   "children": [],
+   "end": "31.440",
+   "id": "f000065",
+   "language": "eng",
+   "lines": [
+    "theorem."
+   ]
+  },
+  {
+   "begin": "31.440",
+   "children": [],
+   "end": "31.960",
+   "id": "f000066",
+   "language": "eng",
+   "lines": [
+    "These"
+   ]
+  },
+  {
+   "begin": "31.960",
+   "children": [],
+   "end": "33.080",
+   "id": "f000067",
+   "language": "eng",
+   "lines": [
+    "operations,"
+   ]
+  },
+  {
+   "begin": "33.080",
+   "children": [],
+   "end": "33.480",
+   "id": "f000068",
+   "language": "eng",
+   "lines": [
+    "which"
+   ]
+  },
+  {
+   "begin": "33.480",
+   "children": [],
+   "end": "33.960",
+   "id": "f000069",
+   "language": "eng",
+   "lines": [
+    "form"
+   ]
+  },
+  {
+   "begin": "33.960",
+   "children": [],
+   "end": "34.120",
+   "id": "f000070",
+   "language": "eng",
+   "lines": [
+    "a"
+   ]
+  },
+  {
+   "begin": "34.120",
+   "children": [],
+   "end": "34.360",
+   "id": "f000071",
+   "language": "eng",
+   "lines": [
+    "Lie"
+   ]
+  },
+  {
+   "begin": "34.360",
+   "children": [],
+   "end": "34.400",
+   "id": "f000072",
+   "language": "eng",
+   "lines": [
+    "group"
+   ]
+  },
+  {
+   "begin": "34.400",
+   "children": [],
+   "end": "34.520",
+   "id": "f000073",
+   "language": "eng",
+   "lines": [
+    "of"
+   ]
+  },
+  {
+   "begin": "34.520",
+   "children": [],
+   "end": "34.760",
    "id": "f000074",
    "language": "eng",
    "lines": [
-    "often"
+    "their"
    ]
   },
   {
-   "begin": "33.280",
+   "begin": "34.760",
    "children": [],
-   "end": "34.000",
+   "end": "35.600",
    "id": "f000075",
    "language": "eng",
    "lines": [
-    "indicate"
+    "associated"
    ]
   },
   {
-   "begin": "34.000",
+   "begin": "35.600",
    "children": [],
-   "end": "34.440",
+   "end": "36.080",
    "id": "f000076",
    "language": "eng",
    "lines": [
-    "very"
+    "theory,"
    ]
   },
   {
-   "begin": "34.440",
+   "begin": "36.080",
    "children": [],
-   "end": "34.840",
+   "end": "36.160",
    "id": "f000077",
    "language": "eng",
    "lines": [
-    "fast"
+    "leave"
    ]
   },
   {
-   "begin": "34.840",
+   "begin": "36.160",
    "children": [],
-   "end": "35.680",
+   "end": "36.960",
    "id": "f000078",
    "language": "eng",
    "lines": [
-    "growth."
+    "the"
+   ]
+  },
+  {
+   "begin": "36.960",
+   "children": [],
+   "end": "37.680",
+   "id": "f000079",
+   "language": "eng",
+   "lines": [
+    "action"
+   ]
+  },
+  {
+   "begin": "37.680",
+   "children": [],
+   "end": "38.280",
+   "id": "f000080",
+   "language": "eng",
+   "lines": [
+    "invariant."
+   ]
+  },
+  {
+   "begin": "38.280",
+   "children": [],
+   "end": "38.840",
+   "id": "f000081",
+   "language": "eng",
+   "lines": [
+    "This"
+   ]
+  },
+  {
+   "begin": "38.840",
+   "children": [],
+   "end": "39.680",
+   "id": "f000082",
+   "language": "eng",
+   "lines": [
+    "operation"
+   ]
+  },
+  {
+   "begin": "39.680",
+   "children": [],
+   "end": "39.960",
+   "id": "f000083",
+   "language": "eng",
+   "lines": [
+    "involves"
+   ]
+  },
+  {
+   "begin": "39.960",
+   "children": [],
+   "end": "40.960",
+   "id": "f000084",
+   "language": "eng",
+   "lines": [
+    "subtracting"
+   ]
+  },
+  {
+   "begin": "40.960",
+   "children": [],
+   "end": "40.960",
+   "id": "f000085",
+   "language": "eng",
+   "lines": [
+    "the"
+   ]
+  },
+  {
+   "begin": "40.960",
+   "children": [],
+   "end": "41.320",
+   "id": "f000086",
+   "language": "eng",
+   "lines": [
+    "time"
+   ]
+  },
+  {
+   "begin": "41.320",
+   "children": [],
+   "end": "41.960",
+   "id": "f000087",
+   "language": "eng",
+   "lines": [
+    "derivative"
+   ]
+  },
+  {
+   "begin": "41.960",
+   "children": [],
+   "end": "42.120",
+   "id": "f000088",
+   "language": "eng",
+   "lines": [
+    "of"
+   ]
+  },
+  {
+   "begin": "42.120",
+   "children": [],
+   "end": "42.440",
+   "id": "f000089",
+   "language": "eng",
+   "lines": [
+    "an"
+   ]
+  },
+  {
+   "begin": "42.440",
+   "children": [],
+   "end": "42.960",
+   "id": "f000090",
+   "language": "eng",
+   "lines": [
+    "arbitrary"
+   ]
+  },
+  {
+   "begin": "42.960",
+   "children": [],
+   "end": "43.480",
+   "id": "f000091",
+   "language": "eng",
+   "lines": [
+    "scalar"
+   ]
+  },
+  {
+   "begin": "43.480",
+   "children": [],
+   "end": "43.960",
+   "id": "f000092",
+   "language": "eng",
+   "lines": [
+    "function"
+   ]
+  },
+  {
+   "begin": "43.960",
+   "children": [],
+   "end": "44.440",
+   "id": "f000093",
+   "language": "eng",
+   "lines": [
+    "from"
+   ]
+  },
+  {
+   "begin": "44.440",
+   "children": [],
+   "end": "45.400",
+   "id": "f000094",
+   "language": "eng",
+   "lines": [
+    "the"
+   ]
+  },
+  {
+   "begin": "45.400",
+   "children": [],
+   "end": "45.800",
+   "id": "f000095",
+   "language": "eng",
+   "lines": [
+    "scalar"
+   ]
+  },
+  {
+   "begin": "45.800",
+   "children": [],
+   "end": "46.720",
+   "id": "f000096",
+   "language": "eng",
+   "lines": [
+    "potential"
+   ]
+  },
+  {
+   "begin": "46.720",
+   "children": [],
+   "end": "47.200",
+   "id": "f000097",
+   "language": "eng",
+   "lines": [
+    "and"
+   ]
+  },
+  {
+   "begin": "47.200",
+   "children": [],
+   "end": "47.200",
+   "id": "f000098",
+   "language": "eng",
+   "lines": [
+    "adding"
+   ]
+  },
+  {
+   "begin": "47.200",
+   "children": [],
+   "end": "47.200",
+   "id": "f000099",
+   "language": "eng",
+   "lines": [
+    "the"
+   ]
+  },
+  {
+   "begin": "47.200",
+   "children": [],
+   "end": "47.760",
+   "id": "f000100",
+   "language": "eng",
+   "lines": [
+    "gradient"
+   ]
+  },
+  {
+   "begin": "47.760",
+   "children": [],
+   "end": "47.880",
+   "id": "f000101",
+   "language": "eng",
+   "lines": [
+    "of"
+   ]
+  },
+  {
+   "begin": "47.880",
+   "children": [],
+   "end": "48.120",
+   "id": "f000102",
+   "language": "eng",
+   "lines": [
+    "that"
+   ]
+  },
+  {
+   "begin": "48.120",
+   "children": [],
+   "end": "48.640",
+   "id": "f000103",
+   "language": "eng",
+   "lines": [
+    "scalar"
+   ]
+  },
+  {
+   "begin": "48.640",
+   "children": [],
+   "end": "49.160",
+   "id": "f000104",
+   "language": "eng",
+   "lines": [
+    "function"
+   ]
+  },
+  {
+   "begin": "49.160",
+   "children": [],
+   "end": "49.280",
+   "id": "f000105",
+   "language": "eng",
+   "lines": [
+    "to"
+   ]
+  },
+  {
+   "begin": "49.280",
+   "children": [],
+   "end": "49.440",
+   "id": "f000106",
+   "language": "eng",
+   "lines": [
+    "the"
+   ]
+  },
+  {
+   "begin": "49.440",
+   "children": [],
+   "end": "49.840",
+   "id": "f000107",
+   "language": "eng",
+   "lines": [
+    "vector"
+   ]
+  },
+  {
+   "begin": "49.840",
+   "children": [],
+   "end": "51.400",
+   "id": "f000108",
+   "language": "eng",
+   "lines": [
+    "potential."
+   ]
+  },
+  {
+   "begin": "51.400",
+   "children": [],
+   "end": "51.560",
+   "id": "f000109",
+   "language": "eng",
+   "lines": [
+    "For"
+   ]
+  },
+  {
+   "begin": "51.560",
+   "children": [],
+   "end": "51.920",
+   "id": "f000110",
+   "language": "eng",
+   "lines": [
+    "10"
+   ]
+  },
+  {
+   "begin": "51.920",
+   "children": [],
+   "end": "52.880",
+   "id": "f000111",
+   "language": "eng",
+   "lines": [
+    "points,"
+   ]
+  },
+  {
+   "begin": "52.880",
+   "children": [],
+   "end": "53.160",
+   "id": "f000112",
+   "language": "eng",
+   "lines": [
+    "name"
+   ]
+  },
+  {
+   "begin": "53.160",
+   "children": [],
+   "end": "53.400",
+   "id": "f000113",
+   "language": "eng",
+   "lines": [
+    "this"
+   ]
+  },
+  {
+   "begin": "53.400",
+   "children": [],
+   "end": "53.680",
+   "id": "f000114",
+   "language": "eng",
+   "lines": [
+    "type"
+   ]
+  },
+  {
+   "begin": "53.680",
+   "children": [],
+   "end": "53.840",
+   "id": "f000115",
+   "language": "eng",
+   "lines": [
+    "of"
+   ]
+  },
+  {
+   "begin": "53.840",
+   "children": [],
+   "end": "54.680",
+   "id": "f000116",
+   "language": "eng",
+   "lines": [
+    "operation"
+   ]
+  },
+  {
+   "begin": "54.680",
+   "children": [],
+   "end": "55.000",
+   "id": "f000117",
+   "language": "eng",
+   "lines": [
+    "used"
+   ]
+  },
+  {
+   "begin": "55.000",
+   "children": [],
+   "end": "55.160",
+   "id": "f000118",
+   "language": "eng",
+   "lines": [
+    "in"
+   ]
+  },
+  {
+   "begin": "55.160",
+   "children": [],
+   "end": "55.480",
+   "id": "f000119",
+   "language": "eng",
+   "lines": [
+    "field"
+   ]
+  },
+  {
+   "begin": "55.480",
+   "children": [],
+   "end": "55.960",
+   "id": "f000120",
+   "language": "eng",
+   "lines": [
+    "theory"
+   ]
+  },
+  {
+   "begin": "55.960",
+   "children": [],
+   "end": "56.240",
+   "id": "f000121",
+   "language": "eng",
+   "lines": [
+    "which"
+   ]
+  },
+  {
+   "begin": "56.240",
+   "children": [],
+   "end": "56.880",
+   "id": "f000122",
+   "language": "eng",
+   "lines": [
+    "modifies"
+   ]
+  },
+  {
+   "begin": "56.880",
+   "children": [],
+   "end": "57.000",
+   "id": "f000123",
+   "language": "eng",
+   "lines": [
+    "the"
+   ]
+  },
+  {
+   "begin": "57.000",
+   "children": [],
+   "end": "57.880",
+   "id": "f000124",
+   "language": "eng",
+   "lines": [
+    "potentials"
+   ]
+  },
+  {
+   "begin": "57.880",
+   "children": [],
+   "end": "58.120",
+   "id": "f000125",
+   "language": "eng",
+   "lines": [
+    "without"
+   ]
+  },
+  {
+   "begin": "58.120",
+   "children": [],
+   "end": "58.800",
+   "id": "f000126",
+   "language": "eng",
+   "lines": [
+    "changing"
+   ]
+  },
+  {
+   "begin": "58.800",
+   "children": [],
+   "end": "58.800",
+   "id": "f000127",
+   "language": "eng",
+   "lines": [
+    "the"
+   ]
+  },
+  {
+   "begin": "58.800",
+   "children": [],
+   "end": "60.560",
+   "id": "f000128",
+   "language": "eng",
+   "lines": [
+    "fields."
    ]
   }
  ]

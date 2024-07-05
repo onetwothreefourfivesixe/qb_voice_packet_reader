@@ -20,9 +20,7 @@ def get_text():
     with open("syncmap.json", "r") as interval:
         data = json.load(interval)
         intervals = [float(fragment["begin"]) for fragment in data["fragments"]]
-    basic_dictionary = {intervals[i]: text[i] for i in range(len(intervals))}
-    response = [{'time': float(time), 'text': text} for time, text in basic_dictionary.items()]
-    response.sort(key=lambda x: x['time'])
+    response = [[intervals[i], text[i]] for i in range(len(intervals))]
     return jsonify(response)
 
 @app.route('/api/get_next_question', methods=['GET'])
