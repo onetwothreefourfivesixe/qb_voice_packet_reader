@@ -138,7 +138,7 @@ scrollbar-width: none;  /* Firefox */
     list-style-type: none;
     padding: 0px 20px 20px 20px;
     border-radius: 0px 0px 15px 15px;
-    /* display: none;  UNDO THIS LATER*/
+    display: none;  /* UNDO THIS LATER- it has been undoed*/
     /* Initially collapsed */
 }
 .specialHR {

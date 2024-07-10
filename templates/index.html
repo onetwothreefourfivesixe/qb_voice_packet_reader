@@ -363,6 +363,10 @@
                     displayedScore.textContent = "Score: " + score;
                     answerRight.textContent = "I was correct"
                     correct = -1;
+
+                    // Change color of button
+                    answerRight.classList.remove('btn-outline-danger');
+                    answerRight.classList.add('btn-outline-success');
                 }
                 else {
                     if (interrupt) {
@@ -377,6 +381,10 @@
                     displayedScore.textContent = "Score: " + score;
                     answerRight.textContent = "I was incorrect";
                     correct = 10;
+
+                    // Change color of button
+                    answerRight.classList.remove('btn-outline-success');
+                    answerRight.classList.add('btn-outline-danger');
                 }
             });
         });
