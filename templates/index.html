@@ -20,8 +20,8 @@
 
 <body class = "bg-qb-background">
      <!-- Top Bar -->
-    <div class = "w-100 bg-qb-light py-2 px-4 d-flex fs-5 justify-content-center" style="height: 52px;">
-        <p>QB Voice Tossup Reader</p>
+    <div class = "w-100 bg-qb-muddyblue py-2 px-4 d-flex fs-5 justify-content-center" style="height: 52px;">
+        <p class = "text-qb-white">QB Voice Tossup Reader</p>
     </div>
 
     <!-- <h1>Play Audio with Synchronized Text</h1> -->
@@ -30,12 +30,12 @@
         Your browser does not support the audio element.
     </audio>
     
-    <div class = "row w-100"> 
+    <div class = "row mw-100 m-0"> 
         <div class = "col-lg-9 p-5 overflow-scroll">
             <!-- Buttons -->
             <span class = "w-100 d-flex">
-                <button id="buzzer" class = "btn btn-outline-primary">Buzz</button>
-                <button id="nextQuestion" class = "btn btn-success mx-3">Next Question</button>
+                <button id="buzzer" class = "btn bg-qb-buzz">Buzz</button>
+                <button id="nextQuestion" class = "btn bg-qb-nextquestion mx-3">Next Question</button>
                 <span id="score" class = "border border-1 border-dark rounded px-4 p-2 bg-qb-white ms-auto">Score: 0</span>
             </span>
             <input type="text" id="answer" style="display: none;" class = "mt-3 w-100" placeholder="Answer">
@@ -45,8 +45,8 @@
             </div>
             
             <ul style="display: none; list-style-type: none;" id="answerLine">
-                <li id="actualAnswer" class = "text-qb-white"></li>
-                <li><button id="answerRight">I was correct</button></li>
+                <li id="actualAnswer" class = "text-qb-lightgreen fst-italic"></li>
+                <li><button id="answerRight" class = 'mt-2 btn'>I was correct</button></li>
             </ul>
         </div>
 
@@ -70,8 +70,11 @@
                     <li><input type="checkbox" id="category11" name="categories" value="Trash"><label for="category11"> Trash</label></li>
                 </ul>
         
-                <button id = "difficultiesButton" type="button" class="collapsible" onclick="toggleVisibility('difficulties')">Select difficulties:</button>
+                <button id = "difficultiesButton" type="button" class="collapsible" onclick="toggleVisibility('difficulties')">
+                    <b>Difficulty Categories</b>
+                </button>
                 <ul class="checklist" id="difficulties">
+                    <hr class = "specialHR">
                     <li><input type="checkbox" id="difficulty1" name="difficulties" value="1"><label for="difficulty1"> 1</label></li>
                     <li><input type="checkbox" id="difficulty2" name="difficulties" value="2"><label for="difficulty2"> 2</label></li>
                     <li><input type="checkbox" id="difficulty3" name="difficulties" value="3"><label for="difficulty3"> 3</label></li>
@@ -117,7 +120,9 @@
         function toggleVisibility(id) {
             const element = document.getElementById(id);
             const buttonElement = document.getElementById(id+"Button");
-            if (element.style.display === "none") {
+
+            // I (sophia) put an extra check for '' (it's still hidden at '')
+            if (element.style.display === "none" || element.style.display === '') {
                 element.style.display = "block";
                 buttonElement.style.borderRadius = '15px 15px 0px 0px';
             } else {
@@ -316,11 +321,13 @@
                         answerDisplay.textContent = "Answer: " + answer;
                         if (timer != null) timer.clear();
                         answerRight.textContent = "I was incorrect";
+                        answerRight.classList.add('btn-outline-danger');
                         audio.dispatchEvent(new Event('ended'));
                     } else {
                         buzzer.click();
                         textInput.value = "";
                         answerRight.textContent = "I was correct";
+                        answerRight.classList.add('btn-outline-success');
                     }
                 }
             });

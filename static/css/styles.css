@@ -1,13 +1,17 @@
 /* 
 TODO:
+- = todo, o = somewhat done
+
 - add some kind of indication (ie. arrows) to show when dropdowns are collapsed
 - make sure it looks good on smaller window sizes
-- actually have a color theme
-- style buttons for I was correct/incorrect
+o actually have a color theme 
+- style buttons for I was correct/incorrect - style as just underlines, not buttons?
+- keybind key (cause i even forget them)
 
 Reference: 
     white: f1f1f1
     border radius: 15px
+    color of the v in the favicon: 0488FD
 */
 
 * {
@@ -25,20 +29,47 @@ Reference:
     color: #f1f1f1;
 }
 
+.text-qb-darkblue {
+    color: #003d72;
+    /* 026DCC */
+}
+
+
+
+.text-qb-lightgreen {
+    color: #3cbd81;
+    /* 1A8754 */
+}
+
 .bg-qb-secondary { 
-    background-color: #334966;
+    background-color: #2c2c2c; /* #334966; */
 }
 .bg-qb-background { 
     background-color: #222222;
 }
 
-.bg-qb-light {
-    background-color: #C7DFF8;
+.bg-qb-muddyblue {
+    background-color: #1964a5;  
+    /* #C7DFF8 */
 }
 .bg-qb-white {
     background-color: #f1f1f1;
 }
 
+.bg-qb-nextquestion {
+    background-color: #9BC3DA !important;
+    /* 026DCC */
+}
+
+.bg-qb-buzz {
+    background-color: #1A86D3 !important;
+    color: white !important;
+}
+
+/* .bg-qb-darkblue {
+    background-color: #00213d !important;
+    /* 026DCC 
+} */
 
 /* Hide scrollbar */
 *::-webkit-scrollbar {
@@ -64,6 +95,11 @@ scrollbar-width: none;  /* Firefox */
         height: calc(100vh - 52px);
     }
 
+    /* So it's differntiable */
+    .col-lg-3 {
+        background-color: #2c2c2c;
+    }
+
     .collapsible, .checklist {
         width: 100%;
     }
@@ -84,7 +120,7 @@ scrollbar-width: none;  /* Firefox */
 
 /* Dropdowns */
 .collapsible {
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 15px;
     background-color: #f1f1f1;
     cursor: pointer;
     padding: 20px 10px;
