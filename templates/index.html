@@ -20,7 +20,7 @@
 
 <body class = "bg-qb-background">
      <!-- Top Bar -->
-    <div class = "w-100 bg-qb-muddyblue py-2 px-4 d-flex fs-5 justify-content-center" style="height: 52px;">
+    <div class = "w-100 bg-qb-topbar py-2 px-4 d-flex fs-5 justify-content-center" style="height: 52px;">
         <p class = "text-qb-white">QB Voice Tossup Reader</p>
     </div>
 
@@ -31,7 +31,7 @@
     </audio>
     
     <div class = "row mw-100 m-0"> 
-        <div class = "col-lg-9 p-5 overflow-scroll">
+        <div class = "col-lg-9 pt-5 px-5 overflow-scroll">
             <!-- Buttons -->
             <span class = "w-100 d-flex">
                 <button id="buzzer" class = "btn bg-qb-buzz">Buzz</button>
@@ -51,6 +51,12 @@
         </div>
 
         <div class = "col-lg-3 p-3 overflow-scroll">
+
+            <div class = "text-qb-lightgray fst-italic mt-1 mb-0 d-flex align-items-center w-100 justify-content-center">
+                <hr class="titleHR">&nbsp;
+                Question settings&nbsp;&nbsp;
+                <hr class="titleHR">
+            </div>
             <form id="checklistForm">
                 <button id = "categoriesButton" type="button" class="collapsible" onclick="toggleVisibility('categories')">
                     <b>Question Categories</b>
@@ -87,6 +93,58 @@
                     <li><input type="checkbox" id="difficulty10" name="difficulties" value="10"><label for="difficulty10"> 10</label></li>
                 </ul>
             </form>
+            <br>
+            <!-- <hr class = 'text-light w-50 mx-auto'> -->
+            <div class = "text-qb-lightgray  fst-italic mb-1 d-flex align-items-center w-100 justify-content-center">
+                <hr class="titleHR">&nbsp;
+                Keybinds&nbsp;&nbsp;
+                <hr class="titleHR">
+            </div>
+            <span class = 'text-light d-flex justify-content-center justify-content-lg-start'>
+                <h5><div class = "badge bg-dark">space</div></h5>&nbsp;= buzz
+            </span>
+            <span class = 'text-light d-flex justify-content-center justify-content-lg-start'>
+                <h5><div class = "badge bg-dark">enter</div></h5>&nbsp;= submit answer
+            </span>
+            <span class = 'text-light d-flex justify-content-center justify-content-lg-start'>
+                <h5><div class = "badge bg-dark">n</div></h5>&nbsp;= next question
+            </span>
+            <br>
+            
+            <div class = "text-qb-lightgray  fst-italic mb-1 d-flex align-items-center w-100 justify-content-center">
+                <hr class="titleHR">&nbsp;
+                Color themes&nbsp;&nbsp;
+                <hr class="titleHR">
+            </div>
+            <div class = "d-flex justify-content-center">
+                <button class = "btn pick-bg-btn">
+                    <div class = "pick-bg-color" style = "background-color: #1964a5;"></div>
+                    <div class = "pick-bg-color" style = "background-color: #222222;"></div>
+                </button>
+    
+                <button class = "btn pick-bg-btn">
+                    <div class = "pick-bg-color" style = "background-color: #FEB0B1;"></div>
+                    <div class = "pick-bg-color" style = "background-color: #ffffff;"></div>
+                </button>
+
+                <button class = "btn pick-bg-btn">
+                    <div class = "pick-bg-color" style = "background-color: #563D7C;"></div>
+                    <div class = "pick-bg-color" style = "background-color: #e5d5fc;"></div>
+                </button>
+
+                <button class = "btn pick-bg-btn">
+                    <div class = "pick-bg-color" style = "background-color: #FEB0B1;"></div>
+                    <div class = "pick-bg-color" style = "background-color: #FEEAE9;"></div>
+                </button>
+
+            </div>
+            
+            <br><br>
+            <!-- <button class = "btn d-flex" style = "width: 30px; height: 30px; padding:0px;">
+                <div class = "bg-info" style = "width: 15px; height: 30px"></div>
+                <div class = "bg-warning" style = "width: 15px; height: 30px"></div>
+            </button> -->
+      
         </div>
         
     </div>
