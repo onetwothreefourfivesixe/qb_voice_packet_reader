@@ -216,6 +216,7 @@
             let questionDone = false;
             let inPower = false;
             let interrupt = false;
+            let questionLoaded = true;
 
             let timer = null;
             let timerPromise = null;
@@ -329,9 +330,13 @@
                     intervalId = setInterval(updateText, 100);
                 };
                 try {
-                    get_next_question().then(
-                        resetAndFetch()
+                    questionLoaded = false;
+                    await get_next_question().then(
+                        resetAndFetch().then(
+                        console.log("Finished fetching text")
+                        )
                     );
+                    questionLoaded = true;
                 } catch (error) {
                     console.error('Error fetching next question and answer:', error);
                 }
@@ -351,7 +356,14 @@
             });
 
             document.addEventListener('keydown', event => {
-                if (!buzzedIn && (event.key === 'n' || event.key === 'N')) nextButton.click();
+                if (!buzzedIn && (event.key === 'n' || event.key === 'N')) {
+                    if (!questionLoaded) {
+                        alert("You cannot skip the question yet.");
+                    }
+                    else {
+                        nextButton.click();
+                    }
+                }
                 else if (!questionEnded && !buzzedIn && event.key === ' ') {
                     buzzedIn = true;
                     if (questionDone) {

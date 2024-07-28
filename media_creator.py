@@ -42,7 +42,6 @@ def saveSpeaking(text = ""):
     # engine.runAndWait()
     myobj = gTTS(text=text, lang="en", slow=False)
     myobj.save("audio.mp3")
-    print(text)
     with open("myFile.txt", "w", encoding='utf-8') as outputFile:
         sentences = text.split()
         for sentence in sentences:
