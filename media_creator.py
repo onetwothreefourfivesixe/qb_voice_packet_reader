@@ -11,7 +11,7 @@ def fetchQuestion(difficulties=None, categories=None):
     # Initialize params with default values
     params = {
         'difficulties': difficulties,
-        'categories': ''.join([char for char in categories if char not in [';', ':', '!', "*", " ", "[", "]",'"']]),
+        'categories': ''.join([char for char in categories if char not in [';', ':', '!', '*', ' ', '[', ']','"']]),
         'number': 1,
         'minYear': 2010,
         'maxYear': 2024,
