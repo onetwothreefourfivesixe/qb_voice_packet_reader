@@ -1,1 +1,1 @@
-Moroccan Invasion of Western Sahara [or Moroccan Invasion of Spanish Sahara or Moroccan Invasion of SADR or Moroccan Invasion of Saharawi Arab Democratic Republic; accept logical equivalents that include "Morocco" and "Western Sahara/Spanish Sahara/SADR/Saharawi Arab Democratic Republic"; accept "Green March" before "Green March" is said]
+spy [accept synonyms such as secret agent, covert agent, or agent of espionage; accept Tinker, Tailor, Soldier, Spy; prompt on vacuum cleaner salesman before "former"] /<ed. WG>
