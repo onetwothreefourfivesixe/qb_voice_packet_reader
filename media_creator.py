@@ -45,7 +45,8 @@ def saveSpeaking(text = ""):
     with open("myFile.txt", "w", encoding='utf-8') as outputFile:
         sentences = text.split()
         for sentence in sentences:
-            outputFile.write(sentence + "\n")
+            if not '("' in sentence:
+                outputFile.write(sentence + "\n")
 
     return "audio.mp3"
 

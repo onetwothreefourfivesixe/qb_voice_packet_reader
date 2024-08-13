@@ -125,3 +125,7 @@ input[type='checkbox'] {
 #audio {
     display: none;
 }
+
+.actualAnswer {
+    color: #f1f1f1;
+}

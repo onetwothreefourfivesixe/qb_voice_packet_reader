@@ -34,5 +34,5 @@ def generate_sync_map(audio_file_path = "audio.mp3", text_file_path = "myFile.tx
     # Print produced sync map
     task.output_sync_map_file()
 
-    with open("answer.txt", "w") as answerFile:
+    with open("answer.txt", "w", encoding="utf-8") as answerFile:
         answerFile.write(answer)

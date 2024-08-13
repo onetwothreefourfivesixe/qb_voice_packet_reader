@@ -1,1 +1,1 @@
-spy [accept synonyms such as secret agent, covert agent, or agent of espionage; accept Tinker, Tailor, Soldier, Spy; prompt on vacuum cleaner salesman before "former"] /<ed. WG>
+Pohjola [also accept: Northland]
