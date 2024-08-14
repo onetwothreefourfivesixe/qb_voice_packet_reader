@@ -10,10 +10,10 @@ import aeneas.globalconstants as gc
 import media_creator as mc
 import pandas as pd
 
-def generate_sync_map(audio_file_path = "audio.mp3", text_file_path = "myFile.txt", sync_map_file_path = "syncmap.json", question_numbers='1, 2, 3, 4, 5, 6, 7, 8, 9, 10', subjects='History, Science, Literature, Fine Arts'):
+def generate_sync_map(audio_file_path = "audio.mp3", text_file_path = "myFile.txt", sync_map_file_path = "syncmap.json", question_numbers='1, 2, 3, 4, 5, 6, 7, 8, 9, 10', subjects='History, Science, Literature, Fine Arts', reading_speed=1.0):
     # Fetch and save the audio file
     tossup, answer = mc.fetchQuestion(question_numbers, subjects)
-    mc.saveSpeaking(tossup)
+    mc.saveSpeaking(tossup, reading_speed)
     
     # Configure task
     config = TaskConfiguration()

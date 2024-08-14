@@ -63,6 +63,10 @@
                 Question settings&nbsp;&nbsp;
                 <hr class="titleHR">
             </div>
+            <div>
+                <p style="color:white;">Reading Speed: </p>
+                <input type="range" min="25" max="200" value="100" id="readingSpeed">
+            </div>
             <form id="checklistForm">
                 <button id = "categoriesButton" type="button" class="collapsible" onclick="toggleVisibility('categories')">
                     <b>Question Categories</b>
@@ -116,6 +120,7 @@
                 <h5><div class = "badge bg-dark">n</div></h5>&nbsp;= next question
             </span>
             <br>
+            <p style="color: white;"><a herf="https://forms.gle/wPafPQCM9pMt3qqx8">Send a bug report!</a></p>
             
             <div class = "text-qb-lightgray  fst-italic mb-1 d-flex align-items-center w-100 justify-content-center">
                 <hr class="titleHR">&nbsp;
@@ -205,7 +210,8 @@
             const answerBox = document.getElementById('answerLine');
             const answerDisplay = document.getElementById('actualAnswer');
             const displayedScore = document.getElementById('score');
-            const answerRight = document.getElementById('answerRight')
+            const answerRight = document.getElementById('answerRight');
+            const readingSpeed = document.getElementById('readingSpeed');
 
             let score = 0;
             let textCues = [];
@@ -234,6 +240,9 @@
             function get_next_question() {
                 const subjects = Array.from(document.querySelectorAll('#categories input[type="checkbox"]:checked')).map(checkbox => checkbox.value);
                 const question_numbers = Array.from(document.querySelectorAll('#difficulties input[type="checkbox"]:checked')).map(checkbox => checkbox.value);
+                const reading_speed = readingSpeed.value / 100;
+                
+                console.log("Reading Speed", reading_speed);
     
                 if (JSON.stringify(subjects) !== JSON.stringify(previousSubjects) || JSON.stringify(question_numbers) !== JSON.stringify(previousDifficulties)) {
                     previousSubjects = subjects;
@@ -243,6 +252,7 @@
                 const params = new URLSearchParams();
                 params.append('subjects', JSON.stringify(previousSubjects));
                 params.append('question_numbers', JSON.stringify(previousDifficulties));
+                params.append('readingSpeed', JSON.stringify(reading_speed));
     
                 const url = '/api/get_next_question?' + params.toString();
     

@@ -31,16 +31,17 @@ def get_next_question():
     if len(question_numbers) > 2:
         question_numbers = [int(number) for number in ''.join([char for char in question_numbers if char not in [';', ':', '!', "*", " ", "[", "]",'"']]).split(",")]
     subjects = request.args.getlist('subjects')[0]
+    reading_speed = float(request.args.getlist('readingSpeed')[0].replace('"',''))
     print(question_numbers)
     print(subjects)
     if  len(question_numbers) > 2 and len(subjects) > 2:
-        forced_alignment.generate_sync_map(question_numbers=question_numbers, subjects=subjects)
+        forced_alignment.generate_sync_map(question_numbers=question_numbers, subjects=subjects, reading_speed=reading_speed)
     elif len(question_numbers) > 2:
-        forced_alignment.generate_sync_map(question_numbers=question_numbers)
+        forced_alignment.generate_sync_map(question_numbers=question_numbers, reading_speed=reading_speed)
     elif len(subjects) > 2:
-         forced_alignment.generate_sync_map(subjects=subjects)
+         forced_alignment.generate_sync_map(subjects=subjects, reading_speed=reading_speed)
     else:
-        forced_alignment.generate_sync_map()
+        forced_alignment.generate_sync_map(reading_speed=reading_speed)
     return "Done"
 
 @app.route('/api/get_answer')
