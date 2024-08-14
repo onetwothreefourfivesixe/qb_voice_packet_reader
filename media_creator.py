@@ -1,5 +1,4 @@
 # import pyttsx3
-from gtts import gTTS
 import json
 import re
 import os
