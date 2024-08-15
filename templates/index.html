@@ -1,7 +1,7 @@
 <!--
     TODO:
-        - Upload new version onto docker
-        - replace gtts with AWS Text to speech
+        - Fix the CSS for the buttons and slider
+        - Add the ability to read bonuses
 -->
 
 <!DOCTYPE html>
@@ -120,7 +120,8 @@
                 <h5><div class = "badge bg-dark">n</div></h5>&nbsp;= next question
             </span>
             <br>
-            <p style="color: white;"><a herf="https://forms.gle/wPafPQCM9pMt3qqx8">Send a bug report!</a></p>
+            
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeJnkK03vjxB7LEMarALk8a6b-SI9o5Tm0qmd8MYMuzLwDF6g/viewform?usp=sf_link">Send a bug report!</a>
             
             <div class = "text-qb-lightgray  fst-italic mb-1 d-flex align-items-center w-100 justify-content-center">
                 <hr class="titleHR">&nbsp;
@@ -222,6 +223,7 @@
             let startTime = 0;
             let intervalId = null;
 
+            let firstQuestion = true;
             let hasntStarted = false;
             let buzzedIn = false;
             let questionEnded = false;
@@ -276,17 +278,6 @@
                 })
                 .catch(error => console.error('Error fetching text cues:', error));
 
-            /*const updateText = () => {
-                const currentTime = audio.currentTime;
-                if (onWord < textCues.length && currentTime >= textCues[onWord].time) {
-                    const latestText = textCues[onWord].text;
-                    onWord++;
-                    if (latestText !== lastDisplayedText) {
-                        textDiv.textContent += " " + latestText;
-                        lastDisplayedText = latestText;
-                    }
-                }
-            };*/
             const updateText = () => {
                 const currentTime = audio.currentTime;
             
@@ -345,13 +336,22 @@
                     inPower = 0;
                     intervalId = setInterval(updateText, 100);
                 };
+
                 try {
                     questionLoaded = false;
                     await get_next_question().then(
                         resetAndFetch().then(
-                        console.log("Finished fetching text")
+                            console.log("Finished fetching text")
                         )
                     );
+                    if (firstQuestion) {
+                        await get_next_question().then(
+                            resetAndFetch().then(
+                                console.log("Finished fetching text")
+                            )
+                        );
+                        firstQuestion = false;
+                    }
                     questionLoaded = true;
                 } catch (error) {
                     console.error('Error fetching next question and answer:', error);
