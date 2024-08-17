@@ -1,8 +1,10 @@
+
 #Remember to uncomment the waitress code when pushing new docker images
 
 from flask import Flask, send_from_directory, render_template, jsonify, request
 import json
 import forced_alignment
+import logging
 
 app = Flask(__name__)
 
@@ -17,13 +19,16 @@ def audio(filename):
 @app.route('/api/get_text')
 def get_text():
     # Example Python method returning data
-    with open("myFile.txt", "r") as question:
+    with open("myFile.txt", "r", encoding='utf-8') as question:
         text = question.read().split("\n")
-    with open("syncmap.json", "r") as interval:
+    with open("syncmap.json", "r", encoding='utf-8') as interval:
         data = json.load(interval)
         intervals = [float(fragment["begin"]) for fragment in data["fragments"]]
     response = [[intervals[i], text[i]] for i in range(len(intervals))]
     return jsonify(response)
+
+# Add this at the beginning of the file
+logger = logging.getLogger(__name__)
 
 @app.route('/api/get_next_question', methods=['GET'])
 def get_next_question():
@@ -32,8 +37,8 @@ def get_next_question():
         question_numbers = [int(number) for number in ''.join([char for char in question_numbers if char not in [';', ':', '!', "*", " ", "[", "]",'"']]).split(",")]
     subjects = request.args.getlist('subjects')[0]
     reading_speed = float(request.args.getlist('readingSpeed')[0].replace('"',''))
-    print(question_numbers)
-    print(subjects)
+    logger.info(f"Question Numbers: {question_numbers}")
+    logger.info(f"Subjects: {subjects}")
     if  len(question_numbers) > 2 and len(subjects) > 2:
         forced_alignment.generate_sync_map(question_numbers=question_numbers, subjects=subjects, reading_speed=reading_speed)
     elif len(question_numbers) > 2:

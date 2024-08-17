@@ -40,8 +40,8 @@
         <div class = "col-lg-9 pt-5 px-5 overflow-scroll">
             <!-- Buttons -->
             <span class = "w-100 d-flex">
-                <button id="buzzer" class = "btn bg-qb-buzz">Buzz</button>
-                <button id="nextQuestion" class = "btn bg-qb-nextquestion mx-3">Next Question</button>
+                <button id="buzzer" class = "btn btn-outline-light">Buzz</button>
+                <button id="nextQuestion" class = "btn btn-outline-light">Next Question</button>
                 <span id="score" class = "border border-1 border-dark rounded px-4 p-2 bg-qb-white ms-auto">Score: 0</span>
             </span>
             <input type="text" id="answer" style="display: none;" class = "mt-3 w-100" placeholder="Answer">
@@ -231,6 +231,7 @@
             let inPower = false;
             let interrupt = false;
             let questionLoaded = true;
+            let parametersChanged = false;
 
             let timer = null;
             let timerPromise = null;
@@ -249,6 +250,10 @@
                 if (JSON.stringify(subjects) !== JSON.stringify(previousSubjects) || JSON.stringify(question_numbers) !== JSON.stringify(previousDifficulties)) {
                     previousSubjects = subjects;
                     previousDifficulties = question_numbers;
+                    parametersChanged = true;
+                }
+                else {
+                    parametersChanged = false;
                 }
     
                 const params = new URLSearchParams();
@@ -339,19 +344,14 @@
 
                 try {
                     questionLoaded = false;
-                    await get_next_question().then(
-                        resetAndFetch().then(
-                            console.log("Finished fetching text")
-                        )
-                    );
-                    if (firstQuestion) {
-                        await get_next_question().then(
-                            resetAndFetch().then(
-                                console.log("Finished fetching text")
-                            )
-                        );
-                        firstQuestion = false;
-                    }
+                    
+                    // await get_next_question().then(
+                    //     resetAndFetch().then(
+                    //         console.log("Finished fetching text")
+                    //     )
+                    // );
+                    await get_next_question();
+                    resetAndFetch();
                     questionLoaded = true;
                 } catch (error) {
                     console.error('Error fetching next question and answer:', error);
@@ -360,10 +360,12 @@
 
             buzzer.addEventListener('click', () => {
                 if (hasntStarted) {
+                    buzzedIn = true;
                     audio.pause();
                     hasntStarted = false;
                     textInput.style.display = 'block';
                 } else {
+                    buzzedIn = false;
                     audio.play();
                     hasntStarted = true;
                     textInput.style.display = 'none';
