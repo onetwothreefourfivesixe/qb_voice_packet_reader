@@ -1,10 +1,7 @@
-
 #Remember to uncomment the waitress code when pushing new docker images
-
 from flask import Flask, send_from_directory, render_template, jsonify, request
 import json
 import forced_alignment
-import logging
 
 app = Flask(__name__)
 
@@ -28,7 +25,6 @@ def get_text():
     return jsonify(response)
 
 # Add this at the beginning of the file
-logger = logging.getLogger(__name__)
 
 @app.route('/api/get_next_question', methods=['GET'])
 def get_next_question():
@@ -37,8 +33,8 @@ def get_next_question():
         question_numbers = [int(number) for number in ''.join([char for char in question_numbers if char not in [';', ':', '!', "*", " ", "[", "]",'"']]).split(",")]
     subjects = request.args.getlist('subjects')[0]
     reading_speed = float(request.args.getlist('readingSpeed')[0].replace('"',''))
-    logger.info(f"Question Numbers: {question_numbers}")
-    logger.info(f"Subjects: {subjects}")
+    print(f"Question Numbers: {question_numbers}")
+    print(f"Subjects: {subjects}")
     if  len(question_numbers) > 2 and len(subjects) > 2:
         forced_alignment.generate_sync_map(question_numbers=question_numbers, subjects=subjects, reading_speed=reading_speed)
     elif len(question_numbers) > 2:
@@ -55,6 +51,6 @@ def get_answer():
         return answer.read()
 
 if __name__ == '__main__':
-    app.run(debug=True)
-    # from waitress import serve
-    # serve(app, host="0.0.0.0", port=5000)
+    # app.run(debug=True)
+    from waitress import serve
+    serve(app, host="0.0.0.0", port=5000)

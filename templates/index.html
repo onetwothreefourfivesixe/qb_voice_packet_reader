@@ -378,55 +378,41 @@
             });
 
             buzzer.addEventListener('click', () => {
-                if (hasntStarted) {
-                    buzzedIn = true;
+                buzzedIn = !buzzedIn;
+                hasntStarted = !buzzedIn;
+                textInput.style.display = buzzedIn ? 'block' : 'none';
+                if (buzzedIn) {
                     audio.pause();
-                    hasntStarted = false;
-                    textInput.style.display = 'block';
-                } else {
-                    buzzedIn = false;
-                    audio.play();
-                    hasntStarted = true;
-                    textInput.style.display = 'none';
-                    intervalId = setInterval(updateText, 100);
-                }
-            });
-
-            document.addEventListener('keydown', event => {
-                if (!buzzedIn && (event.key === 'n' || event.key === 'N')) {
-                    if (!questionLoaded) {
-                        alert("You cannot skip the question yet.");
-                    }
-                    else {
-                        nextButton.click();
-                    }
-                }
-                else if (!questionEnded && !buzzedIn && event.key === ' ') {
-                    buzzedIn = true;
                     if (questionDone) {
                         timer.pause();
                         timerPaused = true;
-                    }
-                    else {
+                    } else {
                         interrupt = true;
                     }
+                } else {
+                    audio.play();
+                    setInterval(updateText, 100);
+                }
+            });
+        
+            document.addEventListener('keydown', event => {
+                if (!buzzedIn && (event.key === 'n' || event.key === 'N')) {
+                    if (questionLoaded) nextButton.click();
+                    else alert("You cannot skip the question yet.");
+                } else if (!questionEnded && !buzzedIn && event.key === ' ') {
                     buzzer.click();
                 } else if (buzzedIn && event.key === 'Enter') {
                     const inputValue = textInput.value;
-                    console.log("Answer: ", answer);
-                    correct = checkAnswer(inputValue);
-                    console.log("Correct: ", correct);
+                    const correct = checkAnswer(inputValue);
                     calculateScore(correct);
                     buzzedIn = false;
-                    if (timerPaused) {
-                        timer.resume();
-                    }
-                    if (correct != -1) {
+                    if (timerPaused) timer.resume();
+                    if (correct !== -1) {
                         questionEnded = true;
                         textDiv.textContent = textCues.map(row => row[1]).join(' ');
                         audio.pause();
                         answerDisplay.textContent = "Answer: " + answer;
-                        if (timer != null) timer.clear();
+                        if (timer) timer.clear();
                         answerRight.textContent = "I was incorrect";
                         answerRight.classList.add('btn-outline-danger');
                         audio.dispatchEvent(new Event('ended'));
@@ -438,61 +424,29 @@
                     }
                 }
             });
-
+        
             audio.addEventListener('ended', () => {
                 questionDone = true;
                 answerDisplay.textContent = "Answer: " + answer;
-                clearInterval(intervalId);
+                clearInterval(updateText);
                 if (!questionEnded) {
-                    console.log("Timer started")
-                    timer = new Timer(function() {
+                    timer = new Timer(() => {
                         answerBox.style.display = 'block';
                         questionEnded = true;
                     }, 5000);
-                }
-                else {
+                } else {
                     answerBox.style.display = 'block';
                 }
             });
-
+        
             answerRight.addEventListener('click', () => {
-                console.log()
-                if (correct != -1) {
-                    if (inPower) {
-                        score -= 15;
-                    }
-                    else {
-                        score -= 10;
-                    }
-                    if (interrupt) {
-                        score -= 5;
-                    }
-                    displayedScore.textContent = "Score: " + score;
-                    answerRight.textContent = "I was correct"
-                    correct = -1;
-
-                    // Change color of button
-                    answerRight.classList.remove('btn-outline-danger');
-                    answerRight.classList.add('btn-outline-success');
-                }
-                else {
-                    if (interrupt) {
-                        score += 5;
-                    }
-                    if (inPower) {
-                        score += 15;
-                    }
-                    else {
-                        score += 10;
-                    }
-                    displayedScore.textContent = "Score: " + score;
-                    answerRight.textContent = "I was incorrect";
-                    correct = 10;
-
-                    // Change color of button
-                    answerRight.classList.remove('btn-outline-success');
-                    answerRight.classList.add('btn-outline-danger');
-                }
+                const wasCorrect = answerRight.textContent === "I was incorrect";
+                score += wasCorrect ? (inPower ? -15 : -10) : (inPower ? 15 : 10);
+                if (interrupt) score += wasCorrect ? -5 : 5;
+                displayedScore.textContent = "Score: " + score;
+                answerRight.textContent = wasCorrect ? "I was correct" : "I was incorrect";
+                answerRight.classList.toggle('btn-outline-danger');
+                answerRight.classList.toggle('btn-outline-success');
             });
         });
     </script>
