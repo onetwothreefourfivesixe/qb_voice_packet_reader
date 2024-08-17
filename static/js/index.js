@@ -1,6 +1,7 @@
 /*
     TODO:
         - Fix bug where pressing the 'get next question' button then buzzing with spacebar skips the question
+        - Fix visual bug where the button to change correctness loses its CSS when it reads 'I was correct' 
 */
 function Timer(callback, delay) {
     var args = arguments,
@@ -56,14 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let score = 0;
     let textCues = [];
     let answer = '';
-    let nextAnswer = '';
     let lastDisplayedText = '';
     let onWord = 0;
-    let startTime = 0;
     let intervalId = null;
     let reading_speed = 0;
 
-    let firstQuestion = true;
     let hasntStarted = false;
     let buzzedIn = false;
     let questionEnded = false;
@@ -74,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let parametersChanged = false;
 
     let timer = null;
-    let timerPromise = null;
     let timerPaused = false;
 
     let previousSubjects = [];
@@ -85,30 +82,22 @@ document.addEventListener('DOMContentLoaded', () => {
         const question_numbers = Array.from(document.querySelectorAll('#difficulties input[type="checkbox"]:checked')).map(checkbox => checkbox.value);
         reading_speed = readingSpeed.value / 100;
         
-        console.log("Reading Speed", reading_speed);
-
-        if (JSON.stringify(subjects) !== JSON.stringify(previousSubjects) || JSON.stringify(question_numbers) !== JSON.stringify(previousDifficulties)) {
-            previousSubjects = subjects;
-            previousDifficulties = question_numbers;
-            parametersChanged = true;
-        }
-        else {
-            parametersChanged = false;
-        }
+        parametersChanged = JSON.stringify(subjects) !== JSON.stringify(previousSubjects) || 
+                            JSON.stringify(question_numbers) !== JSON.stringify(previousDifficulties);
+        
+        previousSubjects = subjects;
+        previousDifficulties = question_numbers;
     }
 
     function get_next_question() {
+        const params = new URLSearchParams({
+            subjects: JSON.stringify(previousSubjects),
+            question_numbers: JSON.stringify(previousDifficulties),
+            readingSpeed: JSON.stringify(reading_speed)
+        });
 
-        const params = new URLSearchParams();
-        params.append('subjects', JSON.stringify(previousSubjects));
-        params.append('question_numbers', JSON.stringify(previousDifficulties));
-        params.append('readingSpeed', JSON.stringify(reading_speed));
-
-        const url = '/api/get_next_question?' + params.toString();
-
-        return fetch(url);
+        return fetch('/api/get_next_question?' + params.toString());
     }
-
 
     const fetchTextCues = () => fetch('/api/get_text')
         .then(response => response.json())
@@ -268,6 +257,8 @@ document.addEventListener('DOMContentLoaded', () => {
         questionDone = true;
         answerDisplay.textContent = "Answer: " + answer;
         clearInterval(updateText);
+        // answerRight.textContent = "I was correct";
+        // answerRight.classList.add('btn-outline-success');
         if (!questionEnded) {
             timer = new Timer(() => {
                 answerBox.style.display = 'block';
@@ -284,7 +275,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (interrupt) score += wasCorrect ? -5 : 5;
         displayedScore.textContent = "Score: " + score;
         answerRight.textContent = wasCorrect ? "I was correct" : "I was incorrect";
-        answerRight.classList.toggle('btn-outline-danger');
-        answerRight.classList.toggle('btn-outline-success');
+        if (wasCorrect) {
+            answerRight.classList.remove('btn-outline-success');
+            answerRight.classList.add('btn-outline-danger');
+        }
+        else {
+            answerRight.classList.remove('btn-outline-danger');
+            answerRight.classList.add('btn-outline-success');
+        }
     });
 });

@@ -1,3 +1,4 @@
+#TODO: Save temp files in a temp folder
 #Remember to uncomment the waitress code when pushing new docker images
 from flask import Flask, send_from_directory, render_template, jsonify, request
 import json
@@ -47,10 +48,10 @@ def get_next_question():
 
 @app.route('/api/get_answer')
 def get_answer():
-    with open("answer.txt", "r") as answer:
+    with open("answer.txt", "r", encoding='utf-8') as answer:
         return answer.read()
 
 if __name__ == '__main__':
-    app.run(debug=True)
-    # from waitress import serve
-    # serve(app, host="0.0.0.0", port=5000)
+    # app.run(debug=True)
+    from waitress import serve
+    serve(app, host="0.0.0.0", port=5000)

@@ -3,1311 +3,1041 @@
   {
    "begin": "0.000",
    "children": [],
-   "end": "0.360",
+   "end": "0.240",
    "id": "f000001",
    "language": "eng",
    "lines": [
-    "With"
+    "In"
    ]
   },
   {
-   "begin": "0.360",
+   "begin": "0.240",
    "children": [],
-   "end": "1.120",
+   "end": "0.480",
    "id": "f000002",
    "language": "eng",
    "lines": [
-    "Lavoisier,"
+    "one"
    ]
   },
   {
-   "begin": "1.120",
+   "begin": "0.480",
    "children": [],
-   "end": "1.360",
+   "end": "1.200",
    "id": "f000003",
+   "language": "eng",
+   "lines": [
+    "conflict,"
+   ]
+  },
+  {
+   "begin": "1.200",
+   "children": [],
+   "end": "1.480",
+   "id": "f000004",
    "language": "eng",
    "lines": [
     "this"
    ]
   },
   {
-   "begin": "1.360",
+   "begin": "1.480",
    "children": [],
-   "end": "1.720",
-   "id": "f000004",
-   "language": "eng",
-   "lines": [
-    "man"
-   ]
-  },
-  {
-   "begin": "1.720",
-   "children": [],
-   "end": "2.040",
+   "end": "1.880",
    "id": "f000005",
    "language": "eng",
    "lines": [
-    "invented"
+    "country's"
    ]
   },
   {
-   "begin": "2.040",
+   "begin": "1.880",
    "children": [],
-   "end": "2.160",
+   "end": "2.440",
    "id": "f000006",
    "language": "eng",
    "lines": [
-    "an"
+    "namesake"
    ]
   },
   {
-   "begin": "2.160",
+   "begin": "2.440",
    "children": [],
-   "end": "2.400",
+   "end": "2.920",
    "id": "f000007",
    "language": "eng",
    "lines": [
-    "ice"
+    "National"
    ]
   },
   {
-   "begin": "2.400",
+   "begin": "2.920",
    "children": [],
-   "end": "3.040",
+   "end": "3.360",
    "id": "f000008",
    "language": "eng",
    "lines": [
-    "calorimeter,"
+    "Liberation"
    ]
   },
   {
-   "begin": "3.040",
+   "begin": "3.360",
    "children": [],
-   "end": "3.040",
+   "end": "3.720",
    "id": "f000009",
    "language": "eng",
    "lines": [
-    "which"
+    "Army"
    ]
   },
   {
-   "begin": "3.040",
+   "begin": "3.720",
    "children": [],
-   "end": "3.040",
+   "end": "3.920",
    "id": "f000010",
-   "language": "eng",
-   "lines": [
-    "they"
-   ]
-  },
-  {
-   "begin": "3.040",
-   "children": [],
-   "end": "3.040",
-   "id": "f000011",
-   "language": "eng",
-   "lines": [
-    "used"
-   ]
-  },
-  {
-   "begin": "3.040",
-   "children": [],
-   "end": "3.040",
-   "id": "f000012",
-   "language": "eng",
-   "lines": [
-    "to"
-   ]
-  },
-  {
-   "begin": "3.040",
-   "children": [],
-   "end": "3.040",
-   "id": "f000013",
-   "language": "eng",
-   "lines": [
-    "show"
-   ]
-  },
-  {
-   "begin": "3.040",
-   "children": [],
-   "end": "3.160",
-   "id": "f000014",
-   "language": "eng",
-   "lines": [
-    "that"
-   ]
-  },
-  {
-   "begin": "3.160",
-   "children": [],
-   "end": "4.080",
-   "id": "f000015",
-   "language": "eng",
-   "lines": [
-    "respiration"
-   ]
-  },
-  {
-   "begin": "4.080",
-   "children": [],
-   "end": "4.560",
-   "id": "f000016",
    "language": "eng",
    "lines": [
     "was"
    ]
   },
   {
-   "begin": "4.560",
+   "begin": "3.920",
    "children": [],
-   "end": "4.760",
-   "id": "f000017",
+   "end": "4.400",
+   "id": "f000011",
    "language": "eng",
    "lines": [
-    "a"
+    "defeated"
    ]
   },
   {
-   "begin": "4.760",
+   "begin": "4.400",
    "children": [],
-   "end": "5.360",
-   "id": "f000018",
-   "language": "eng",
-   "lines": [
-    "form"
-   ]
-  },
-  {
-   "begin": "5.360",
-   "children": [],
-   "end": "5.560",
-   "id": "f000019",
-   "language": "eng",
-   "lines": [
-    "of"
-   ]
-  },
-  {
-   "begin": "5.560",
-   "children": [],
-   "end": "6.880",
-   "id": "f000020",
-   "language": "eng",
-   "lines": [
-    "combustion."
-   ]
-  },
-  {
-   "begin": "6.880",
-   "children": [],
-   "end": "7.040",
-   "id": "f000021",
-   "language": "eng",
-   "lines": [
-    "He"
-   ]
-  },
-  {
-   "begin": "7.040",
-   "children": [],
-   "end": "7.520",
-   "id": "f000022",
-   "language": "eng",
-   "lines": [
-    "corrected"
-   ]
-  },
-  {
-   "begin": "7.520",
-   "children": [],
-   "end": "8.120",
-   "id": "f000023",
-   "language": "eng",
-   "lines": [
-    "Newtonian"
-   ]
-  },
-  {
-   "begin": "8.120",
-   "children": [],
-   "end": "9.000",
-   "id": "f000024",
-   "language": "eng",
-   "lines": [
-    "calculations"
-   ]
-  },
-  {
-   "begin": "9.000",
-   "children": [],
-   "end": "9.160",
-   "id": "f000025",
-   "language": "eng",
-   "lines": [
-    "of"
-   ]
-  },
-  {
-   "begin": "9.160",
-   "children": [],
-   "end": "9.160",
-   "id": "f000026",
-   "language": "eng",
-   "lines": [
-    "the"
-   ]
-  },
-  {
-   "begin": "9.160",
-   "children": [],
-   "end": "9.360",
-   "id": "f000027",
-   "language": "eng",
-   "lines": [
-    "speed"
-   ]
-  },
-  {
-   "begin": "9.360",
-   "children": [],
-   "end": "9.440",
-   "id": "f000028",
-   "language": "eng",
-   "lines": [
-    "of"
-   ]
-  },
-  {
-   "begin": "9.440",
-   "children": [],
-   "end": "9.880",
-   "id": "f000029",
-   "language": "eng",
-   "lines": [
-    "sound"
-   ]
-  },
-  {
-   "begin": "9.880",
-   "children": [],
-   "end": "10.000",
-   "id": "f000030",
+   "end": "4.680",
+   "id": "f000012",
    "language": "eng",
    "lines": [
     "by"
    ]
   },
   {
-   "begin": "10.000",
+   "begin": "4.680",
    "children": [],
-   "end": "10.400",
-   "id": "f000031",
+   "end": "5.040",
+   "id": "f000013",
    "language": "eng",
    "lines": [
-    "taking"
+    "NRA"
    ]
   },
   {
-   "begin": "10.400",
+   "begin": "5.040",
    "children": [],
-   "end": "10.600",
-   "id": "f000032",
+   "end": "5.600",
+   "id": "f000014",
    "language": "eng",
    "lines": [
-    "into"
+    "forces"
+   ]
+  },
+  {
+   "begin": "5.600",
+   "children": [],
+   "end": "5.840",
+   "id": "f000015",
+   "language": "eng",
+   "lines": [
+    "led"
+   ]
+  },
+  {
+   "begin": "5.840",
+   "children": [],
+   "end": "6.000",
+   "id": "f000016",
+   "language": "eng",
+   "lines": [
+    "by"
+   ]
+  },
+  {
+   "begin": "6.000",
+   "children": [],
+   "end": "6.400",
+   "id": "f000017",
+   "language": "eng",
+   "lines": [
+    "Yoweri"
+   ]
+  },
+  {
+   "begin": "6.400",
+   "children": [],
+   "end": "7.720",
+   "id": "f000018",
+   "language": "eng",
+   "lines": [
+    "Museveni."
+   ]
+  },
+  {
+   "begin": "7.720",
+   "children": [],
+   "end": "8.000",
+   "id": "f000019",
+   "language": "eng",
+   "lines": [
+    "That"
+   ]
+  },
+  {
+   "begin": "8.000",
+   "children": [],
+   "end": "8.200",
+   "id": "f000020",
+   "language": "eng",
+   "lines": [
+    "conflict,"
+   ]
+  },
+  {
+   "begin": "8.200",
+   "children": [],
+   "end": "8.640",
+   "id": "f000021",
+   "language": "eng",
+   "lines": [
+    "the"
+   ]
+  },
+  {
+   "begin": "8.640",
+   "children": [],
+   "end": "9.560",
+   "id": "f000022",
+   "language": "eng",
+   "lines": [
+    "Luwero"
+   ]
+  },
+  {
+   "begin": "9.560",
+   "children": [],
+   "end": "9.760",
+   "id": "f000023",
+   "language": "eng",
+   "lines": [
+    "War,"
+   ]
+  },
+  {
+   "begin": "9.760",
+   "children": [],
+   "end": "10.000",
+   "id": "f000024",
+   "language": "eng",
+   "lines": [
+    "saw"
+   ]
+  },
+  {
+   "begin": "10.000",
+   "children": [],
+   "end": "10.120",
+   "id": "f000025",
+   "language": "eng",
+   "lines": [
+    "the"
+   ]
+  },
+  {
+   "begin": "10.120",
+   "children": [],
+   "end": "10.480",
+   "id": "f000026",
+   "language": "eng",
+   "lines": [
+    "defeat"
+   ]
+  },
+  {
+   "begin": "10.480",
+   "children": [],
+   "end": "10.600",
+   "id": "f000027",
+   "language": "eng",
+   "lines": [
+    "of"
    ]
   },
   {
    "begin": "10.600",
    "children": [],
    "end": "10.960",
-   "id": "f000033",
+   "id": "f000028",
    "language": "eng",
    "lines": [
-    "account"
+    "former"
    ]
   },
   {
    "begin": "10.960",
    "children": [],
-   "end": "11.160",
-   "id": "f000034",
+   "end": "11.400",
+   "id": "f000029",
    "language": "eng",
    "lines": [
-    "heat"
+    "president"
    ]
   },
   {
-   "begin": "11.160",
+   "begin": "11.400",
    "children": [],
-   "end": "12.400",
-   "id": "f000035",
+   "end": "11.800",
+   "id": "f000030",
    "language": "eng",
    "lines": [
-    "compression."
+    "Milton"
    ]
   },
   {
-   "begin": "12.400",
+   "begin": "11.800",
    "children": [],
-   "end": "12.680",
-   "id": "f000036",
+   "end": "11.960",
+   "id": "f000031",
    "language": "eng",
    "lines": [
-    "This"
+    "Obote"
    ]
   },
   {
-   "begin": "12.680",
+   "begin": "11.960",
    "children": [],
-   "end": "12.960",
-   "id": "f000037",
+   "end": "12.480",
+   "id": "f000032",
    "language": "eng",
    "lines": [
-    "man"
+    "after"
    ]
   },
   {
-   "begin": "12.960",
+   "begin": "12.480",
    "children": [],
-   "end": "13.480",
-   "id": "f000038",
-   "language": "eng",
-   "lines": [
-    "posited"
-   ]
-  },
-  {
-   "begin": "13.480",
-   "children": [],
-   "end": "14.160",
-   "id": "f000039",
-   "language": "eng",
-   "lines": [
-    "that"
-   ]
-  },
-  {
-   "begin": "14.160",
-   "children": [],
-   "end": "14.520",
-   "id": "f000040",
-   "language": "eng",
-   "lines": [
-    "if"
-   ]
-  },
-  {
-   "begin": "14.520",
-   "children": [],
-   "end": "14.760",
-   "id": "f000041",
+   "end": "12.600",
+   "id": "f000033",
    "language": "eng",
    "lines": [
     "a"
    ]
   },
   {
-   "begin": "14.760",
+   "begin": "12.600",
    "children": [],
-   "end": "15.000",
-   "id": "f000042",
+   "end": "13.280",
+   "id": "f000034",
    "language": "eng",
    "lines": [
-    "being"
+    "Tanzanian"
+   ]
+  },
+  {
+   "begin": "13.280",
+   "children": [],
+   "end": "13.680",
+   "id": "f000035",
+   "language": "eng",
+   "lines": [
+    "invasion"
+   ]
+  },
+  {
+   "begin": "13.680",
+   "children": [],
+   "end": "13.960",
+   "id": "f000036",
+   "language": "eng",
+   "lines": [
+    "toppled"
+   ]
+  },
+  {
+   "begin": "13.960",
+   "children": [],
+   "end": "14.080",
+   "id": "f000037",
+   "language": "eng",
+   "lines": [
+    "a"
+   ]
+  },
+  {
+   "begin": "14.080",
+   "children": [],
+   "end": "15.000",
+   "id": "f000038",
+   "language": "eng",
+   "lines": [
+    "military-usurper"
    ]
   },
   {
    "begin": "15.000",
    "children": [],
-   "end": "15.120",
-   "id": "f000043",
-   "language": "eng",
-   "lines": [
-    "knew"
-   ]
-  },
-  {
-   "begin": "15.120",
-   "children": [],
-   "end": "15.320",
-   "id": "f000044",
-   "language": "eng",
-   "lines": [
-    "the"
-   ]
-  },
-  {
-   "begin": "15.320",
-   "children": [],
-   "end": "15.640",
-   "id": "f000045",
-   "language": "eng",
-   "lines": [
-    "state"
-   ]
-  },
-  {
-   "begin": "15.640",
-   "children": [],
-   "end": "15.840",
-   "id": "f000046",
-   "language": "eng",
-   "lines": [
-    "of"
-   ]
-  },
-  {
-   "begin": "15.840",
-   "children": [],
-   "end": "15.840",
-   "id": "f000047",
-   "language": "eng",
-   "lines": [
-    "the"
-   ]
-  },
-  {
-   "begin": "15.840",
-   "children": [],
-   "end": "16.320",
-   "id": "f000048",
-   "language": "eng",
-   "lines": [
-    "universe"
-   ]
-  },
-  {
-   "begin": "16.320",
-   "children": [],
-   "end": "16.960",
-   "id": "f000049",
-   "language": "eng",
-   "lines": [
-    "at"
-   ]
-  },
-  {
-   "begin": "16.960",
-   "children": [],
-   "end": "17.240",
-   "id": "f000050",
-   "language": "eng",
-   "lines": [
-    "a"
-   ]
-  },
-  {
-   "begin": "17.240",
-   "children": [],
-   "end": "17.320",
-   "id": "f000051",
-   "language": "eng",
-   "lines": [
-    "given"
-   ]
-  },
-  {
-   "begin": "17.320",
-   "children": [],
-   "end": "17.320",
-   "id": "f000052",
-   "language": "eng",
-   "lines": [
-    "point"
-   ]
-  },
-  {
-   "begin": "17.320",
-   "children": [],
-   "end": "17.360",
-   "id": "f000053",
-   "language": "eng",
-   "lines": [
-    "in"
-   ]
-  },
-  {
-   "begin": "17.360",
-   "children": [],
-   "end": "17.480",
-   "id": "f000054",
-   "language": "eng",
-   "lines": [
-    "time,"
-   ]
-  },
-  {
-   "begin": "17.480",
-   "children": [],
-   "end": "17.640",
-   "id": "f000055",
-   "language": "eng",
-   "lines": [
-    "then"
-   ]
-  },
-  {
-   "begin": "17.640",
-   "children": [],
-   "end": "17.640",
-   "id": "f000056",
-   "language": "eng",
-   "lines": [
-    "it"
-   ]
-  },
-  {
-   "begin": "17.640",
-   "children": [],
-   "end": "17.640",
-   "id": "f000057",
-   "language": "eng",
-   "lines": [
-    "could"
-   ]
-  },
-  {
-   "begin": "17.640",
-   "children": [],
-   "end": "17.680",
-   "id": "f000058",
-   "language": "eng",
-   "lines": [
-    "predict"
-   ]
-  },
-  {
-   "begin": "17.680",
-   "children": [],
-   "end": "17.960",
-   "id": "f000059",
-   "language": "eng",
-   "lines": [
-    "the"
-   ]
-  },
-  {
-   "begin": "17.960",
-   "children": [],
-   "end": "18.320",
-   "id": "f000060",
-   "language": "eng",
-   "lines": [
-    "entire"
-   ]
-  },
-  {
-   "begin": "18.320",
-   "children": [],
-   "end": "18.520",
-   "id": "f000061",
-   "language": "eng",
-   "lines": [
-    "future"
-   ]
-  },
-  {
-   "begin": "18.520",
-   "children": [],
-   "end": "18.520",
-   "id": "f000062",
-   "language": "eng",
-   "lines": [
-    "of"
-   ]
-  },
-  {
-   "begin": "18.520",
-   "children": [],
-   "end": "18.840",
-   "id": "f000063",
-   "language": "eng",
-   "lines": [
-    "the"
-   ]
-  },
-  {
-   "begin": "18.840",
-   "children": [],
-   "end": "19.440",
-   "id": "f000064",
-   "language": "eng",
-   "lines": [
-    "universe,"
-   ]
-  },
-  {
-   "begin": "19.440",
-   "children": [],
-   "end": "19.640",
-   "id": "f000065",
-   "language": "eng",
-   "lines": [
-    "a"
-   ]
-  },
-  {
-   "begin": "19.640",
-   "children": [],
-   "end": "19.760",
-   "id": "f000066",
-   "language": "eng",
-   "lines": [
-    "thought"
-   ]
-  },
-  {
-   "begin": "19.760",
-   "children": [],
-   "end": "20.200",
-   "id": "f000067",
-   "language": "eng",
-   "lines": [
-    "experiment"
-   ]
-  },
-  {
-   "begin": "20.200",
-   "children": [],
-   "end": "20.680",
-   "id": "f000068",
-   "language": "eng",
-   "lines": [
-    "known"
-   ]
-  },
-  {
-   "begin": "20.680",
-   "children": [],
-   "end": "21.000",
-   "id": "f000069",
-   "language": "eng",
-   "lines": [
-    "as"
-   ]
-  },
-  {
-   "begin": "21.000",
-   "children": [],
-   "end": "21.240",
-   "id": "f000070",
-   "language": "eng",
-   "lines": [
-    "his"
-   ]
-  },
-  {
-   "begin": "21.240",
-   "children": [],
-   "end": "22.320",
-   "id": "f000071",
-   "language": "eng",
-   "lines": [
-    "demon."
-   ]
-  },
-  {
-   "begin": "22.320",
-   "children": [],
-   "end": "22.520",
-   "id": "f000072",
-   "language": "eng",
-   "lines": [
-    "His"
-   ]
-  },
-  {
-   "begin": "22.520",
-   "children": [],
-   "end": "22.920",
-   "id": "f000073",
-   "language": "eng",
-   "lines": [
-    "namesake"
-   ]
-  },
-  {
-   "begin": "22.920",
-   "children": [],
-   "end": "23.560",
-   "id": "f000074",
-   "language": "eng",
-   "lines": [
-    "equation"
-   ]
-  },
-  {
-   "begin": "23.560",
-   "children": [],
-   "end": "23.760",
-   "id": "f000075",
-   "language": "eng",
-   "lines": [
-    "gives"
-   ]
-  },
-  {
-   "begin": "23.760",
-   "children": [],
-   "end": "24.320",
-   "id": "f000076",
-   "language": "eng",
-   "lines": [
-    "rise"
-   ]
-  },
-  {
-   "begin": "24.320",
-   "children": [],
-   "end": "24.320",
-   "id": "f000077",
-   "language": "eng",
-   "lines": [
-    "to"
-   ]
-  },
-  {
-   "begin": "24.320",
-   "children": [],
-   "end": "24.560",
-   "id": "f000078",
-   "language": "eng",
-   "lines": [
-    "spherical"
-   ]
-  },
-  {
-   "begin": "24.560",
-   "children": [],
-   "end": "25.400",
-   "id": "f000079",
-   "language": "eng",
-   "lines": [
-    "harmonics"
-   ]
-  },
-  {
-   "begin": "25.400",
-   "children": [],
-   "end": "25.560",
-   "id": "f000080",
-   "language": "eng",
-   "lines": [
-    "and"
-   ]
-  },
-  {
-   "begin": "25.560",
-   "children": [],
-   "end": "25.720",
-   "id": "f000081",
-   "language": "eng",
-   "lines": [
-    "he"
-   ]
-  },
-  {
-   "begin": "25.720",
-   "children": [],
-   "end": "26.000",
-   "id": "f000082",
-   "language": "eng",
-   "lines": [
-    "investigated"
-   ]
-  },
-  {
-   "begin": "26.000",
-   "children": [],
-   "end": "26.360",
-   "id": "f000083",
-   "language": "eng",
-   "lines": [
-    "the"
-   ]
-  },
-  {
-   "begin": "26.360",
-   "children": [],
-   "end": "26.560",
-   "id": "f000084",
-   "language": "eng",
-   "lines": [
-    "stability"
-   ]
-  },
-  {
-   "begin": "26.560",
-   "children": [],
-   "end": "26.760",
-   "id": "f000085",
-   "language": "eng",
-   "lines": [
-    "of"
-   ]
-  },
-  {
-   "begin": "26.760",
-   "children": [],
-   "end": "27.080",
-   "id": "f000086",
-   "language": "eng",
-   "lines": [
-    "the"
-   ]
-  },
-  {
-   "begin": "27.080",
-   "children": [],
-   "end": "27.440",
-   "id": "f000087",
-   "language": "eng",
-   "lines": [
-    "solar"
-   ]
-  },
-  {
-   "begin": "27.440",
-   "children": [],
-   "end": "28.600",
-   "id": "f000088",
-   "language": "eng",
-   "lines": [
-    "system."
-   ]
-  },
-  {
-   "begin": "28.600",
-   "children": [],
-   "end": "28.800",
-   "id": "f000089",
-   "language": "eng",
-   "lines": [
-    "His"
-   ]
-  },
-  {
-   "begin": "28.800",
-   "children": [],
-   "end": "29.240",
-   "id": "f000090",
-   "language": "eng",
-   "lines": [
-    "namesake"
-   ]
-  },
-  {
-   "begin": "29.240",
-   "children": [],
-   "end": "30.240",
-   "id": "f000091",
-   "language": "eng",
-   "lines": [
-    "transformation"
-   ]
-  },
-  {
-   "begin": "30.240",
-   "children": [],
-   "end": "30.240",
-   "id": "f000092",
-   "language": "eng",
-   "lines": [
-    "is"
-   ]
-  },
-  {
-   "begin": "30.240",
-   "children": [],
-   "end": "30.280",
-   "id": "f000093",
-   "language": "eng",
-   "lines": [
-    "the"
-   ]
-  },
-  {
-   "begin": "30.280",
-   "children": [],
-   "end": "30.680",
-   "id": "f000094",
-   "language": "eng",
-   "lines": [
-    "integral"
-   ]
-  },
-  {
-   "begin": "30.680",
-   "children": [],
-   "end": "30.920",
-   "id": "f000095",
-   "language": "eng",
-   "lines": [
-    "of"
-   ]
-  },
-  {
-   "begin": "30.920",
-   "children": [],
-   "end": "31.360",
-   "id": "f000096",
-   "language": "eng",
-   "lines": [
-    "zero"
-   ]
-  },
-  {
-   "begin": "31.360",
-   "children": [],
-   "end": "31.360",
-   "id": "f000097",
-   "language": "eng",
-   "lines": [
-    "to"
-   ]
-  },
-  {
-   "begin": "31.360",
-   "children": [],
-   "end": "32.000",
-   "id": "f000098",
-   "language": "eng",
-   "lines": [
-    "infinity"
-   ]
-  },
-  {
-   "begin": "32.000",
-   "children": [],
-   "end": "32.320",
-   "id": "f000099",
-   "language": "eng",
-   "lines": [
-    "of"
-   ]
-  },
-  {
-   "begin": "32.320",
-   "children": [],
-   "end": "32.440",
-   "id": "f000100",
-   "language": "eng",
-   "lines": [
-    "a"
-   ]
-  },
-  {
-   "begin": "32.440",
-   "children": [],
-   "end": "32.760",
-   "id": "f000101",
-   "language": "eng",
-   "lines": [
-    "function"
-   ]
-  },
-  {
-   "begin": "32.760",
-   "children": [],
-   "end": "32.760",
-   "id": "f000102",
-   "language": "eng",
-   "lines": [
-    "of"
-   ]
-  },
-  {
-   "begin": "32.760",
-   "children": [],
-   "end": "32.960",
-   "id": "f000103",
-   "language": "eng",
-   "lines": [
-    "t"
-   ]
-  },
-  {
-   "begin": "32.960",
-   "children": [],
-   "end": "33.360",
-   "id": "f000104",
-   "language": "eng",
-   "lines": [
-    "times"
-   ]
-  },
-  {
-   "begin": "33.360",
-   "children": [],
-   "end": "33.600",
-   "id": "f000105",
-   "language": "eng",
-   "lines": [
-    "e"
-   ]
-  },
-  {
-   "begin": "33.600",
-   "children": [],
-   "end": "33.720",
-   "id": "f000106",
-   "language": "eng",
-   "lines": [
-    "to"
-   ]
-  },
-  {
-   "begin": "33.720",
-   "children": [],
-   "end": "33.720",
-   "id": "f000107",
-   "language": "eng",
-   "lines": [
-    "the"
-   ]
-  },
-  {
-   "begin": "33.720",
-   "children": [],
-   "end": "34.200",
-   "id": "f000108",
-   "language": "eng",
-   "lines": [
-    "negative"
-   ]
-  },
-  {
-   "begin": "34.200",
-   "children": [],
-   "end": "34.560",
-   "id": "f000109",
-   "language": "eng",
-   "lines": [
-    "st"
-   ]
-  },
-  {
-   "begin": "34.560",
-   "children": [],
-   "end": "34.760",
-   "id": "f000110",
-   "language": "eng",
-   "lines": [
-    "dt."
-   ]
-  },
-  {
-   "begin": "34.760",
-   "children": [],
-   "end": "35.120",
-   "id": "f000111",
-   "language": "eng",
-   "lines": [
-    "For"
-   ]
-  },
-  {
-   "begin": "35.120",
-   "children": [],
-   "end": "36.280",
-   "id": "f000112",
-   "language": "eng",
-   "lines": [
-    "10"
-   ]
-  },
-  {
-   "begin": "36.280",
-   "children": [],
-   "end": "36.760",
-   "id": "f000113",
-   "language": "eng",
-   "lines": [
-    "points,"
-   ]
-  },
-  {
-   "begin": "36.760",
-   "children": [],
-   "end": "37.200",
-   "id": "f000114",
-   "language": "eng",
-   "lines": [
-    "name"
-   ]
-  },
-  {
-   "begin": "37.200",
-   "children": [],
-   "end": "37.440",
-   "id": "f000115",
-   "language": "eng",
-   "lines": [
-    "this"
-   ]
-  },
-  {
-   "begin": "37.440",
-   "children": [],
-   "end": "37.640",
-   "id": "f000116",
-   "language": "eng",
-   "lines": [
-    "French"
-   ]
-  },
-  {
-   "begin": "37.640",
-   "children": [],
-   "end": "38.320",
-   "id": "f000117",
-   "language": "eng",
-   "lines": [
-    "scientist"
-   ]
-  },
-  {
-   "begin": "38.320",
-   "children": [],
-   "end": "38.320",
-   "id": "f000118",
+   "end": "15.360",
+   "id": "f000039",
    "language": "eng",
    "lines": [
     "who"
    ]
   },
   {
-   "begin": "38.320",
+   "begin": "15.360",
    "children": [],
-   "end": "38.320",
-   "id": "f000119",
+   "end": "15.640",
+   "id": "f000040",
    "language": "eng",
    "lines": [
-    "is"
+    "tried"
    ]
   },
   {
-   "begin": "38.320",
+   "begin": "15.640",
    "children": [],
-   "end": "38.640",
-   "id": "f000120",
+   "end": "15.760",
+   "id": "f000041",
    "language": "eng",
    "lines": [
-    "the"
+    "to"
    ]
   },
   {
-   "begin": "38.640",
+   "begin": "15.760",
    "children": [],
-   "end": "39.400",
-   "id": "f000121",
+   "end": "16.160",
+   "id": "f000042",
    "language": "eng",
    "lines": [
-    "namesake"
+    "annex"
    ]
   },
   {
-   "begin": "39.400",
+   "begin": "16.160",
    "children": [],
-   "end": "39.600",
-   "id": "f000122",
-   "language": "eng",
-   "lines": [
-    "of"
-   ]
-  },
-  {
-   "begin": "39.600",
-   "children": [],
-   "end": "39.600",
-   "id": "f000123",
+   "end": "16.440",
+   "id": "f000043",
    "language": "eng",
    "lines": [
     "the"
    ]
   },
   {
-   "begin": "39.600",
+   "begin": "16.440",
    "children": [],
-   "end": "40.080",
-   "id": "f000124",
+   "end": "16.960",
+   "id": "f000044",
    "language": "eng",
    "lines": [
-    "divergence"
+    "(*)"
    ]
   },
   {
-   "begin": "40.080",
+   "begin": "16.960",
    "children": [],
-   "end": "40.120",
-   "id": "f000125",
+   "end": "17.600",
+   "id": "f000045",
    "language": "eng",
    "lines": [
-    "of"
+    "Kagera"
    ]
   },
   {
-   "begin": "40.120",
+   "begin": "17.600",
    "children": [],
-   "end": "40.120",
-   "id": "f000126",
+   "end": "18.040",
+   "id": "f000046",
    "language": "eng",
    "lines": [
-    "the"
+    "Region."
    ]
   },
   {
-   "begin": "40.120",
+   "begin": "18.040",
    "children": [],
-   "end": "40.720",
-   "id": "f000127",
+   "end": "19.040",
+   "id": "f000047",
    "language": "eng",
    "lines": [
-    "gradient,"
+    "That"
    ]
   },
   {
-   "begin": "40.720",
+   "begin": "19.040",
    "children": [],
-   "end": "41.360",
-   "id": "f000128",
+   "end": "19.400",
+   "id": "f000048",
    "language": "eng",
    "lines": [
-    "written"
+    "leader"
    ]
   },
   {
-   "begin": "41.360",
+   "begin": "19.400",
    "children": [],
-   "end": "41.640",
-   "id": "f000129",
+   "end": "19.680",
+   "id": "f000049",
+   "language": "eng",
+   "lines": [
+    "referred"
+   ]
+  },
+  {
+   "begin": "19.680",
+   "children": [],
+   "end": "19.680",
+   "id": "f000050",
+   "language": "eng",
+   "lines": [
+    "to"
+   ]
+  },
+  {
+   "begin": "19.680",
+   "children": [],
+   "end": "20.280",
+   "id": "f000051",
+   "language": "eng",
+   "lines": [
+    "himself"
+   ]
+  },
+  {
+   "begin": "20.280",
+   "children": [],
+   "end": "20.400",
+   "id": "f000052",
    "language": "eng",
    "lines": [
     "as"
    ]
   },
   {
-   "begin": "41.640",
+   "begin": "20.400",
    "children": [],
-   "end": "41.640",
-   "id": "f000130",
+   "end": "20.520",
+   "id": "f000053",
    "language": "eng",
    "lines": [
-    "del"
+    "the"
    ]
   },
   {
-   "begin": "41.640",
+   "begin": "20.520",
    "children": [],
-   "end": "42.720",
-   "id": "f000131",
+   "end": "21.320",
+   "id": "f000054",
    "language": "eng",
    "lines": [
-    "squared."
+    "\"Conqueror"
+   ]
+  },
+  {
+   "begin": "21.320",
+   "children": [],
+   "end": "21.400",
+   "id": "f000055",
+   "language": "eng",
+   "lines": [
+    "of"
+   ]
+  },
+  {
+   "begin": "21.400",
+   "children": [],
+   "end": "21.400",
+   "id": "f000056",
+   "language": "eng",
+   "lines": [
+    "the"
+   ]
+  },
+  {
+   "begin": "21.400",
+   "children": [],
+   "end": "21.920",
+   "id": "f000057",
+   "language": "eng",
+   "lines": [
+    "British"
+   ]
+  },
+  {
+   "begin": "21.920",
+   "children": [],
+   "end": "22.520",
+   "id": "f000058",
+   "language": "eng",
+   "lines": [
+    "Empire\""
+   ]
+  },
+  {
+   "begin": "22.520",
+   "children": [],
+   "end": "22.640",
+   "id": "f000059",
+   "language": "eng",
+   "lines": [
+    "after"
+   ]
+  },
+  {
+   "begin": "22.640",
+   "children": [],
+   "end": "22.960",
+   "id": "f000060",
+   "language": "eng",
+   "lines": [
+    "the"
+   ]
+  },
+  {
+   "begin": "22.960",
+   "children": [],
+   "end": "23.360",
+   "id": "f000061",
+   "language": "eng",
+   "lines": [
+    "UK"
+   ]
+  },
+  {
+   "begin": "23.360",
+   "children": [],
+   "end": "23.600",
+   "id": "f000062",
+   "language": "eng",
+   "lines": [
+    "broke"
+   ]
+  },
+  {
+   "begin": "23.600",
+   "children": [],
+   "end": "24.160",
+   "id": "f000063",
+   "language": "eng",
+   "lines": [
+    "diplomatic"
+   ]
+  },
+  {
+   "begin": "24.160",
+   "children": [],
+   "end": "24.840",
+   "id": "f000064",
+   "language": "eng",
+   "lines": [
+    "relations"
+   ]
+  },
+  {
+   "begin": "24.840",
+   "children": [],
+   "end": "25.160",
+   "id": "f000065",
+   "language": "eng",
+   "lines": [
+    "with"
+   ]
+  },
+  {
+   "begin": "25.160",
+   "children": [],
+   "end": "25.280",
+   "id": "f000066",
+   "language": "eng",
+   "lines": [
+    "him"
+   ]
+  },
+  {
+   "begin": "25.280",
+   "children": [],
+   "end": "25.280",
+   "id": "f000067",
+   "language": "eng",
+   "lines": [
+    "in"
+   ]
+  },
+  {
+   "begin": "25.280",
+   "children": [],
+   "end": "26.120",
+   "id": "f000068",
+   "language": "eng",
+   "lines": [
+    "1977,"
+   ]
+  },
+  {
+   "begin": "26.120",
+   "children": [],
+   "end": "26.280",
+   "id": "f000069",
+   "language": "eng",
+   "lines": [
+    "and"
+   ]
+  },
+  {
+   "begin": "26.280",
+   "children": [],
+   "end": "26.560",
+   "id": "f000070",
+   "language": "eng",
+   "lines": [
+    "he"
+   ]
+  },
+  {
+   "begin": "26.560",
+   "children": [],
+   "end": "26.960",
+   "id": "f000071",
+   "language": "eng",
+   "lines": [
+    "also"
+   ]
+  },
+  {
+   "begin": "26.960",
+   "children": [],
+   "end": "27.200",
+   "id": "f000072",
+   "language": "eng",
+   "lines": [
+    "styled"
+   ]
+  },
+  {
+   "begin": "27.200",
+   "children": [],
+   "end": "27.920",
+   "id": "f000073",
+   "language": "eng",
+   "lines": [
+    "himself"
+   ]
+  },
+  {
+   "begin": "27.920",
+   "children": [],
+   "end": "28.000",
+   "id": "f000074",
+   "language": "eng",
+   "lines": [
+    "the"
+   ]
+  },
+  {
+   "begin": "28.000",
+   "children": [],
+   "end": "28.400",
+   "id": "f000075",
+   "language": "eng",
+   "lines": [
+    "\"Last"
+   ]
+  },
+  {
+   "begin": "28.400",
+   "children": [],
+   "end": "28.640",
+   "id": "f000076",
+   "language": "eng",
+   "lines": [
+    "King"
+   ]
+  },
+  {
+   "begin": "28.640",
+   "children": [],
+   "end": "28.680",
+   "id": "f000077",
+   "language": "eng",
+   "lines": [
+    "of"
+   ]
+  },
+  {
+   "begin": "28.680",
+   "children": [],
+   "end": "29.560",
+   "id": "f000078",
+   "language": "eng",
+   "lines": [
+    "Scotland\""
+   ]
+  },
+  {
+   "begin": "29.560",
+   "children": [],
+   "end": "29.680",
+   "id": "f000079",
+   "language": "eng",
+   "lines": [
+    "in"
+   ]
+  },
+  {
+   "begin": "29.680",
+   "children": [],
+   "end": "30.000",
+   "id": "f000080",
+   "language": "eng",
+   "lines": [
+    "addition"
+   ]
+  },
+  {
+   "begin": "30.000",
+   "children": [],
+   "end": "30.120",
+   "id": "f000081",
+   "language": "eng",
+   "lines": [
+    "to"
+   ]
+  },
+  {
+   "begin": "30.120",
+   "children": [],
+   "end": "30.560",
+   "id": "f000082",
+   "language": "eng",
+   "lines": [
+    "harboring"
+   ]
+  },
+  {
+   "begin": "30.560",
+   "children": [],
+   "end": "31.280",
+   "id": "f000083",
+   "language": "eng",
+   "lines": [
+    "Palestinian"
+   ]
+  },
+  {
+   "begin": "31.280",
+   "children": [],
+   "end": "32.000",
+   "id": "f000084",
+   "language": "eng",
+   "lines": [
+    "hijackers"
+   ]
+  },
+  {
+   "begin": "32.000",
+   "children": [],
+   "end": "32.360",
+   "id": "f000085",
+   "language": "eng",
+   "lines": [
+    "during"
+   ]
+  },
+  {
+   "begin": "32.360",
+   "children": [],
+   "end": "32.840",
+   "id": "f000086",
+   "language": "eng",
+   "lines": [
+    "Operation"
+   ]
+  },
+  {
+   "begin": "32.840",
+   "children": [],
+   "end": "34.040",
+   "id": "f000087",
+   "language": "eng",
+   "lines": [
+    "Entebbe."
+   ]
+  },
+  {
+   "begin": "34.040",
+   "children": [],
+   "end": "34.240",
+   "id": "f000088",
+   "language": "eng",
+   "lines": [
+    "For"
+   ]
+  },
+  {
+   "begin": "34.240",
+   "children": [],
+   "end": "34.520",
+   "id": "f000089",
+   "language": "eng",
+   "lines": [
+    "10"
+   ]
+  },
+  {
+   "begin": "34.520",
+   "children": [],
+   "end": "35.160",
+   "id": "f000090",
+   "language": "eng",
+   "lines": [
+    "points,"
+   ]
+  },
+  {
+   "begin": "35.160",
+   "children": [],
+   "end": "35.440",
+   "id": "f000091",
+   "language": "eng",
+   "lines": [
+    "name"
+   ]
+  },
+  {
+   "begin": "35.440",
+   "children": [],
+   "end": "35.880",
+   "id": "f000092",
+   "language": "eng",
+   "lines": [
+    "this"
+   ]
+  },
+  {
+   "begin": "35.880",
+   "children": [],
+   "end": "36.120",
+   "id": "f000093",
+   "language": "eng",
+   "lines": [
+    "landlocked"
+   ]
+  },
+  {
+   "begin": "36.120",
+   "children": [],
+   "end": "36.440",
+   "id": "f000094",
+   "language": "eng",
+   "lines": [
+    "East"
+   ]
+  },
+  {
+   "begin": "36.440",
+   "children": [],
+   "end": "36.760",
+   "id": "f000095",
+   "language": "eng",
+   "lines": [
+    "African"
+   ]
+  },
+  {
+   "begin": "36.760",
+   "children": [],
+   "end": "37.400",
+   "id": "f000096",
+   "language": "eng",
+   "lines": [
+    "country"
+   ]
+  },
+  {
+   "begin": "37.400",
+   "children": [],
+   "end": "37.560",
+   "id": "f000097",
+   "language": "eng",
+   "lines": [
+    "led"
+   ]
+  },
+  {
+   "begin": "37.560",
+   "children": [],
+   "end": "37.760",
+   "id": "f000098",
+   "language": "eng",
+   "lines": [
+    "by"
+   ]
+  },
+  {
+   "begin": "37.760",
+   "children": [],
+   "end": "38.240",
+   "id": "f000099",
+   "language": "eng",
+   "lines": [
+    "dictator"
+   ]
+  },
+  {
+   "begin": "38.240",
+   "children": [],
+   "end": "38.640",
+   "id": "f000100",
+   "language": "eng",
+   "lines": [
+    "Idi"
+   ]
+  },
+  {
+   "begin": "38.640",
+   "children": [],
+   "end": "39.000",
+   "id": "f000101",
+   "language": "eng",
+   "lines": [
+    "Amin"
+   ]
+  },
+  {
+   "begin": "39.000",
+   "children": [],
+   "end": "39.480",
+   "id": "f000102",
+   "language": "eng",
+   "lines": [
+    "during"
+   ]
+  },
+  {
+   "begin": "39.480",
+   "children": [],
+   "end": "39.480",
+   "id": "f000103",
+   "language": "eng",
+   "lines": [
+    "the"
+   ]
+  },
+  {
+   "begin": "39.480",
+   "children": [],
+   "end": "40.960",
+   "id": "f000104",
+   "language": "eng",
+   "lines": [
+    "1970's."
    ]
   }
  ]
