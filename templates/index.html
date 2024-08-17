@@ -222,6 +222,7 @@
             let onWord = 0;
             let startTime = 0;
             let intervalId = null;
+            let reading_speed = 0;
 
             let firstQuestion = true;
             let hasntStarted = false;
@@ -240,10 +241,10 @@
             let previousSubjects = [];
             let previousDifficulties = [];
 
-            function get_next_question() {
+            function get_params() {
                 const subjects = Array.from(document.querySelectorAll('#categories input[type="checkbox"]:checked')).map(checkbox => checkbox.value);
                 const question_numbers = Array.from(document.querySelectorAll('#difficulties input[type="checkbox"]:checked')).map(checkbox => checkbox.value);
-                const reading_speed = readingSpeed.value / 100;
+                reading_speed = readingSpeed.value / 100;
                 
                 console.log("Reading Speed", reading_speed);
     
@@ -255,6 +256,9 @@
                 else {
                     parametersChanged = false;
                 }
+            }
+
+            function get_next_question() {
     
                 const params = new URLSearchParams();
                 params.append('subjects', JSON.stringify(previousSubjects));
@@ -344,14 +348,29 @@
 
                 try {
                     questionLoaded = false;
-                    
-                    // await get_next_question().then(
-                    //     resetAndFetch().then(
-                    //         console.log("Finished fetching text")
-                    //     )
-                    // );
-                    await get_next_question();
-                    resetAndFetch();
+
+                    clearInterval(intervalId);
+                    audio.pause();
+                    console.log("Question paused");
+                    await get_params();
+
+                    if (parametersChanged) {
+                        await get_next_question();
+                        resetAndFetch();
+                        get_next_question().then(
+                        resetAndFetch().then(
+                                console.log("Finished fetching text")
+                            )
+                        );
+                    }
+                    else {
+                        await get_next_question().then(
+                        resetAndFetch().then(
+                            console.log("Finished fetching text")
+                        )
+                    );
+                    }
+
                     questionLoaded = true;
                 } catch (error) {
                     console.error('Error fetching next question and answer:', error);
