@@ -62,7 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let intervalId = null;
     let reading_speed = 0;
 
-    let hasntStarted = false;
     let buzzedIn = false;
     let questionEnded = false;
     let questionDone = false;
@@ -76,6 +75,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let previousSubjects = [];
     let previousDifficulties = [];
+
+    const audioUrl = "{{ url_for('audio', filename='audio.mp3') }}";
+    console.log(audioUrl);
 
     function get_params() {
         const subjects = Array.from(document.querySelectorAll('#categories input[type="checkbox"]:checked')).map(checkbox => checkbox.value);
@@ -111,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.text()) // Corrected typo here
         .then(text => {
         answer = text;
-        console.log("Answer: ", answer);
+        console.log("Answewwerr: ", answer);
         })
         .catch(error => console.error('Error fetching text cues:', error));
 
@@ -160,12 +162,13 @@ document.addEventListener('DOMContentLoaded', () => {
             textInput.value = "";
             textCues = [];
             onWord = 0;
-            audioSource.src = `{{ url_for('audio', filename='audio.mp3') }}?t=${new Date().getTime()}`;
+            const audioSource = document.getElementById('audioSource');
+            const audioUrl = audioSource.getAttribute('src');
+            audioSource.src = `${audioUrl}?t=${new Date().getTime()}`;
             audio.load();
             await fetchTextCues();
             fetchAnswer();
             audio.play();
-            hasntStarted = true;
             questionEnded = false;
             questionDone = false;
             buzzedIn = false;
@@ -207,17 +210,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     buzzer.addEventListener('click', () => {
         buzzedIn = !buzzedIn;
-        hasntStarted = !buzzedIn;
-        textInput.style.display = buzzedIn ? 'block' : 'none';
+        console.log("buzzedIn? ", buzzedIn);
         if (buzzedIn) {
-            audio.pause();
-            if (questionDone) {
-                timer.pause();
-                timerPaused = true;
-            } else {
-                interrupt = true;
-            }
+        textInput.style.display = 'block';
+        audio.pause();
+        if (questionDone) {
+            timer.pause();
+            timerPaused = true;
         } else {
+            interrupt = true;
+        }
+        } else {
+            textInput.style.display = 'none';
             audio.play();
             setInterval(updateText, 100);
         }
@@ -230,10 +234,10 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (!questionEnded && !buzzedIn && event.key === ' ') {
             buzzer.click();
         } else if (buzzedIn && event.key === 'Enter') {
+            console.log("test");
             const inputValue = textInput.value;
             const correct = checkAnswer(inputValue);
             calculateScore(correct);
-            buzzedIn = false;
             if (timerPaused) timer.resume();
             if (correct !== -1) {
                 questionEnded = true;
@@ -245,10 +249,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 answerRight.classList.add('btn-outline-danger');
                 audio.dispatchEvent(new Event('ended'));
             } else {
-                buzzer.click();
+                textInput.style.display = 'none';
+                audio.play();
+                setInterval(updateText, 100);
                 textInput.value = "";
-                answerRight.textContent = "I was correct";
-                answerRight.classList.add('btn-outline-success');
+                // answerRight.textContent = "I was correct";
+                // answerRight.classList.add('btn-outline-success');
             }
         }
     });

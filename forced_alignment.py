@@ -24,7 +24,7 @@ Args:
 Returns:
     None
 '''
-def generate_sync_map(audio_file_path="audio.mp3", text_file_path="myFile.txt", sync_map_file_path="syncmap.json", question_numbers='', subjects='', reading_speed=1.0):
+def generate_sync_map(audio_file_path="temp/audio.mp3", text_file_path="temp/myFile.txt", sync_map_file_path="temp/syncmap.json", question_numbers='', subjects='', reading_speed=1.0):
     try:
         # Fetch and save the audio file
         tossup, answer = mc.fetchQuestion(question_numbers, subjects)
@@ -49,7 +49,7 @@ def generate_sync_map(audio_file_path="audio.mp3", text_file_path="myFile.txt", 
         # Print produced sync map
         task.output_sync_map_file()
 
-        with open("answer.txt", "w", encoding="utf-8") as answerFile:
+        with open("temp/answer.txt", "w", encoding="utf-8") as answerFile:
             answerFile.write(answer)
     except Exception as e:
         print(f"Error occurred: {e}")

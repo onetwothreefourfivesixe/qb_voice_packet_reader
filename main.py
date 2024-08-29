@@ -3,6 +3,7 @@
 from flask import Flask, send_from_directory, render_template, jsonify, request
 import json
 import forced_alignment
+import os
 
 app = Flask(__name__)
 
@@ -10,22 +11,27 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/<filename>')
+@app.route('/temp/<filename>', endpoint='audio')
 def audio(filename):
-    return send_from_directory('', filename)
+    # print('temp/' + str('filename'))
+    # file_path = os.path.join('temp', filename)
+    # if os.path.exists(file_path):
+    #     print(f"Serving file: {file_path}")
+    return send_from_directory('temp', filename)
+    # else:
+    #     print(f"File not found: {file_path}")
+    #     return "File not found", 404
 
 @app.route('/api/get_text')
 def get_text():
     # Example Python method returning data
-    with open("myFile.txt", "r", encoding='utf-8') as question:
+    with open("temp/myFile.txt", "r", encoding='utf-8') as question:
         text = question.read().split("\n")
-    with open("syncmap.json", "r", encoding='utf-8') as interval:
+    with open("temp/syncmap.json", "r", encoding='utf-8') as interval:
         data = json.load(interval)
         intervals = [float(fragment["begin"]) for fragment in data["fragments"]]
     response = [[intervals[i], text[i]] for i in range(len(intervals))]
     return jsonify(response)
-
-# Add this at the beginning of the file
 
 @app.route('/api/get_next_question', methods=['GET'])
 def get_next_question():
@@ -48,10 +54,10 @@ def get_next_question():
 
 @app.route('/api/get_answer')
 def get_answer():
-    with open("answer.txt", "r", encoding='utf-8') as answer:
+    with open("temp/answer.txt", "r", encoding='utf-8') as answer:
         return answer.read()
 
 if __name__ == '__main__':
-    # app.run(debug=True)
-    from waitress import serve
-    serve(app, host="0.0.0.0", port=5000)
+    app.run(debug=True)
+    # from waitress import serve
+    # serve(app, host="0.0.0.0", port=5000)
