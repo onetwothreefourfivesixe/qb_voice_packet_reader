@@ -7,10 +7,16 @@ import os
 
 app = Flask(__name__)
 
+'''
+Route to render the index.html template when accessing the root URL.
+'''
 @app.route('/')
 def index():
     return render_template('index.html')
 
+'''
+Route to serve audio files located in the 'temp' directory based on the provided filename.
+'''
 @app.route('/temp/<filename>', endpoint='audio')
 def audio(filename):
     # print('temp/' + str('filename'))
@@ -22,6 +28,9 @@ def audio(filename):
     #     print(f"File not found: {file_path}")
     #     return "File not found", 404
 
+'''
+Route to retrieve text data from files and return it in JSON format with corresponding intervals.
+'''
 @app.route('/api/get_text')
 def get_text():
     # Example Python method returning data
@@ -33,6 +42,9 @@ def get_text():
     response = [[intervals[i], text[i]] for i in range(len(intervals))]
     return jsonify(response)
 
+'''
+Route to retrieve the next question based on specified question numbers, subjects, and reading speed parameters.
+'''
 @app.route('/api/get_next_question', methods=['GET'])
 def get_next_question():
     question_numbers = request.args.getlist('question_numbers')[0]
@@ -52,12 +64,15 @@ def get_next_question():
         forced_alignment.generate_sync_map(reading_speed=reading_speed)
     return "Done"
 
+'''
+Route to retrieve the answer from a text file.
+'''
 @app.route('/api/get_answer')
 def get_answer():
     with open("temp/answer.txt", "r", encoding='utf-8') as answer:
         return answer.read()
 
 if __name__ == '__main__':
-    app.run(debug=True)
-    # from waitress import serve
-    # serve(app, host="0.0.0.0", port=5000)
+    # app.run(debug=True)
+    from waitress import serve
+    serve(app, host="0.0.0.0", port=5000)
