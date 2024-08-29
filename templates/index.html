@@ -58,14 +58,16 @@
 
         <div class = "col-lg-3 p-3 overflow-scroll">
 
-            <div class = "text-qb-lightgray fst-italic mt-1 mb-0 d-flex align-items-center w-100 justify-content-center">
+            <div class = "text-qb-white fst-italic mt-1 mb-0 d-flex align-items-center w-100 justify-content-center">
                 <hr class="titleHR">&nbsp;
                 Question settings&nbsp;&nbsp;
                 <hr class="titleHR">
             </div>
             <div>
-                <p style="color:white;">Reading Speed: </p>
-                <input type="range" min="25" max="200" value="100" id="readingSpeed">
+                <!-- <p style="color:white;">Reading Speed: </p>
+                <input type="range" min="25" max="200" value="100" id="readingSpeed"> -->
+                <label for="readingSpeed" class="form-label text-qb-white">Reading Speed: </label>
+                <input type="range" class="form-range" min="25" max="200" value="100" id="readingSpeed">
             </div>
             <form id="checklistForm">
                 <button id = "categoriesButton" type="button" class="collapsible" onclick="toggleVisibility('categories')">

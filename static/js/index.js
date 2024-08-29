@@ -222,13 +222,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         } else {
             textInput.style.display = 'none';
+            textInput.value = '';
             audio.play();
             setInterval(updateText, 100);
         }
     });
 
     document.addEventListener('keydown', event => {
-        if (!buzzedIn && (event.key === 'n' || event.key === 'N')) {
+        if (questionEnded || !buzzedIn && (event.key === 'n' || event.key === 'N')) {
             if (questionLoaded) nextButton.click();
             else alert("You cannot skip the question yet.");
         } else if (!questionEnded && !buzzedIn && event.key === ' ') {
@@ -249,10 +250,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 answerRight.classList.add('btn-outline-danger');
                 audio.dispatchEvent(new Event('ended'));
             } else {
-                textInput.style.display = 'none';
-                audio.play();
-                setInterval(updateText, 100);
-                textInput.value = "";
+                // textInput.style.display = 'none';
+                buzzer.click();
                 // answerRight.textContent = "I was correct";
                 // answerRight.classList.add('btn-outline-success');
             }
