@@ -1,0 +1,455 @@
+<!--
+    TODO:
+        - Fix the CSS for the buttons and slider
+        - Add the ability to read bonuses
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Packet Reader</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+</head>
+
+<body class = "bg-qb-background">
+     <!-- Top Bar -->
+    <div class = "w-100 bg-qb-topbar py-2 px-4 d-flex fs-5 justify-content-center" style="height: 52px;">
+        <p class = "text-qb-white">QB Voice Tossup Reader</p>
+    </div>
+
+    <!-- <h1>Play Audio with Synchronized Text</h1> -->
+    <audio id="audio" controls>
+        <source id="audioSource" src="{{ url_for('audio', filename='audio.mp3') }}" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <div class = "row mw-100 m-0"> 
+        <div class = "col-lg-9 pt-5 px-5 overflow-scroll">
+            <!-- Buttons -->
+            <span class = "w-100 d-flex">
+                <button id="buzzer" class = "btn btn-outline-light">Buzz</button>
+                <button id="nextQuestion" class = "btn btn-outline-light">Next Question</button>
+                <span id="score" class = "border border-1 border-dark rounded px-4 p-2 bg-qb-white ms-auto">Score: 0</span>
+            </span>
+            <input type="text" id="answer" style="display: none;" class = "mt-3 w-100" placeholder="Answer">
+            <hr class ="text-light">
+            <div id="text" class = "text-qb-white">
+                <p id="question" class="question"></p>
+            </div>
+            
+            <ul style="display: none; list-style-type: none;" id="answerLine">
+                <li id="actualAnswer" class = "text-qb-lightgreen fst-italic" style="color:white;"></li>
+                <li><button id="answerRight" class = 'mt-2 btn'>I was correct</button></li>
+            </ul>
+        </div>
+
+        <div class = "col-lg-3 p-3 overflow-scroll">
+
+            <div class = "text-qb-white fst-italic mt-1 mb-0 d-flex align-items-center w-100 justify-content-center">
+                <hr class="titleHR">&nbsp;
+                Question settings&nbsp;&nbsp;
+                <hr class="titleHR">
+            </div>
+            <div>
+                <!-- <p style="color:white;">Reading Speed: </p>
+                <input type="range" min="25" max="200" value="100" id="readingSpeed"> -->
+                <label for="readingSpeed" class="form-label text-qb-white">Reading Speed: </label>
+                <input type="range" class="form-range" min="25" max="200" value="100" id="readingSpeed">
+            </div>
+            <form id="checklistForm">
+                <button id = "categoriesButton" type="button" class="collapsible" onclick="toggleVisibility('categories')">
+                    <b>Question Categories</b>
+                </button>
+                <ul class="checklist" id="categories">
+                    <hr class = "specialHR">
+                    <li><input type="checkbox" id="category1" name="categories" value="Literature"><label for="category1"> Literature</label></li>
+                    <li><input type="checkbox" id="category2" name="categories" value="History"><label for="category2"> History</label></li>
+                    <li><input type="checkbox" id="category3" name="categories" value="Science"><label for="category3"> Science</label></li>
+                    <li><input type="checkbox" id="category4" name="categories" value="Fine Arts"><label for="category4"> Fine Arts</label></li>
+                    <li><input type="checkbox" id="category5" name="categories" value="Religion"><label for="category5"> Religion</label></li>
+                    <li><input type="checkbox" id="category6" name="categories" value="Mythology"><label for="category6"> Mythology</label></li>
+                    <li><input type="checkbox" id="category7" name="categories" value="Philosophy"><label for="category7"> Philosophy</label></li>
+                    <li><input type="checkbox" id="category8" name="categories" value="Social Science"><label for="category8"> Social Science</label></li>
+                    <li><input type="checkbox" id="category9" name="categories" value="Current Events"><label for="category9"> Current Events</label></li>
+                    <li><input type="checkbox" id="category10" name="categories" value="Geography"><label for="category10"> Geography</label></li>
+                    <li><input type="checkbox" id="category11" name="categories" value="Trash"><label for="category11"> Trash</label></li>
+                </ul>
+        
+                <button id = "difficultiesButton" type="button" class="collapsible" onclick="toggleVisibility('difficulties')">
+                    <b>Difficulty Categories</b>
+                </button>
+                <ul class="checklist" id="difficulties">
+                    <hr class = "specialHR">
+                    <li><input type="checkbox" id="difficulty1" name="difficulties" value="1"><label for="difficulty1"> 1</label></li>
+                    <li><input type="checkbox" id="difficulty2" name="difficulties" value="2"><label for="difficulty2"> 2</label></li>
+                    <li><input type="checkbox" id="difficulty3" name="difficulties" value="3"><label for="difficulty3"> 3</label></li>
+                    <li><input type="checkbox" id="difficulty4" name="difficulties" value="4"><label for="difficulty4"> 4</label></li>
+                    <li><input type="checkbox" id="difficulty5" name="difficulties" value="5"><label for="difficulty5"> 5</label></li>
+                    <li><input type="checkbox" id="difficulty6" name="difficulties" value="6"><label for="difficulty6"> 6</label></li>
+                    <li><input type="checkbox" id="difficulty7" name="difficulties" value="7"><label for="difficulty7"> 7</label></li>
+                    <li><input type="checkbox" id="difficulty8" name="difficulties" value="8"><label for="difficulty8"> 8</label></li>
+                    <li><input type="checkbox" id="difficulty9" name="difficulties" value="9"><label for="difficulty9"> 9</label></li>
+                    <li><input type="checkbox" id="difficulty10" name="difficulties" value="10"><label for="difficulty10"> 10</label></li>
+                </ul>
+            </form>
+            <br>
+            <!-- <hr class = 'text-light w-50 mx-auto'> -->
+            <div class = "text-qb-lightgray  fst-italic mb-1 d-flex align-items-center w-100 justify-content-center">
+                <hr class="titleHR">&nbsp;
+                Keybinds&nbsp;&nbsp;
+                <hr class="titleHR">
+            </div>
+            <span class = 'text-light d-flex justify-content-center justify-content-lg-start'>
+                <h5><div class = "badge bg-dark">space</div></h5>&nbsp;= buzz
+            </span>
+            <span class = 'text-light d-flex justify-content-center justify-content-lg-start'>
+                <h5><div class = "badge bg-dark">enter</div></h5>&nbsp;= submit answer
+            </span>
+            <span class = 'text-light d-flex justify-content-center justify-content-lg-start'>
+                <h5><div class = "badge bg-dark">n</div></h5>&nbsp;= next question
+            </span>
+            <br>
+            
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeJnkK03vjxB7LEMarALk8a6b-SI9o5Tm0qmd8MYMuzLwDF6g/viewform?usp=sf_link">Send a bug report!</a>
+            
+            <div class = "text-qb-lightgray  fst-italic mb-1 d-flex align-items-center w-100 justify-content-center">
+                <hr class="titleHR">&nbsp;
+                Color themes&nbsp;&nbsp;
+                <hr class="titleHR">
+            </div>
+            <div class = "d-flex justify-content-center">
+                <button class = "btn pick-bg-btn">
+                    <div class = "pick-bg-color" style = "background-color: #1964a5;"></div>
+                    <div class = "pick-bg-color" style = "background-color: #222222;"></div>
+                </button>
+    
+                <button class = "btn pick-bg-btn">
+                    <div class = "pick-bg-color" style = "background-color: #FEB0B1;"></div>
+                    <div class = "pick-bg-color" style = "background-color: #ffffff;"></div>
+                </button>
+
+                <button class = "btn pick-bg-btn">
+                    <div class = "pick-bg-color" style = "background-color: #563D7C;"></div>
+                    <div class = "pick-bg-color" style = "background-color: #e5d5fc;"></div>
+                </button>
+
+                <button class = "btn pick-bg-btn">
+                    <div class = "pick-bg-color" style = "background-color: #FEB0B1;"></div>
+                    <div class = "pick-bg-color" style = "background-color: #FEEAE9;"></div>
+                </button>
+
+            </div>
+            
+            <br><br>
+            <!-- <button class = "btn d-flex" style = "width: 30px; height: 30px; padding:0px;">
+                <div class = "bg-info" style = "width: 15px; height: 30px"></div>
+                <div class = "bg-warning" style = "width: 15px; height: 30px"></div>
+            </button> -->
+      
+        </div>
+        
+    </div>
+        <!--<script>
+        function Timer(callback, delay) {
+            var args = arguments,
+                self = this,
+                timer, start;
+        
+            this.clear = function () {
+                clearTimeout(timer);
+            };
+        
+            this.pause = function () {
+                this.clear();
+                delay -= new Date() - start;
+            };
+        
+            this.resume = function () {
+                start = new Date();
+                timer = setTimeout(function () {
+                    callback.apply(self, Array.prototype.slice.call(args, 2, args.length));
+                }, delay);
+            };
+        
+            this.resume();
+        }
+
+        function toggleVisibility(id) {
+            const element = document.getElementById(id);
+            const buttonElement = document.getElementById(id+"Button");
+
+            // I (sophia) put an extra check for '' (it's still hidden at '')
+            if (element.style.display === "none" || element.style.display === '') {
+                element.style.display = "block";
+                buttonElement.style.borderRadius = '15px 15px 0px 0px';
+            } else {
+                element.style.display = "none";
+                buttonElement.style.borderRadius = '15px';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const audio = document.getElementById('audio');
+            const audioSource = document.getElementById('audioSource');
+            const buzzer = document.getElementById('buzzer');
+            const nextButton = document.getElementById('nextQuestion');
+            const textDiv = document.getElementById('question');
+            const textInput = document.getElementById('answer');
+            const answerBox = document.getElementById('answerLine');
+            const answerDisplay = document.getElementById('actualAnswer');
+            const displayedScore = document.getElementById('score');
+            const answerRight = document.getElementById('answerRight');
+            const readingSpeed = document.getElementById('readingSpeed');
+
+            let score = 0;
+            let textCues = [];
+            let answer = '';
+            let nextAnswer = '';
+            let lastDisplayedText = '';
+            let onWord = 0;
+            let startTime = 0;
+            let intervalId = null;
+            let reading_speed = 0;
+
+            let firstQuestion = true;
+            let hasntStarted = false;
+            let buzzedIn = false;
+            let questionEnded = false;
+            let questionDone = false;
+            let inPower = false;
+            let interrupt = false;
+            let questionLoaded = true;
+            let parametersChanged = false;
+
+            let timer = null;
+            let timerPromise = null;
+            let timerPaused = false;
+
+            let previousSubjects = [];
+            let previousDifficulties = [];
+
+            function get_params() {
+                const subjects = Array.from(document.querySelectorAll('#categories input[type="checkbox"]:checked')).map(checkbox => checkbox.value);
+                const question_numbers = Array.from(document.querySelectorAll('#difficulties input[type="checkbox"]:checked')).map(checkbox => checkbox.value);
+                reading_speed = readingSpeed.value / 100;
+                
+                console.log("Reading Speed", reading_speed);
+    
+                if (JSON.stringify(subjects) !== JSON.stringify(previousSubjects) || JSON.stringify(question_numbers) !== JSON.stringify(previousDifficulties)) {
+                    previousSubjects = subjects;
+                    previousDifficulties = question_numbers;
+                    parametersChanged = true;
+                }
+                else {
+                    parametersChanged = false;
+                }
+            }
+
+            function get_next_question() {
+    
+                const params = new URLSearchParams();
+                params.append('subjects', JSON.stringify(previousSubjects));
+                params.append('question_numbers', JSON.stringify(previousDifficulties));
+                params.append('readingSpeed', JSON.stringify(reading_speed));
+    
+                const url = '/api/get_next_question?' + params.toString();
+    
+                return fetch(url);
+            }
+
+
+            const fetchTextCues = () => fetch('/api/get_text')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    textCues = data; 
+                })
+                .catch(error => console.error('Error fetching text cues:', error));
+
+            const fetchAnswer = () => fetch('/api/get_answer')
+                .then(response => response.text()) // Corrected typo here
+                .then(text => {
+                answer = text;
+                console.log("Answer: ", answer);
+                })
+                .catch(error => console.error('Error fetching text cues:', error));
+
+            const updateText = () => {
+                const currentTime = audio.currentTime;
+            
+                // Loop through all text cues that should have been displayed by now
+                while (onWord < textCues.length && currentTime >= textCues[onWord][0]) {
+                    const latestText = textCues[onWord][1];
+                    onWord++;
+                    if (latestText !== lastDisplayedText) {
+                        textDiv.textContent += " " + latestText;
+                        lastDisplayedText = latestText;
+                    }
+                }
+            };
+
+            const checkAnswer = userAnswer => answer.toLocaleLowerCase().indexOf(userAnswer.toLocaleLowerCase());
+
+            const calculateScore = correct => {
+                if (correct != -1) {
+                    if (textDiv.textContent.indexOf('(*)') < 0) {
+                        inPower = true;
+                    }
+                    if (inPower) {
+                        score += 5;
+                    }
+                    score += 10;
+                }
+                else {
+                    if (!questionEnded)
+                        score -= 5;
+                }
+                console.log("Score: ", score);
+                displayedScore.textContent = "Score: " + score;
+            };            
+
+            nextButton.addEventListener('click', async () => {
+                const resetAndFetch = async () => {
+                    answerBox.style.display = 'none';
+                    textInput.style.display = 'none';
+                    audio.pause();
+                    audio.currentTime = 0;
+                    lastDisplayedText = '';
+                    textDiv.textContent = '';
+                    textInput.value = "";
+                    textCues = [];
+                    onWord = 0;
+                    audioSource.src = `{{ url_for('audio', filename='audio.mp3') }}?t=${new Date().getTime()}`;
+                    audio.load();
+                    await fetchTextCues();
+                    fetchAnswer();
+                    audio.play();
+                    hasntStarted = true;
+                    questionEnded = false;
+                    questionDone = false;
+                    buzzedIn = false;
+                    interrupt = false;
+                    inPower = 0;
+                    intervalId = setInterval(updateText, 100);
+                };
+
+                try {
+                    questionLoaded = false;
+
+                    clearInterval(intervalId);
+                    audio.pause();
+                    console.log("Question paused");
+                    await get_params();
+
+                    if (parametersChanged) {
+                        await get_next_question();
+                        resetAndFetch();
+                        get_next_question().then(
+                        resetAndFetch().then(
+                                console.log("Finished fetching text")
+                            )
+                        );
+                    }
+                    else {
+                        await get_next_question().then(
+                        resetAndFetch().then(
+                            console.log("Finished fetching text")
+                        )
+                    );
+                    }
+
+                    questionLoaded = true;
+                } catch (error) {
+                    console.error('Error fetching next question and answer:', error);
+                }
+            });
+
+            buzzer.addEventListener('click', () => {
+                buzzedIn = !buzzedIn;
+                hasntStarted = !buzzedIn;
+                textInput.style.display = buzzedIn ? 'block' : 'none';
+                if (buzzedIn) {
+                    audio.pause();
+                    if (questionDone) {
+                        timer.pause();
+                        timerPaused = true;
+                    } else {
+                        interrupt = true;
+                    }
+                } else {
+                    audio.play();
+                    setInterval(updateText, 100);
+                }
+            });
+        
+            document.addEventListener('keydown', event => {
+                if (!buzzedIn && (event.key === 'n' || event.key === 'N')) {
+                    if (questionLoaded) nextButton.click();
+                    else alert("You cannot skip the question yet.");
+                } else if (!questionEnded && !buzzedIn && event.key === ' ') {
+                    buzzer.click();
+                } else if (buzzedIn && event.key === 'Enter') {
+                    const inputValue = textInput.value;
+                    const correct = checkAnswer(inputValue);
+                    calculateScore(correct);
+                    buzzedIn = false;
+                    if (timerPaused) timer.resume();
+                    if (correct !== -1) {
+                        questionEnded = true;
+                        textDiv.textContent = textCues.map(row => row[1]).join(' ');
+                        audio.pause();
+                        answerDisplay.textContent = "Answer: " + answer;
+                        if (timer) timer.clear();
+                        answerRight.textContent = "I was incorrect";
+                        answerRight.classList.add('btn-outline-danger');
+                        audio.dispatchEvent(new Event('ended'));
+                    } else {
+                        buzzer.click();
+                        textInput.value = "";
+                        answerRight.textContent = "I was correct";
+                        answerRight.classList.add('btn-outline-success');
+                    }
+                }
+            });
+        
+            audio.addEventListener('ended', () => {
+                questionDone = true;
+                answerDisplay.textContent = "Answer: " + answer;
+                clearInterval(updateText);
+                if (!questionEnded) {
+                    timer = new Timer(() => {
+                        answerBox.style.display = 'block';
+                        questionEnded = true;
+                    }, 5000);
+                } else {
+                    answerBox.style.display = 'block';
+                }
+            });
+        
+            answerRight.addEventListener('click', () => {
+                const wasCorrect = answerRight.textContent === "I was incorrect";
+                score += wasCorrect ? (inPower ? -15 : -10) : (inPower ? 15 : 10);
+                if (interrupt) score += wasCorrect ? -5 : 5;
+                displayedScore.textContent = "Score: " + score;
+                answerRight.textContent = wasCorrect ? "I was correct" : "I was incorrect";
+                answerRight.classList.toggle('btn-outline-danger');
+                answerRight.classList.toggle('btn-outline-success');
+            });
+        });
+    </script> -->
+    <script src="{{url_for('static', filename='js/index.js')}}"></script>
+</body>
+</html>

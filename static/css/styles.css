@@ -1,0 +1,135 @@
+/* 
+TODO:
+- add some kind of indication (ie. arrows) to show when dropdowns are collapsed
+- make sure it looks good on smaller window sizes
+- actually have a color theme
+- style buttons for I was correct/incorrect
+
+Reference: 
+    white: f1f1f1
+    border radius: 15px
+*/
+
+* {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Background color DEEDFD */
+.text-qb-secondary { 
+    color: #334966;
+}
+.text-qb-white {
+    color: #f1f1f1;
+}
+
+.bg-qb-secondary { 
+    background-color: #334966;
+}
+.bg-qb-background { 
+    background-color: #222222;
+}
+
+.bg-qb-light {
+    background-color: #C7DFF8;
+}
+.bg-qb-white {
+    background-color: #f1f1f1;
+}
+
+
+/* Hide scrollbar */
+*::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+    
+* {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
+
+
+
+/* Position of dropdowns */
+/* breakpoints:
+    large >= 992px
+    medium >= 768px
+    small >= 576px
+*/
+
+@media (min-width: 992px) {
+    .col-lg-3, .col-lg-9 {
+        height: calc(100vh - 52px);
+    }
+
+    .collapsible, .checklist {
+        width: 100%;
+    }
+}
+@media (max-width: 991px) {
+    .collapsible, .checklist {
+        width: 50%;
+        margin-left: 25%;
+    }
+}
+@media (max-width: 600px) {
+    .collapsible, .checklist {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+
+/* Dropdowns */
+.collapsible {
+    border-radius: 15px 15px 0px 0px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    padding: 20px 10px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    margin-top: 20px;
+    /* margin: 10px 0; */
+
+    text-align: center;
+}
+
+.checklist {
+    background-color: #f1f1f1;
+    list-style-type: none;
+    padding: 0px 20px 20px 20px;
+    border-radius: 0px 0px 15px 15px;
+    /* display: none;  UNDO THIS LATER*/
+    /* Initially collapsed */
+}
+.specialHR {
+    margin: 0px  !important;
+    margin-bottom: 20px !important;
+}
+
+li > label {
+    transition: 200ms;
+    width: 80%;
+    margin-left: 7px;
+}
+
+input[type='checkbox'] {
+    width: 10%;
+}
+
+/* Misc */
+
+#audio {
+    display: none;
+}
+
+.actualAnswer {
+    color: #f1f1f1;
+}
+
+a {
+    color: #f1f1f1;
+}
