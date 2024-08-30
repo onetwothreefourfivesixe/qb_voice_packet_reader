@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM python:3.9-slim
+FROM python:3.12-slim
 
 # Set the working directory in the container
 WORKDIR /app
@@ -9,8 +9,12 @@ RUN pip install --upgrade pip
 
 # Install system dependencies, including wget and bash
 RUN apt-get update && \
-    apt-get install -y build-essential gcc cmake ffmpeg espeak libespeak-dev espeak-ng libespeak-ng1 libespeak-ng-dev git wget bash && \
-    apt-get install -y python3-dev python3-pip python3-wheel pkg-config && \
+    apt-get install -y --no-install-recommends \
+    ffmpeg \
+    espeak \
+    python3-dev python3-pip python3-wheel pkg-config \
+    python3-distutils \
+    build-essential && \
     rm -rf /var/lib/apt/lists/*
 
 # Install setuptools using pip
