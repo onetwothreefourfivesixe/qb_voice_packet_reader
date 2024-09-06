@@ -1,6 +1,4 @@
-# QB Voice Packet Reader (Flask Branch)
-
-This branch of the QB Voice Packet Reader repository contains the Flask implementation of the QB Packet Reader application.
+# QB Voice Packet Reader
 
 ## Table of Contents
 
