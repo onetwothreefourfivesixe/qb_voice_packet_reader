@@ -1,4 +1,4 @@
-# QB Voice Packet Reader
+# QB Voice Packet Reader - DEPRECATED
 
 ## Table of Contents
 
@@ -8,6 +8,8 @@
 - [License](#license)
 
 ## About
+
+**Warning: This project is not being worked on, and the current iteration of this project can be found [here](https://github.com/onetwothreefourfivesixe/qbv_web).**
 
 The QB Packet Reader is an application designed to read questions used in quiz bowl competitions out loud, while also printing the questions out as well. This branch utilizes the Flask framework to create a web-based interface for the QB Voice Packet Reader. All questions are sourced from https://qbreader.org through its API.
 
